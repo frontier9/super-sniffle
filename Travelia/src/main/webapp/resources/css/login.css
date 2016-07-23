@@ -1,0 +1,23 @@
+@CHARSET "EUC-KR";
+
+.btn-hotel {
+  background-color: hsl(23, 83%, 40%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ed8544", endColorstr="#ba5211");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ed8544), to(#ba5211));
+  background-image: -moz-linear-gradient(top, #ed8544, #ba5211);
+  background-image: -ms-linear-gradient(top, #ed8544, #ba5211);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ed8544), color-stop(100%, #ba5211));
+  background-image: -webkit-linear-gradient(top, #ed8544, #ba5211);
+  background-image: -o-linear-gradient(top, #ed8544, #ba5211);
+  background-image: linear-gradient(#ed8544, #ba5211);
+  border-color: #ba5211 #ba5211 hsl(23, 83%, 35%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+
+div.error {
+	color: rgba(255, 0, 0, 0.8); 
+	font-style: italic;`
+}

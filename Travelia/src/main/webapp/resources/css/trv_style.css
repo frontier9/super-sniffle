@@ -1,0 +1,583 @@
+@font-face {
+	font-family: NamsanEB;
+	src: url(../fonts/NamsanEB.ttf);
+}
+
+@font-face {
+	font-family: NamsanM;
+	src: url(../fonts/NamsanM.ttf);
+}
+
+body {
+	font-family: 'Century Gothic', sans-serif;
+}
+
+.container-fluid {
+	max-width: 1600px;
+}
+
+.container_wapper {
+	width: 100%;
+	background: #c0c0c0;
+}
+
+.rcolor {
+	background: #f00;
+}
+
+.gcolor {
+	background: #0f0;
+}
+
+.bcolor {
+	background: #00f;
+}
+
+h1 {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	text-align: center;
+	font: normal normal normal 40px/60px NamsanEB;;
+	color: #3b3b3b;
+}
+
+.trv_logo a:hover {
+	text-decoration: none;
+}
+/*menu*/
+#trv_mobile_menu {
+	top: 0;
+	width: 250px;
+	height: 100%;
+	background: #f9f9f9;
+	position: fixed;
+	z-index: 5500;
+	right: -1500px;
+	display: none;
+	overflow: auto;
+}
+
+#trv_mobile_menu ul li a {
+	text-align: left;
+	background: #33ccff;
+	color: #000;
+}
+
+#trv_mobile_menu ul li:hover a {
+	background: #008ae6;
+	color: #fff;
+}
+
+#trv_banner_menu {
+	width: 100%;
+	background: #f9f9f9;
+	height: 94px;
+	border-bottom: 1px solid #f15556;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+
+
+#trv_banner_menu #logo_img {
+	max-height: 90px;
+	float: left;
+}
+
+#trv_banner_menu #logo_text {
+	position: absolute;
+	font: normal normal normal 36px/1em 'Century Gothic', sans-serif;
+	margin-top: 30px;
+	padding-left: 60px;
+	text-align: left;
+	/* color: #e35354; */
+	color: #00e6e6;
+	width: auto;
+}
+
+#trv_banner_menu #logo_text span, span#endlogo {
+	/* color: #9fb038; */
+	color: #e65c00;
+}
+
+#trv_banner_menu ul li a, #trv_banner_menu ul li a:focus {
+	padding-top: 35px;
+	padding-bottom: 35px;
+	margin-top: -2px;
+	font: normal normal normal 25px/19px NamsanM;
+	color: #000;
+	background: repeat-x url("../images/banner_bg2.png") 0 -94px;
+	transition-duration: 1s;
+}
+
+#trv_banner_menu ul li a:hover, #trv_banner_menu ul li a.current
+	{
+	background-position: 0 0px;
+	background-color: #00e6e6; /*#f15556;*/
+	color: #fff;
+}
+
+#trv_banner_menu span.glyphicon {
+	font-size: 30px;
+	right: -1em;	
+}
+
+#trv_banner_menu #mobile_menu {
+	padding-top: 25px;
+	font-size: 30px;
+	float: right;
+	color: #e35354;
+}
+/*banner slide*/
+.banner {
+	width: 100%;
+	height: 500px;
+	margin-top: 94px;
+	position: relative;
+	overflow: hidden;
+}
+
+.banner ul {
+	list-style: none;
+	padding: 0;
+}
+
+.banner ul li {
+	float: left;
+	height: 350px;
+	width: 100%;
+}
+
+.banner div.slide_caption {
+	background: rgba(0, 0, 0, 0.0);
+	max-width: 600px;
+	margin: 120px auto auto auto;
+}
+
+.banner div.slide_caption h1 {
+	margin: 0;
+	height: 200px;
+	font-family: NamsanEB;
+	font-size: 2.5em;
+	background: none;
+	text-align: center;
+	color: #fff;
+	line-height: 7.5em;
+	text-shadow: 0px 0px 10px rgb(0, 0, 0);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.banner div.slide_caption p {
+	font-size: 1.5em;
+	font-family: NamsanM;
+	/*background: rgba(150, 150, 150, 0.7);*/
+	text-align: center;
+	color: #FFF;
+	text-shadow: 2px 2px 0px rgba(150, 150, 150, 1);
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	
+}
+
+.banner div.slide_caption a {
+	color: #FF6;
+}
+
+.trv_banner_slide_01 {
+	background: url('../images/Bulguksa.png');
+	background-size: cover;
+}
+
+.trv_banner_slide_02 {
+	background: url('../images/Korea-Seoul-Bukchon-02.png');
+	background-size: cover;
+}
+
+.trv_banner_slide_03 {
+	background: url('../images/hiatemple.png');
+	background-size: cover;
+}
+	
+
+/*about our organization*/
+#trv_about {
+	background: #ffffff;
+	float: left;
+}
+
+#trv_about .about_icon img {
+	width: 100%;
+}
+
+#trv_about .about_icon h2 {
+	text-align: center;
+	font: normal normal normal 25px/25px 'NamsanEB';
+}
+
+#trv_about .about_icon .imgwap {
+	text-align: center;
+	border-radius: 75px;
+}
+
+#trv_about .about_icon p {
+	text-align: center;
+	font: normal normal normal 22px/30px "NamsanM";
+}
+
+#trv_about .mission {
+	background-color: #bd3e25;
+	color: #f5bd48;
+}
+
+#trv_about .product {
+	background-color: #334d5c;
+	color: #f5bd48;
+}
+
+#trv_about .testimonial {
+	background-color: #efc84a;
+	color: #ab4921;
+}
+
+#trv_about .statistic {
+	background-color: #334d5c;
+	color: #efc84a;
+}
+
+#trv_about #testimonial_text_wap {
+	overflow: visible;
+}
+
+#trv_about #testimonial_text_wap h2 {
+	font-family: 'NamsanEB';
+	font-size: 24px;
+	margin: 0;
+	padding: 12px 0;
+}
+
+#trv_about #testimonial_text_wap h3 {
+	font-family: 'NamsanEB';
+	letter-spacing: 0.2em;
+	font-size: 20px;
+	margin: 0;
+	padding: 12px 0;
+}
+
+#trv_about #testimonial_text_wap img {
+	margin-bottom: 20px;
+}
+
+#trv_about #testimonial_text_wap p {
+	font-family: 'NamsanM';
+	font-size: 16px;
+	line-height: 2em;
+}
+
+#trv_about .testimonial_text {
+	width: 100%;
+	float: left;
+}
+
+#trv_about .pre_next {
+	font-size: 70px;
+	top: 50%;
+	margin-top: -35px;
+	position: absolute;
+}
+
+#trv_about .pre_next a {
+	color: #6698b5;
+	float: left;
+}
+
+#trv_about .pre_next a:hover {
+	color: #334d5c;
+}
+
+#trv_about #testimonial_text_wap h1 {
+	font-size: 50px;
+	top: 50%;
+	margin-top: -20px;
+}
+
+#trv_about .testimonial_top_bottom_spacer {
+	margin-bottom : 100px;
+}
+/*events*/
+#trv_events {
+	background: #6698b5;
+	float: left;
+	overflow: hidden;
+}
+
+#trv_events h1 {
+	color: #fff;
+}
+
+#trv_events .event_box_wap {
+	overflow: hidden;
+	margin-bottom: 30px;
+	cursor: pointer;
+	position: relative;
+}
+
+#trv_events .event_box_wap .event_box_img {
+	position: relative;
+	width: 100%;
+	top: 0;
+}
+
+#trv_events .event_box_wap .event_box_caption {
+    position: relative;
+    top: 0;
+    padding-bottom: 10px;
+    background: #fff;
+    width: 100%;
+    border-top: 3px solid #3c6f8c;
+}
+
+#trv_events .event_box_wap h1, #trv_events .event_box_wap p
+	{
+	margin: 0;
+	color: #000000;
+	text-align: center;
+}
+
+#trv_events .event_box_wap p {
+	padding: 5px 20px 15px 20px;
+}
+
+#trv_events .event_box_wap h1 {
+	padding: 20px 20px 20px 20px;
+	font-size: 24px;
+	line-height: 24px;
+}
+/*timeline*/
+#trv_timeline {
+	background: #fff;
+	float: left;
+}
+
+#trv_timeline .container-fluid {
+	max-width: 1600px;
+	position: absolute;
+	margin: auto;
+	margin-bottom: 80px;
+	background: url("../images/time_line_bg.jpg") repeat-y center top;
+}
+
+#trv_timeline .time_line_wap {
+	position: absolute;
+	display: none;
+}
+
+#trv_timeline .time_line_caption {
+	background: #f15556;
+	padding: 10px 20px 10px 20px;
+	border-radius: 5px;
+	height: 40px;
+	clear: both;
+	color: #fff;
+}
+
+#trv_timeline .time_line_paragraph {
+	background: #e6e6e6;
+	padding: 10px;
+	border-radius: 5px;
+	width: 100%;
+	margin-top: 50px;
+	font-family: 'Century Gothic', sans-serif;
+}
+
+#trv_timeline .time_line_paragraph a {
+	color: #000;
+	text-decoration: underline;
+}
+
+#trv_timeline .left_timeline {
+	margin-left: 30px;
+}
+
+#trv_timeline .left_timeline .time_line_caption {
+	float: right;
+	margin-right: 0px;
+}
+
+#trv_timeline .right_timeline .time_line_caption {
+	float: left;
+}
+
+#trv_timeline .time_line_paragraph h1 {
+	text-align: left;
+	margin: 0;
+	font-size: 24px;
+	line-height: 30px;
+	color: #000;
+	padding: 20px 20px 20px 20px;
+}
+
+#trv_timeline .time_line_paragraph p {
+	padding: 0px 20px 20px 20px;
+	text-align: left;
+	margin: 0;
+	font-size: 14px;
+	line-height: 2em;
+	color: #000;
+}
+
+#trv_timeline .left_timer {
+	float: right;
+	background: url("../images/arrow_left.png") 0 5px;
+}
+
+#trv_timeline .right_timer {
+	float: left;
+	background: url("../images/arrow_right.png") 0px 5px;
+}
+
+#trv_timeline .left_timer, #trv_timeline .right_timer {
+	padding-left: 30px;
+	width: 101px;
+	position: absolute;
+}
+
+#trv_timeline .left_timer span, #trv_timeline .right_timer span
+	{
+	border-radius: 20px;
+	width: 30px;
+	height: 30px;
+	background: #e6e6e6;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	padding-top: 3px;
+	margin-top: 3px;
+}
+/*contact*/
+#trv_contact {
+	font-family: 'NamsanM';
+	background: #6698b5;
+	float: left;
+}
+
+#trv_contact h1 {
+	font-family: "NamsanEB";
+	color: #fff;
+}
+
+#trv_contact h2 {
+	font-family: "NamsanEB"; 
+	font-size: 24px;
+	color: #fff;
+	padding-top: 0;
+	padding-bottom: 20px;
+}
+
+#trv_contact_map {
+	width: 100%;
+	height: 320px;
+	float: left;
+	margin-bottom: 40px;
+}
+
+#trv_contact ul li a {
+	background: none;
+}
+
+#trv_contact ul li a i {
+	width: 60px;
+	padding: 20px 0;
+	font-size: 32px;
+	color: #fff;
+	text-align: center;
+}
+
+#trv_contact p {
+	color: #fff;
+	line-height: 30px;
+	margin-top: 15px;
+}
+
+#trv_contact input {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	border: none;
+}
+
+#trv_contact textarea {
+	border: none;
+	width: 100%;
+	height: 150px;
+	padding: 10px;
+}
+
+#trv_contact button {
+	width: 100%;
+	height: 50px;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: none;
+	background: #eaeaea;
+}
+
+#trv_contact button:hover {
+	background: #f4f4f4;
+}
+
+#trv_footer {
+	width: 100%;
+	border-top: 2px solid #507f9a;
+	height: 70px;
+	background: #447693;
+	float: left;
+}
+
+#trv_footer p {
+	padding-top: 20px;
+	color: #fff;
+	text-align: center;
+}
+
+#trv_footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+@media (max-width: 730px) {
+	
+	#trv_banner_menu #logo_text {
+		text-align: center;
+	}
+	
+	#trv_banner_menu #logo_img {
+		margin-left: -20px;
+	}
+}
+
+/*  Small devices (tablets, 768px and up)  */
+@media (max-width: 768px) { 
+    #trv_about .pre_next {
+        font-size: 15px;
+    }
+    #trv_timeline .right_timer {
+        background-position: center center;
+    }
+}
+/*  Medium devices (desktops, 992px and up)  */
+@media (max-width: 970px) {
+    #trv_timeline .right_timer {
+        background-position: 100px 5px;
+    }
+    #trv_banner_menu #logo_text {
+        font: normal normal normal 35px/1em 'Century Gothic', sans-serif;
+    }
+    #trv_timeline .container-fluid {	
+        background: url("../images/time_line_bg.jpg") repeat-y 28px 0;
+    }
+}
+/*  Large devices (large desktops, 1200px and up)  */
+@media (min-width: 1200px) {
+}

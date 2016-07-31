@@ -1,6 +1,6 @@
 package com.kitri.travelia.domain;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -9,17 +9,10 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Member implements UserDetails{
-	
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	
 	private int no;
@@ -32,8 +25,8 @@ public class Member implements UserDetails{
 	private String auth_pending;
 	private String auth_key;
 	
+	
 	public Member() {
-		super();
 	}
 	public Member(int no, String email, String pw, String nick, String avt, Timestamp reg_date, String intro,
 			String auth_pending, String auth_key) {
@@ -103,15 +96,23 @@ public class Member implements UserDetails{
 		this.auth_key = auth_key;
 	}
 	@Override
+	public String toString() {
+		return "Member [no=" + no + ", email=" + email + ", pw=" + pw + ", nick=" + nick + ", avt=" + avt
+				+ ", reg_date=" + reg_date + ", intro=" + intro + ", auth_pending=" + auth_pending + ", auth_key="
+				+ auth_key + "]";
+	}
+	//UserDetails 구현 메소드
+	
+	//인증 후 필요한 ROLE_USER권한 반환
+	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		//인증 후 필요한 기본권한인 ROLE_USER권한을 받환
 		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 		authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
 		return authorities;
 	}
 	@Override
 	public String getPassword() {
-		
+		// TODO Auto-generated method stub
 		return pw;
 	}
 	@Override
@@ -126,7 +127,7 @@ public class Member implements UserDetails{
 	}
 	@Override
 	public boolean isAccountNonLocked() {
-		// 계정 잠금
+		// TODO Auto-generated method stub
 		return true;
 	}
 	@Override
@@ -140,7 +141,5 @@ public class Member implements UserDetails{
 		return true;
 	}
 	
-	
-
 	
 }

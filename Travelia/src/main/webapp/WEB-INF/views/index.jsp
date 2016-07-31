@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:url value="/login" var="loginUrl"/>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -39,18 +40,18 @@
       <div class="modal-body" >
         <div id="myTabContent" class="tab-content">
           <!-- </div> -->
-            
             <!-- login  -->
             <div class="tab-pane fade in active" id="signin">
-               <form class="form center-block">
+               <form class="form center-block" action="${loginUrl}" method="post">
+               		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
                     <fieldset>
                     <br>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="이메일을 입력하세요">
+                                <input type="email" name ="username" class="form-control" placeholder="이메일을 입력하세요">
                            </div>
 
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="비밀번호를 입력하세요">
+                            <input type="password" name ="password" class="form-control" placeholder="비밀번호를 입력하세요">
                         </div>
   
                			<div class="form-group text-right">

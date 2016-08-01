@@ -1,0 +1,183 @@
+header{
+	color:black;
+	margin-bottom:5px;
+	}
+#logo{
+	text-align: center;
+	padding:1em 0;
+}
+#logo span {
+  vertical-align: middle;
+  font-size: 6em;
+  margin-right: 0;
+}
+	/*
+#img{
+	margin:0 0 5px 0; 
+	
+}
+.jumbotron{
+	margin-top: 70px;
+	margin-bottom: 0px;
+	margin-left: 150px;
+	margin-right: 150px;
+	text-align: center;
+	background: #18BC9C;
+}
+
+#container{
+	margin-top: 70px;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	text-align: center;
+	pedding-top:5px;
+	pedding-left:60px; 
+}
+*/
+.pagination{
+	display: block;
+	text-align: center;
+}
+.pagination > li > a {
+	float: none;
+	margin-left:-5px;
+}
+
+
+.col-md-4{
+	text-align:right;
+	margin-top:2em;
+}
+.col-xs-12 col-md-12{
+	pedding-right:20px;
+	text-align:right;
+}
+
+.table{
+	max-width:100%;
+	margin-bottom: -1px;
+}
+
+table th, table td{
+	text-align:left;
+}
+
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    color: black;
+}
+a:action{
+	color: black;
+}
+
+.fluid-user{
+	
+	max-width:1600px;
+}
+#form-control{
+	height: 34px;
+	border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+select{
+  width: 95px; 
+  padding: .4em .5em; 
+  background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */  
+  border-radius: 7%; 
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none;
+	webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none; 
+}
+@media screen and(min-width:250px){
+row{
+	float:right;
+	}
+}
+@media screen and(max-width:249px){ 
+	form-inline{
+	display:inline;
+	}
+}
+
+#title{
+	text-align:center;
+	font-size: 5em;
+}
+
+
+/* Travel note */
+img {
+	margin-bottom: -7px
+	}
+
+#col-md-4-R{
+position: relative;
+  min-height: 1px;
+  padding-right: 0;
+  padding-left: 0;
+ 
+}
+@media (min-width: 992px) {
+	#col-md-4-R{
+	 float: left;
+	  width: 33.33333333%;
+}
+}
+.travel-content{
+	max-width:1500px;margin:auto;
+	}
+.pedding-btn{
+	border:none;display:inline-block;
+	outline:0;padding:6px 16px;vertical-align:middle;
+	overflow:hidden;text-decoration:none!important;
+	color:#fff;background-color:#000;text-align:center;
+	cursor:pointer;white-space:nowrap;
+}
+.traveltitle{
+	padding-top:32px;padding-bottom:32px;
+	text-align:center;
+	opacity:0.60;filter:alpha(opacity=60);
+	margin-bottom:16px;
+	}
+	
+	/*
+.w3-opennav{
+	-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;
+	-moz-user-select:none;-ms-user-select:none;user-select:none;
+	}
+.w3-xxlarge{
+	font-size:36px!important;
+	}
+.w3-right{
+	float:right!important;
+	}
+.w3-margin-right{
+	margin-right:16px!important;
+	}
+.w3-padding-64{
+	padding-top:64px!important;padding-bottom:64px!important;
+	}
+.w3-light-grey{
+	color:#000!important;background-color:#f1f1f1!important;
+	}
+.w3-margin-top{
+	margin-top:16px!important;
+	}
+.w3-xlarge{
+	font-size:24px!important;
+	}
+.w3-row-padding{
+	padding:0 8px;
+}
+
+*/

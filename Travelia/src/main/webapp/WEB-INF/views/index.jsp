@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="description" content="" />
 <meta name="author" content="trv">
-<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="shortcut icon" href="<c:url value="/resources/images/favicon.ico" />"/>
 <link href="<c:url value="/resources/css/font-awesome.min.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/trv_style.css" />" rel="stylesheet">

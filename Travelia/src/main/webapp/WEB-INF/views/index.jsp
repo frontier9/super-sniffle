@@ -1,3 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:url value="/login" var="loginUrl"/>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,15 +11,11 @@
 <meta name="description" content="" />
 <meta name="author" content="trv">
 <link rel="shortcut icon" href="./favicon.ico" />
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/trv_style.css" rel="stylesheet">
-<link rel="stylesheet" href="css/login.css">
-
+<link href="<c:url value="/resources/css/font-awesome.min.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/trv_style.css" />" rel="stylesheet">
+<link rel="stylesheet" href="<c:url value="/resources/css/login.css" />">
 <title>Travelia</title>
-
-
- 
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
 	  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
@@ -24,11 +23,6 @@
 
 </head>
 <body>
-
-
-
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -46,25 +40,20 @@
       <div class="modal-body" >
         <div id="myTabContent" class="tab-content">
           <!-- </div> -->
-            
             <!-- login  -->
             <div class="tab-pane fade in active" id="signin">
-               <form class="form center-block">
+               <form class="form center-block" action="${loginUrl}" method="post">
+               		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
                     <fieldset>
                     <br>
-
-                     
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="이메일을 입력하세요">
+                                <input type="email" name ="username" class="form-control" placeholder="이메일을 입력하세요">
                            </div>
 
-                     
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="비밀번호를 입력하세요">
+                            <input type="password" name ="password" class="form-control" placeholder="비밀번호를 입력하세요">
                         </div>
-                    
-                
-
+  
                			<div class="form-group text-right">
                             <button id="submit" name="sigin1" class="btn btn-info">접속하기!</button>
                         </div>
@@ -72,7 +61,6 @@
             </fieldset>
         </form>
     </div>
-    
     
     <!-- 비밀번호 찾기 -->
     
@@ -220,7 +208,7 @@
 		<div id="trv_banner_menu">
 			<div class="container-fluid">
 				<div class="col-xs-3 trv_logo">
-					<a href="#"> <img src="images/hml.svg" id="logo_img" alt="TraVeliA" title="TraVeliA" />
+					<a href="#"> <img src="<c:url value="/resources/images/hml.svg" />" id="logo_img" alt="TraVeliA" title="TraVeliA" />
 						<h1 id="logo_text">Tra<span>Veli</span>A</h1>
 					</a>
 					
@@ -286,7 +274,7 @@
 			<div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
 				<div class="event_box_wap event_animate_left">
 					<div class="event_box_img">
-						<img src="images/south-korea-travel-map-lovely-flat-style-61890108.png" class="img-responsive" alt="" />
+						<img src="<c:url value="/resources/images/south-korea-travel-map-lovely-flat-style-61890108.png"/>" class="img-responsive" alt="" />
 					</div>
 
 					<div class="event_box_caption">
@@ -299,7 +287,7 @@
 			<div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
 				<div class="event_box_wap event_animate_right">
 					<div class="event_box_img">
-						<img src="images/dragndrop.png" class="img-responsive" alt="" />
+						<img src="<c:url value="/resources/images/dragndrop.png" />" class="img-responsive" alt="" />
 					</div>
 					<div class="event_box_caption">
 						<h1>찾은 곳을 끌어다 놓으세요!</h1>
@@ -313,7 +301,7 @@
 			<div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
 				<div class="event_box_wap event_animate_left">
 					<div class="event_box_img">
-						<img src="images/hanging_polaroids_by_anushka04.png" class="img-responsive"
+						<img src="<c:url value="/resources/images/hanging_polaroids_by_anushka04.png" />" class="img-responsive"
 							alt="" />
 					</div>
 
@@ -327,7 +315,7 @@
 			<div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
 				<div class="event_box_wap event_animate_right"> 
 					<div class="event_box_img">
-						<img src="images/Speak_Share-your-ideas.jpg" class="img-responsive"
+						<img src="<c:url value="/resources/images/Speak_Share-your-ideas.jpg" />" class="img-responsive"
 							alt="" />
 					</div>
 
@@ -488,15 +476,15 @@
 			<p id="footer">Copyright &copy; 2016 TraVelia</p>
 		</div>
 	</div>
-	<script src="js/jquery-2.2.4.js"></script>
+	<script src="<c:url value="/resources/js/jquery-2.2.4.js" />"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="js/jquery.validate.js"></script> 
-	<script src="js/additional_methods.js"></script>
-	<script src="js/form_validation_msg.js"></script>
-	<script src="js/jquery.singlePageNav.min.js"></script>
-	<script src="js/unslider.min.js"></script>
-	<script src="js/trv_script.js"></script>
+	<script src="<c:url value="/resources/js/jquery.validate.js" />"></script> 
+	<script src="<c:url value="/resources/js/additional_methods.js" />"></script>
+	<script src="<c:url value="/resources/js/form_validation_msg.js" />"></script>
+	<script src="<c:url value="/resources/js/jquery.singlePageNav.min.js" />"></script>
+	<script src="<c:url value="/resources/js/unslider.min.js" />"></script>
+	<script src="<c:url value="/resources/js/trv_script.js" />"></script>
 	
 	<script type="text/javascript">
 	//<![CDATA[
@@ -614,8 +602,6 @@
 		
 		
 	});
-		
-		
 	//]]>
 	</script>
 	

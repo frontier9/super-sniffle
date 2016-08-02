@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class = "container-fluid fluid-user">
-	<header>
+	
 		<div class = "container">
 				<div id = "logo">
 				<img src="http://ko.learnlayout.com/images/logo.png">

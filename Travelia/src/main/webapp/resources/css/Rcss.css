@@ -11,30 +11,7 @@ header{
   font-size: 6em;
   margin-right: 0;
 }
-	/*
-#img{
-	margin:0 0 5px 0; 
-	
-}
-.jumbotron{
-	margin-top: 70px;
-	margin-bottom: 0px;
-	margin-left: 150px;
-	margin-right: 150px;
-	text-align: center;
-	background: #18BC9C;
-}
 
-#container{
-	margin-top: 70px;
-	margin-bottom: 0;
-	margin-left: 0;
-	margin-right: 0;
-	text-align: center;
-	pedding-top:5px;
-	pedding-left:60px; 
-}
-*/
 .pagination{
 	display: block;
 	text-align: center;
@@ -181,3 +158,61 @@ position: relative;
 }
 
 */
+
+/*card section
+html,
+body {
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
+	&:active {
+		cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/hearthstone-click.png) 10 2, auto;
+	}
+	&:after {
+		bottom: 0;
+		content: '';
+		filter: blur( 8px );
+		left: 0;
+		opacity: 0.8;
+		position: absolute;
+		right: 0;
+		top: 0;
+		will-change: transform;
+		z-index: -1;
+	}
+}
+*/
+.card {
+	left: 0;
+	top: 0;
+	perspective: 300px;
+	position: absolute;
+	transform-style: preserve-3d;
+	will-change: transform;
+	width: 300px;
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+box-shadow:0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.card-image {
+	display: block;
+	pointer-events: none;
+	transform-style: preserve-3d;
+	width: 100%;
+	will-change: transform;
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+

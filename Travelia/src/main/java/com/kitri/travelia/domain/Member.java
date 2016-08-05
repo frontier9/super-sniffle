@@ -107,7 +107,8 @@ public class Member implements UserDetails{
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-		authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+		if(getEmail()!=""||getEmail()!=null)
+			authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
 		return authorities;
 	}
 	@Override

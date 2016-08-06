@@ -190,12 +190,24 @@
 			<li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>
 			<li><a href="#trv_timeline"><span class="fa fa-clock-o fa-fw"></span>&nbsp;Timeline</a></li>
 			<li><a href="#trv_contact"><span class="fa fa-book fa-fw"></span>&nbsp;Contact</a></li>
+			<!-- login 전 -->
+			<c:if test="${empty pageContext.request.userPrincipal }">
 			<li>
 				<a href=""  data-toggle="modal" data-target="#login_modal">
 					<span class="fa fa-sign-in fa-fw"></span>
 						&nbsp;Login
 				</a>
 			</li>
+			</c:if>
+			<!-- login 후 -->
+			<c:if test="${not empty pageContext.request.userPrincipal }">
+			<li>
+				<a href=""  data-toggle="modal" data-target="#login_modal">
+					<span class="fa fa-sign-in fa-fw"></span>
+						&nbsp;Logout
+				</a>
+			</li>
+			</c:if>
 			<!--<li><a rel="nofollow" href="http://www.facebook.com/trv"
 				class="external-link"><i class="glyphicon glyphicon-export"></i>
 					&nbsp; External</a></li> -->
@@ -220,7 +232,14 @@
 						<li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>
 						<li><a href="#trv_timeline"><span class="fa fa-clock-o fa-fw"></span>&nbsp;Timeline</a></li>
 						<li><a href="#trv_contact"><span class="fa fa-book fa-fw"></span>&nbsp;Contact</a></li>
+						<!-- login 전 -->
+						<c:if test="${empty pageContext.request.userPrincipal }">
 						<li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Login</a></li>
+						</c:if>
+						<!-- login 후 -->
+						<c:if test="${not empty pageContext.request.userPrincipal }">
+						<li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Logout</a></li>
+						</c:if>
 						<!-- <li><a rel="nofollow"
 							href="http://www.facebook.com/trv" class="external-link">External</a></li> -->
 					</ul>

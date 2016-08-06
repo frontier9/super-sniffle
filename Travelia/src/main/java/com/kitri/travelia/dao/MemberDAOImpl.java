@@ -35,10 +35,13 @@ public class MemberDAOImpl implements MemberDAO {
 
 	@Override
 	public Member confirmEmail(String email) throws UsernameNotFoundException {
-		return sqlSession.selectOne(namespace+".confirmEmail", email);
+		System.out.println("(MemberDAOImpl) Email :" +email);
+		Member member = sqlSession.selectOne(namespace+".confirmEmail", email);
+		System.out.print("(MemberDAOImpl) Member :"+ member.toString());
+		return sqlSession.selectOne(namespace+".confirmEmail",email);
 	}
 
-	@Override
+	@Override 
 	public String overlapTest(String id) {
 		// TODO Auto-generated method stub
 		return null;

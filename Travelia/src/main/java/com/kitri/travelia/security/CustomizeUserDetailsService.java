@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.StandardPasswordEncoder;
 
 import com.kitri.travelia.dao.MemberDAO;
 import com.kitri.travelia.domain.Member;
@@ -18,23 +17,25 @@ public class CustomizeUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String useremail) throws UsernameNotFoundException {
 		
-		System.out.println(useremail);
+		System.out.println("(UserDetailService) userEmail:" + useremail);
 		
-		StandardPasswordEncoder encoder = new StandardPasswordEncoder();
+		//StandardPasswordEncoder encoder = new StandardPasswordEncoder();
 		
 		//사용자가 입력한 계정명으로 해당 계정을 찾아옴
 		Member member = memberDAO.confirmEmail(useremail);
+		
+		System.out.println("UserDetailService , Member = " + member.toString());
 		//계정에 상태 설정
 		boolean enabled = member.isEnabled();	// 사용 가능한지
 		boolean accountNonExpired = member.isAccountNonExpired();	//계정이 만료됬는지
 		boolean credentialsNonExpired = member.isCredentialsNonExpired();	//자격이 만료됬는지
 		boolean accountNonLocked = member.isAccountNonLocked();	//계정이 잠겼는지
 		
-		/*
+		
 		//DB에서 권한 목록을 가져와서 권한을 추가
 		String defaultAuthority ="Anonymous";
 		
-		
+		/*
 		Collection<Role> authorities = (Collection<Role>)memberDAO.getAuthority(useremail);
 		boolean flag = true;
 		for(Role role : authorities){

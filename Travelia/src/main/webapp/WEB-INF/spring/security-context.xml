@@ -37,7 +37,6 @@
 			token-validity-seconds=세션유지시간(브라우저 닫은 뒤에도 자동 로그인)	
 		<remember-me key="kjs" token-validity-seconds="2419200"/> -->					 
 	</security:http>
-
 	<!-- 로그인 Action  -->
 	<bean id = "userService" class="com.kitri.travelia.security.CustomizeUserDetailsService"/>
 	<!-- 로그인 성공, 실패  -->
@@ -50,6 +49,7 @@
 		user-service-ref의 id를 가진 클래스로 접근해 로그인 처리
 		password-encoder = 해당 encoder를 이용해 사용자가 입력한 패스워드를 암호화 하여 비교-->
 	<security:authentication-manager>
+	<!--  <security:authentication-provider ref="customAuthenticationProvider" />-->
 	<security:authentication-provider user-service-ref="userService">
 			<!--<security:password-encoder ref="encoder"/>-->
 		</security:authentication-provider>		

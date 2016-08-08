@@ -21,16 +21,11 @@ public class MemberDAOImpl implements MemberDAO {
 		return sqlSession.selectOne(namespace+".getTime");
 	}
 
-	@Override
-	public void insertMembertest(Member member) {
-		sqlSession.insert(namespace+".insertMembertest",member);
-		
 
-	}
 	@Override
-	public void insertMember(Member member) {
-		sqlSession.insert(namespace+".insertMember", member);
-		
+	public int insertMember(Member member) {
+		return sqlSession.insert(namespace+".insertMember", member);
+
 	}
 
 	@Override
@@ -47,11 +42,6 @@ public class MemberDAOImpl implements MemberDAO {
 		return null;
 	}
 
-	@Override
-	public String getEmail() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public void updateMember(Member VO) {

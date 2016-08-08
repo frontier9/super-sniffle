@@ -33,8 +33,8 @@
       <div class="bs-example bs-example-tabs">
             <ul id="myTabs" class="nav nav-tabs">
               <li class="active"><a href="#signin" data-toggle="tab">로그인</a></li>
-              <!-- <li role="presentation"><a href="#pass" data-toggle="tab">비밀번호 찾기</a></li>-->
-
+              <li role="hidden"><a href="#pass" data-toggle="tab">비밀번호 찾기</a></li>
+              <li role="presentation"><a href="#signup" data-toggle="tab">회원가입</a></li>
           </ul>
       </div>
       
@@ -59,7 +59,9 @@
 							<div class="form-group">
 								<button id="submit" name="sigin1" class="btn btn-info">접속하기!</button>
 							</div>
-								 <button class="btn btn-info"><li role="presentation"><a href="#signup" data-toggle="tab">회원가입</a></li></button>
+							<div class="form-group">
+								 <button class="btn btn-info" id="myPass"><a href="#pass" data-toggle="tab">비번찾기!</a></button>
+							</div>
 						</div>
 					</fieldset>
         </form>
@@ -625,6 +627,12 @@
 					required: "프로필 사진을 설정해주세요."
 				}
 			}
+		});
+
+		$('#myPass').click(function (e) {
+			var $tabs = $('.bs-example-tabs li');
+			e.preventDefault();
+			$tabs.filter('.active').next('li').find('a[data-toggle="tab"]').tab('show')
 		});
 
 		var file_size;

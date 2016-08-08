@@ -32,8 +32,8 @@
       <div class="bs-example bs-example-tabs">
             <ul id="myTabs" class="nav nav-tabs">
               <li class="active"><a href="#signin" data-toggle="tab">로그인</a></li>
-              <li role="presentation"><a href="#pass" data-toggle="tab">비밀번호 찾기</a></li>
-              <li role="presentation"><a href="#signup" data-toggle="tab">회원가입</a></li>
+              <!-- <li role="presentation"><a href="#pass" data-toggle="tab">비밀번호 찾기</a></li>-->
+
           </ul>
       </div>
       
@@ -46,19 +46,21 @@
                		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
                     <fieldset>
                     <br>
-                            <div class="form-group">
+						<div class="form-group">
                                 <input type="email" name ="username" class="form-control" placeholder="이메일을 입력하세요">
-                           </div>
+					    </div>
 
                         <div class="form-group">
                             <input type="password" name ="password" class="form-control" placeholder="비밀번호를 입력하세요">
                         </div>
-  
-               			<div class="form-group text-right">
-                            <button id="submit" name="sigin1" class="btn btn-info">접속하기!</button>
-                        </div>
-              
-            </fieldset>
+
+						<div class="form-inline text-right">
+							<div class="form-group">
+								<button id="submit" name="sigin1" class="btn btn-info">접속하기!</button>
+							</div>
+								 <button class="btn btn-info"><li role="presentation"><a href="#signup" data-toggle="tab">회원가입</a></li></button>
+						</div>
+					</fieldset>
         </form>
     </div>
     

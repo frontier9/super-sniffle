@@ -21,7 +21,7 @@ public class JoinController {
 		//암호화
 		//org.springframework.security.crypto.password.StandardPasswordEncoder
 		//StandardPasswordEncoder encoder = new StandardPasswordEncoder();
-		member.setPw(encoder.encode((String)member.getPw()));
+		member.setMem_pw(encoder.encode((String)member.getMem_pw()));
 		//insert작업
 	}
 	//이메일 중복확인

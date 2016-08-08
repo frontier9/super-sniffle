@@ -15,6 +15,6 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		values(#{email},#{pw},#{nick},#{avt},#{reg_date},#{intro},#{auth_pending},#{auth_key})
 	</insert>
 	<select id ="confirmEmail" resultType="Member" parameterType="String">
-			select * from member where mem_email = #{email}
+			select * from member where mem_email = #{mem_email}
 	</select>
 </mapper>

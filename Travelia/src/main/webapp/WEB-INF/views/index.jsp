@@ -256,7 +256,7 @@
 	
 	<div id="trv_about" class="container_wapper">
 		<div class="container-fluid">
-			<h1>뭐하는 곳인가요?</h1>
+			<h1>뭐하는 곳인가요??</h1>
 			<div class="col-sm-6 col-md-4 about_icon">
 				<div class="imgwap mission">
 					<i class="fa fa-pencil-square-o"></i>

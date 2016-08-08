@@ -207,7 +207,7 @@ jQuery(function(){
             } else if( $.timeline_right_position_top < $.timeline_left_position_top ){
                 $("#trv_timeline .container-fluid").css({"position":"relative"});
                 $.timeline_right_position_top = ($.timeline_old_left_position_top + 40) < $.timeline_right_position_top  ? $.timeline_right_position_top : $.timeline_right_position_top + 40;
-
+//
 
                 //put on right
                 $(this).css({

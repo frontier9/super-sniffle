@@ -2,6 +2,11 @@
 .navbar-default{background:  #FFFFFF;}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{background: none;color: #E89F10;}
 
+.navbar-pos{
+	
+	float: left;
+}
+
 @media (max-width: 1200px) {
 	.navbar-brand{padding-top: 11px;}
 

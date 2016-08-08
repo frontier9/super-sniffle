@@ -14,6 +14,7 @@
 <link href="<c:url value="/resources/css/font-awesome.min.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/trv_style.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/navbar.css" />" rel="stylesheet">
 <link rel="stylesheet" href="<c:url value="/resources/css/login.css" />">
 <title>Travelia</title>
   <!-- Latest compiled and minified CSS -->
@@ -497,6 +498,40 @@
 			<p id="footer">Copyright &copy; 2016 TraVelia</p>
 		</div>
 	</div>
+	
+	  <div class="navbar navbar-default navbar-fixed-bottom" role="navigation" id="top-nav">
+  	          <div class="container">
+  	            <div class="navbar-header">
+  	              <!-- Logo Starts -->
+  	              <a class="navbar-brand" href="#home"> </a>
+  	              <!-- #Logo Ends -->
+
+
+  	              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+  	                <span class="sr-only">Toggle navigation</span>
+  	                <span class="icon-bar"></span>
+  	                <span class="icon-bar"></span>
+  	                <span class="icon-bar"></span>
+  	              </button>
+
+  	            </div>
+
+
+  	            <!-- Nav Starts -->
+  	            <div class="navbar-collapse  collapse">
+  	              <ul class="nav navbar-nav navbar-right scroll">
+  	                 <li class="active"><a href="#home">Home</a></li>
+  	                 <li><a href="#about">Travelnote</a></li>
+  	                 <li><a href="#works">Schedule</a></li>
+  	                 <li><a href="#partners">Board</a></li>
+  	                 <li><a href="#contact">Profile</a></li>
+  	              </ul>
+  	            </div>
+  	            <!-- #Nav Ends -->
+
+  	          </div>
+  	        </div>
+	
 	<script src="<c:url value="/resources/js/jquery-2.2.4.js" />"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

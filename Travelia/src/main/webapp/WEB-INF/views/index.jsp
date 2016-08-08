@@ -11,16 +11,15 @@
 <meta name="description" content="" />
 <meta name="author" content="trv">
 <link rel="shortcut icon" href="<c:url value="/resources/images/favicon.ico" />"/>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>	">
 <link href="<c:url value="/resources/css/font-awesome.min.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/trv_style.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/navbar.css" />" rel="stylesheet">
 <link rel="stylesheet" href="<c:url value="/resources/css/login.css" />">
 <title>Travelia</title>
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
-	  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
-	  rossorigin="anonymous">
+
 
 </head>
 <body>
@@ -223,37 +222,34 @@
 	<!-- navbar for mobile --> 
 	
 	
-	<div class="container_wapper">
+	<div class="container_wrapper">
 		<div id="trv_banner_menu">
 			<div class="container-fluid">
-				<div class="col-xs-3 trv_logo">
-					<a href="#"> <img src="<c:url value="/resources/images/hml.svg" />" id="logo_img" alt="TraVeliA" title="TraVeliA" />
-						<h1 id="logo_text">Tra<span>Veli</span>A</h1>
-					</a>
-					
-				</div>
-				<div class="col-sm-9 hidden-xs">
-					<ul class="nav nav-justified"> 
-						<li><a href="#trv_banner_slide"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
-						<li><a href="#trv_about"><span class="fa fa-plane fa-fw"></span>&nbsp;Travelia?</a></li>
-						<li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>
-						<li><a href="#trv_timeline"><span class="fa fa-clock-o fa-fw"></span>&nbsp;Timeline</a></li>
-						<li><a href="#trv_contact"><span class="fa fa-book fa-fw"></span>&nbsp;Contact</a></li>
-						<!-- login 전 -->
-						<c:if test="${empty pageContext.request.userPrincipal }">
-						<li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Login</a></li>
-						</c:if>
-						<!-- login 후 -->
-						<c:if test="${not empty pageContext.request.userPrincipal }">
-						<li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Logout</a></li>
-						</c:if>
-						<!-- <li><a rel="nofollow"
-							href="http://www.facebook.com/trv" class="external-link">External</a></li> -->
-					</ul>
-				</div>
-				<div class="col-xs-8 visible-xs">
-					<a href="#" id="mobile_menu"><span class="glyphicon glyphicon-th-list"></span></a>
-				</div>
+
+					<div class="col-xs-3 trv_logo">
+						<a href="#"> <img src="<c:url value="/resources/images/hml.svg" />" id="logo_img" alt="TraVeliA" title="TraVeliA" />
+							<h1 id="logo_text">Tra<span>Veli</span>A</h1>
+						</a>
+
+					</div>
+
+					<div class="col-sm-9 hidden-xs">
+						<ul class="nav nav-justified">
+							<li><a href="#trv_banner_slide"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
+							<li><a href="#trv_about"><span class="fa fa-plane fa-fw"></span>&nbsp;Travelia?</a></li>
+							<li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>
+							<li><a href="#trv_timeline"><span class="fa fa-clock-o fa-fw"></span>&nbsp;Timeline</a></li>
+							<li><a href="#trv_contact"><span class="fa fa-book fa-fw"></span>&nbsp;Contact</a></li>
+
+						</ul>
+					</div>
+
+					<div class="col-xs-9 visible-xs">
+						<a href="#" id="mobile_menu">
+							<span class="glyphicon glyphicon-th-list"></span>
+						</a>
+					</div>
+
 			</div>
 		</div>
 	</div>
@@ -535,16 +531,19 @@
 
   	          </div>
   	        </div>
-	
-	<script src="<c:url value="/resources/js/jquery-2.2.4.js" />"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="<c:url value="/resources/js/jquery.validate.js" />"></script> 
+
+	<script src="<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" />"> </script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />"> </script>
+
+	<script src="<c:url value="/resources/js/trv_script.js" />"></script>
+
+	<script src="<c:url value="/resources/js/jquery.validate.js" />"></script>
 	<script src="<c:url value="/resources/js/additional_methods.js" />"></script>
 	<script src="<c:url value="/resources/js/form_validation_msg.js" />"></script>
 	<script src="<c:url value="/resources/js/jquery.singlePageNav.min.js" />"></script>
 	<script src="<c:url value="/resources/js/unslider.min.js" />"></script>
-	<script src="<c:url value="/resources/js/trv_script.js" />"></script>
+
 	
 	<script type="text/javascript">
 	//<![CDATA[

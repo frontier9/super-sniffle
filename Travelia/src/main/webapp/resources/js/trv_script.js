@@ -259,7 +259,7 @@ jQuery(function(){
     //$("#mobile_menu").click(function(){
     $('mobile_menu').toggle(function(){
     	$('body').css('opacity', '0.2');
-        $("#trv_mobile_menu").	show();
+        $("#trv_mobile_menu").show();
         $("#trv_mobile_menu").animate({"right":-100});
         return false;
     }, function() {

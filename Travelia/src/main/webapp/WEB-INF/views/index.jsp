@@ -33,7 +33,7 @@
       <div class="bs-example bs-example-tabs">
             <ul id="myTabs" class="nav nav-tabs">
               <li class="active"><a href="#signin" data-toggle="tab">로그인</a></li>
-              <li role="hidden"><a href="#pass" data-toggle="tab">비밀번호 찾기</a></li>
+              <li role="presentation"><a href="#pass" data-toggle="tab">비밀번호 찾기</a></li>
               <li role="presentation"><a href="#signup" data-toggle="tab">회원가입</a></li>
           </ul>
       </div>
@@ -189,7 +189,9 @@
 
 	<!-- navbar for mobile -->
 	<div id="trv_mobile_menu">
+
 		<ul class="nav nav-pills nav-stacked">
+
 			<li><a href="#trv_banner_slide"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
 			<li><a href="#trv_about"><span class="fa fa-plane fa-fw"></span>&nbsp;Travelia?</a></li>
 			<li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>

@@ -22,39 +22,25 @@ public class MemberDAOImpl implements MemberDAO {
 	}
 
 	@Override
-	public void insertMembertest(Member member) {
-		sqlSession.insert(namespace+".insertMembertest",member);
+	public int insertMember(Member member) {
 		
-
-	}
-	@Override
-	public void insertMember(Member member) {
-		sqlSession.insert(namespace+".insertMember", member);
-		
+		return sqlSession.insert(namespace+".insertMember", member);
 	}
 
 	@Override
 	public Member confirmEmail(String email) throws UsernameNotFoundException {
-		System.out.println("(MemberDAOImpl) Email :" +email);
-		Member member = sqlSession.selectOne(namespace+".confirmEmail", email);
-		System.out.print("(MemberDAOImpl) Member :"+ member.toString());
+
 		return sqlSession.selectOne(namespace+".confirmEmail",email);
 	}
 
-	@Override 
-	public String overlapTest(String id) {
+	@Override
+	public String overlapTest(String email) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String getEmail() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void updateMember(Member VO) {
+	public void updateMember(Member member) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -66,14 +52,16 @@ public class MemberDAOImpl implements MemberDAO {
 	}
 
 	@Override
-	public String passwordCnt(Member memVO) {
+	public String passwordCnt(Member member) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public String getPassword(String member_id) {
+	public String getPassword(String email) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 }

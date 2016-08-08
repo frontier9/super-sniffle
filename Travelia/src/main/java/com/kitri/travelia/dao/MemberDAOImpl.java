@@ -14,7 +14,7 @@ public class MemberDAOImpl implements MemberDAO {
 	@Inject
 	private SqlSession sqlSession;
 	
-	private static final String namespace ="com.kitri.travelia.mapper.MemberMapper";
+	private static final String namespace ="com.kitri.travelia.mapper.MemberMaper";
 	
 	@Override
 	public String getTime() {
@@ -24,8 +24,9 @@ public class MemberDAOImpl implements MemberDAO {
 	@Override
 	public void insertMembertest(Member member) {
 		sqlSession.insert(namespace+".insertMembertest",member);
-	}
+		
 
+	}
 	@Override
 	public void insertMember(Member member) {
 		sqlSession.insert(namespace+".insertMember", member);

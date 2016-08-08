@@ -6,13 +6,9 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 	<select id="getTime" resultType="string">
 		select now()
 	</select>
-	<insert id ="insertMembertest">
-		insert into member(mem_email,mem_pw,mem_nick)
-		values (#{email},#{pw},#{nick})
-	</insert>
 	<insert id ="insertMember">
 		insert into member(mem_email, mem_pw, mem_nick, mem_avt, mem_reg_date, mem_intro, mem_auto_pending, mem_auth_key) 
-		values(#{email},#{pw},#{nick},#{avt},#{reg_date},#{intro},#{auth_pending},#{auth_key})
+		values(#{mem_email},#{mem_pw},#{mem_nick},#{mem_avt},#{mem_reg_date},#{mem_intro},#{mem_auth_pending},#{mem_auth_key})
 	</insert>
 	<select id ="confirmEmail" resultType="Member" parameterType="String">
 			select * from member where mem_email = #{mem_email}

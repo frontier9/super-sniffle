@@ -13,21 +13,28 @@ import com.kitri.travelia.domain.Member;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/spring/**/*.xml"})
 public class MemberDAOTest {
+	
 	@Inject
 	private MemberDAO dao;
 	
-	@Test
+	
 	public void testTime()throws Exception{
 		System.out.println(dao.getTime());
 	}
 	
-	@Test
 	public void testInsertMember() throws Exception{
 		Member member = new Member();
-		member.setEmail("aadfaaa");
-		member.setNick("ssfya");
-		member.setPw("aaaasfa");
+		/*
+		member.setEmail("aadsdsdsdfaaa");
+		member.setNick("ssfysdsda");
+		member.setPw("aaaasdsdsdsfa");
 		dao.insertMembertest(member);
+		*/
+	}
+	@Test
+	public void testConfirmEmail()throws Exception{
+		Member member = dao.confirmEmail("khs987872@gmail.com");
+		System.out.println("member = " + member.toString());
 	}
 
 }

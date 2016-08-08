@@ -10,10 +10,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="description" content="" />
 <meta name="author" content="trv">
-<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="shortcut icon" href="<c:url value="/resources/images/favicon.ico" />"/>
 <link href="<c:url value="/resources/css/font-awesome.min.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/trv_style.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/navbar.css" />" rel="stylesheet">
 <link rel="stylesheet" href="<c:url value="/resources/css/login.css" />">
 <title>Travelia</title>
   <!-- Latest compiled and minified CSS -->
@@ -32,7 +33,7 @@
       <div class="bs-example bs-example-tabs">
             <ul id="myTabs" class="nav nav-tabs">
               <li class="active"><a href="#signin" data-toggle="tab">로그인</a></li>
-              <li role="presentation"><a href="#pass" data-toggle="tab">비밀번호 찾기</a></li>
+              <li role="hidden"><a href="#pass" data-toggle="tab">비밀번호 찾기</a></li>
               <li role="presentation"><a href="#signup" data-toggle="tab">회원가입</a></li>
           </ul>
       </div>
@@ -46,19 +47,23 @@
                		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
                     <fieldset>
                     <br>
-                            <div class="form-group">
+						<div class="form-group">
                                 <input type="email" name ="username" class="form-control" placeholder="이메일을 입력하세요">
-                           </div>
+					    </div>
 
                         <div class="form-group">
                             <input type="password" name ="password" class="form-control" placeholder="비밀번호를 입력하세요">
                         </div>
-  
-               			<div class="form-group text-right">
-                            <button id="submit" name="sigin1" class="btn btn-info">접속하기!</button>
-                        </div>
-              
-            </fieldset>
+
+						<div class="form-inline text-right">
+							<div class="form-group">
+								<button id="submit" name="sigin1" class="btn btn-info">접속하기!</button>
+							</div>
+							<div class="form-group">
+								 <button class="btn btn-info" id="myPass"><a href="#pass" data-toggle="tab">비번찾기!</a></button>
+							</div>
+						</div>
+					</fieldset>
         </form>
     </div>
     
@@ -190,12 +195,24 @@
 			<li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>
 			<li><a href="#trv_timeline"><span class="fa fa-clock-o fa-fw"></span>&nbsp;Timeline</a></li>
 			<li><a href="#trv_contact"><span class="fa fa-book fa-fw"></span>&nbsp;Contact</a></li>
+			<!-- login 전 -->
+			<c:if test="${empty pageContext.request.userPrincipal }">
 			<li>
 				<a href=""  data-toggle="modal" data-target="#login_modal">
 					<span class="fa fa-sign-in fa-fw"></span>
 						&nbsp;Login
 				</a>
 			</li>
+			</c:if>
+			<!-- login 후 -->
+			<c:if test="${not empty pageContext.request.userPrincipal }">
+			<li>
+				<a href=""  data-toggle="modal" data-target="#login_modal">
+					<span class="fa fa-sign-in fa-fw"></span>
+						&nbsp;Logout
+				</a>
+			</li>
+			</c:if>
 			<!--<li><a rel="nofollow" href="http://www.facebook.com/trv"
 				class="external-link"><i class="glyphicon glyphicon-export"></i>
 					&nbsp; External</a></li> -->
@@ -220,7 +237,14 @@
 						<li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>
 						<li><a href="#trv_timeline"><span class="fa fa-clock-o fa-fw"></span>&nbsp;Timeline</a></li>
 						<li><a href="#trv_contact"><span class="fa fa-book fa-fw"></span>&nbsp;Contact</a></li>
+						<!-- login 전 -->
+						<c:if test="${empty pageContext.request.userPrincipal }">
 						<li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Login</a></li>
+						</c:if>
+						<!-- login 후 -->
+						<c:if test="${not empty pageContext.request.userPrincipal }">
+						<li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Logout</a></li>
+						</c:if>
 						<!-- <li><a rel="nofollow"
 							href="http://www.facebook.com/trv" class="external-link">External</a></li> -->
 					</ul>
@@ -476,6 +500,40 @@
 			<p id="footer">Copyright &copy; 2016 TraVelia</p>
 		</div>
 	</div>
+	
+	  <div class="navbar navbar-default navbar-fixed-bottom" role="navigation" id="top-nav">
+  	          <div class="container">
+  	            <div class="navbar-header">
+  	              <!-- Logo Starts -->
+  	              <a class="navbar-brand" href="#home"> </a>
+  	              <!-- #Logo Ends -->
+
+
+  	              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+  	                <span class="sr-only">Toggle navigation</span>
+  	                <span class="icon-bar"></span>
+  	                <span class="icon-bar"></span>
+  	                <span class="icon-bar"></span>
+  	              </button>
+
+  	            </div>
+
+
+  	            <!-- Nav Starts -->
+  	            <div class="navbar-collapse  collapse">
+  	              <ul class="nav navbar-nav navbar-right scroll">
+  	                 <li class="active"><a href="#home">Home</a></li>
+  	                 <li><a href="#about">Travelnote</a></li>
+  	                 <li><a href="#works">Schedule</a></li>
+  	                 <li><a href="#partners">Board</a></li>
+  	                 <li><a href="#contact">Profile</a></li>
+  	              </ul>
+  	            </div>
+  	            <!-- #Nav Ends -->
+
+  	          </div>
+  	        </div>
+	
 	<script src="<c:url value="/resources/js/jquery-2.2.4.js" />"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -569,6 +627,12 @@
 					required: "프로필 사진을 설정해주세요."
 				}
 			}
+		});
+
+		$('#myPass').click(function (e) {
+			var $tabs = $('.bs-example-tabs li');
+			e.preventDefault();
+			$tabs.filter('.active').next('li').find('a[data-toggle="tab"]').tab('show')
 		});
 
 		var file_size;

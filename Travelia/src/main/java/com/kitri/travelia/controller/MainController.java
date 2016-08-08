@@ -21,9 +21,7 @@ public class MainController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
+	//메인 화면
 	@RequestMapping(value = "/")
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -44,9 +42,20 @@ public class MainController {
 		//model.addAttribute("useremail", getMember().getEmail());
 		return "ex";
 	}
-	
+	@RequestMapping(value="/test")
+	public String test(){
+		//model.addAttribute("usernick", getMember().getNick());
+		//model.addAttribute("useremail", getMember().getEmail());
+		return "map";
+	}
+	@RequestMapping(value="/profile")
+	public String test2(){
+		//model.addAttribute("usernick", getMember().getNick());
+		//model.addAttribute("useremail", getMember().getEmail());
+		return "profile/profile";
+	}
 	public Member getMember(){
 		return (Member)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 	}
-
+	
 }

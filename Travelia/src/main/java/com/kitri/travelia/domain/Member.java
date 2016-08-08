@@ -15,110 +15,117 @@ public class Member implements UserDetails{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private int no;
-	private String email;
-	private String pw;
-	private String nick;
-	private String avt;
-	private Timestamp reg_date;
-	private String intro;
-	private String auth_pending;
-	private String auth_key;
+	private int mem_no;
+	private String mem_email;
+	private String mem_pw;
+	private String mem_nick;
+	private String mem_avt;
+	private Timestamp mem_reg_date;
+	private String mem_intro;
+	private String mem_auth_pending;
+	private String mem_auth_key;
 	
 	
 	public Member() {
-	}
-	public Member(int no, String email, String pw, String nick, String avt, Timestamp reg_date, String intro,
-			String auth_pending, String auth_key) {
 		super();
-		this.no = no;
-		this.email = email;
-		this.pw = pw;
-		this.nick = nick;
-		this.avt = avt;
-		this.reg_date = reg_date;
-		this.intro = intro;
-		this.auth_pending = auth_pending;
-		this.auth_key = auth_key;
 	}
-	public int getNo() {
-		return no;
+	public Member(int mem_no, String mem_email, String mem_pw, String mem_nick, String mem_avt, Timestamp mem_reg_date,
+			String mem_intro, String mem_auth_pending, String mem_auth_key) {
+		this.mem_no = mem_no;
+		this.mem_email = mem_email;
+		this.mem_pw = mem_pw;
+		this.mem_nick = mem_nick;
+		this.mem_avt = mem_avt;
+		this.mem_reg_date = mem_reg_date;
+		this.mem_intro = mem_intro;
+		this.mem_auth_pending = mem_auth_pending;
+		this.mem_auth_key = mem_auth_key;
 	}
-	public void setNo(int no) {
-		this.no = no;
+	public int getMem_no() {
+		return mem_no;
 	}
-	public String getEmail() {
-		return email;
+	public void setMem_no(int mem_no) {
+		this.mem_no = mem_no;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public String getMem_email() {
+		return mem_email;
 	}
-	public String getPw() {
-		return pw;
+	public void setMem_email(String mem_email) {
+		this.mem_email = mem_email;
 	}
-	public void setPw(String pw) {
-		this.pw = pw;
+	public String getMem_pw() {
+		return mem_pw;
 	}
-	public String getNick() {
-		return nick;
+	public void setMem_pw(String mem_pw) {
+		this.mem_pw = mem_pw;
 	}
-	public void setNick(String nick) {
-		this.nick = nick;
+	public String getMem_nick() {
+		return mem_nick;
 	}
-	public String getAvt() {
-		return avt;
+	public void setMem_nick(String mem_nick) {
+		this.mem_nick = mem_nick;
 	}
-	public void setAvt(String avt) {
-		this.avt = avt;
+	public String getMem_avt() {
+		return mem_avt;
 	}
-	public Timestamp getReg_date() {
-		return reg_date;
+	public void setMem_avt(String mem_avt) {
+		this.mem_avt = mem_avt;
 	}
-	public void setReg_date(Timestamp reg_date) {
-		this.reg_date = reg_date;
+	public Timestamp getMem_reg_date() {
+		return mem_reg_date;
 	}
-	public String getIntro() {
-		return intro;
+	public void setMem_reg_date(Timestamp mem_reg_date) {
+		this.mem_reg_date = mem_reg_date;
 	}
-	public void setIntro(String intro) {
-		this.intro = intro;
+	public String getMem_intro() {
+		return mem_intro;
 	}
-	public String getAuth_pending() {
-		return auth_pending;
+	public void setMem_intro(String mem_intro) {
+		this.mem_intro = mem_intro;
 	}
-	public void setAuth_pending(String auth_pending) {
-		this.auth_pending = auth_pending;
+	public String getMem_auth_pending() {
+		return mem_auth_pending;
 	}
-	public String getAuth_key() {
-		return auth_key;
+	public void setMem_auth_pending(String mem_auth_pending) {
+		this.mem_auth_pending = mem_auth_pending;
 	}
-	public void setAuth_key(String auth_key) {
-		this.auth_key = auth_key;
+	public String getMem_auth_key() {
+		return mem_auth_key;
 	}
+	public void setMem_auth_key(String mem_auth_key) {
+		this.mem_auth_key = mem_auth_key;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	
 	@Override
 	public String toString() {
-		return "Member [no=" + no + ", email=" + email + ", pw=" + pw + ", nick=" + nick + ", avt=" + avt
-				+ ", reg_date=" + reg_date + ", intro=" + intro + ", auth_pending=" + auth_pending + ", auth_key="
-				+ auth_key + "]";
+		return "Member [mem_no=" + mem_no + ", mem_email=" + mem_email + ", mem_pw=" + mem_pw + ", mem_nick=" + mem_nick
+				+ ", mem_avt=" + mem_avt + ", mem_reg_date=" + mem_reg_date + ", mem_intro=" + mem_intro
+				+ ", mem_auth_pending=" + mem_auth_pending + ", mem_auth_key=" + mem_auth_key + "]";
 	}
+	
 	//UserDetails 구현 메소드
 	
 	//인증 후 필요한 ROLE_USER권한 반환
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-		authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+		if(getMem_email()!=""||getMem_email()!=null)
+			authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
 		return authorities;
 	}
 	@Override
 	public String getPassword() {
 		// TODO Auto-generated method stub
-		return pw;
+		return getMem_pw();
 	}
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return email;
+		return getMem_email();
 	}
 	@Override
 	public boolean isAccountNonExpired() {
@@ -140,6 +147,4 @@ public class Member implements UserDetails{
 		// TODO Auto-generated method stub
 		return true;
 	}
-	
-	
 }

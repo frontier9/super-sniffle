@@ -66,7 +66,7 @@
         </form>
     </div>
     
-    <!-- 비밀번호 찾기 -->
+    <!-- 비밀번호 찾기 시작 -->
     
     <!-- login  -->
      <div class="tab-pane fade" id="pass">
@@ -83,7 +83,7 @@
             </fieldset>
         </form>
     </div>
-    <!-- 비밀번호 찾기 -->
+    <!-- 비밀번호 찾기 끝 -->
 
     <!-- sign up -->
     <div class="tab-pane fade" id="signup">
@@ -221,7 +221,8 @@
 	</div>
 	<!-- navbar for mobile --> 
 	
-	
+
+	<!-- Navigation bar starts -->
 	<div class="container_wrapper">
 		<div id="trv_banner_menu">
 			<div class="container-fluid">
@@ -235,11 +236,11 @@
 
 					<div class="col-sm-9 hidden-xs">
 						<ul class="nav nav-justified">
-							<li><a href="#trv_banner_slide"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
-							<li><a href="#trv_about"><span class="fa fa-plane fa-fw"></span>&nbsp;Travelia?</a></li>
-							<li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>
-							<li><a href="#trv_timeline"><span class="fa fa-clock-o fa-fw"></span>&nbsp;Timeline</a></li>
-							<li><a href="#trv_contact"><span class="fa fa-book fa-fw"></span>&nbsp;Contact</a></li>
+							<li class="active"><a href="#home">Home</a></li>
+							<li><a href="#about">Travelnote</a></li>
+							<li><a href="#works">Schedule</a></li>
+							<li><a href="#partners">Board</a></li>
+							<li><a href="#contact">Profile</a></li>
 							<li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Login</a></li>
 						</ul>
 					</div>
@@ -253,6 +254,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- Navigation bar ends -->
 	
 	<div id="trv_about" class="container_wapper">
 		<div class="container-fluid">
@@ -520,14 +522,33 @@
   	            <!-- Nav Starts -->
   	            <div class="navbar-collapse  collapse">
   	              <ul class="nav navbar-nav navbar-right scroll">
-  	                 <li class="active"><a href="#home">Home</a></li>
-  	                 <li><a href="#about">Travelnote</a></li>
-  	                 <li><a href="#works">Schedule</a></li>
-  	                 <li><a href="#partners">Board</a></li>
-  	                 <li><a href="#contact">Profile</a></li>
+					  <li><a href="#trv_banner_slide"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
+					  <li><a href="#trv_about"><span class="fa fa-plane fa-fw"></span>&nbsp;Travelia?</a></li>
+					  <li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>
+					  <li><a href="#trv_timeline"><span class="fa fa-clock-o fa-fw"></span>&nbsp;Timeline</a></li>
+					  <li><a href="#trv_contact"><span class="fa fa-book fa-fw"></span>&nbsp;Contact</a></li>
+
+
   	              </ul>
   	            </div>
   	            <!-- #Nav Ends -->
+
+
+
+				  <!--
+
+				   	<ul class="nav nav-justified">
+							<li><a href="#trv_banner_slide"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
+							<li><a href="#trv_about"><span class="fa fa-plane fa-fw"></span>&nbsp;Travelia?</a></li>
+							<li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>
+							<li><a href="#trv_timeline"><span class="fa fa-clock-o fa-fw"></span>&nbsp;Timeline</a></li>
+							<li><a href="#trv_contact"><span class="fa fa-book fa-fw"></span>&nbsp;Contact</a></li>
+							<li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Login</a></li>
+						</ul>
+
+
+				   -->
+
 
   	          </div>
   	        </div>

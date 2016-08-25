@@ -1,15 +1,15 @@
 /*
 
-Dragonfruit Template
+ Dragonfruit Template
 
-http://www.trv.com/tm-411-dragonfruit
+ http://www.trv.com/tm-411-dragonfruit
 
-*/
+ */
 
 jQuery(function(){
     $ = jQuery;
     $(window).load( function() {
-        $('.external-link').unbind('click');    
+        $('.external-link').unbind('click');
     });
     //main menu
     $("#trv_banner_menu ul").singlePageNav({offset: $('#trv_banner_menu').outerHeight()});
@@ -49,7 +49,7 @@ jQuery(function(){
             'padding-right': "10%",
         });
     });
-  //about textimonial
+    //about textimonial
     $.current_testimonial = $("div.testimonial_text").first();
     $("div.testimonial_text").hide();
     $.current_testimonial.show();
@@ -125,37 +125,37 @@ jQuery(function(){
     });
     //timeline
     $(window).on("load resize", function(){
-    //$(document).scroll(function() {
-    	//-----------------------------
-    	
-    	/*var y_pos = window.pageYOffset;
-    	
-    	var past_pos = 1600;
-    	console.log('yoffset ' +  window.pageY);
-    	console.log($(window).scrollTop());
-    	
-    	if(y_pos > past_pos) {
-    		
-    	}
-    	
-    	var hT = $('.time_line_wap #fire_point').offset().top,
-        	hH = $('.time_line_wap #fire_point').outerHeight(),
-        	wH = $(window).height(),
-        	wS = $(this).scrollTop();
-    		//console.log((hT-wH) , wS);
-    		console.log(wS + ' ' + (hT+hH-wH) );
-    		if (wS > (hT+hH-wH)){
-    				//$('.time_line_)wap').fadeIn(3500);
-    }*/
-    	
-    	//var docu_top = $(document).scrollTop();
-    	//var event_top = $("#trv_timeline").position().top - $("#trv_banner_menu").outerHeight();
-    	//console.log(docu_top + ' ' + event_top);
-    	
-    	
-    	
-    	
-    	//-----------------------------
+        //$(document).scroll(function() {
+        //-----------------------------
+
+        /*var y_pos = window.pageYOffset;
+
+         var past_pos = 1600;
+         console.log('yoffset ' +  window.pageY);
+         console.log($(window).scrollTop());
+
+         if(y_pos > past_pos) {
+
+         }
+
+         var hT = $('.time_line_wap #fire_point').offset().top,
+         hH = $('.time_line_wap #fire_point').outerHeight(),
+         wH = $(window).height(),
+         wS = $(this).scrollTop();
+         //console.log((hT-wH) , wS);
+         console.log(wS + ' ' + (hT+hH-wH) );
+         if (wS > (hT+hH-wH)){
+         //$('.time_line_)wap').fadeIn(3500);
+         }*/
+
+        //var docu_top = $(document).scrollTop();
+        //var event_top = $("#trv_timeline").position().top - $("#trv_banner_menu").outerHeight();
+        //console.log(docu_top + ' ' + event_top);
+
+
+
+
+        //-----------------------------
         $.timeline_right_position_top = 0 ;
         $.timeline_old_right_position_top = 0 ;
         $.timeline_left_position_top = 0 ;
@@ -171,75 +171,75 @@ jQuery(function(){
             if($(window).width()<970){
                 $("#trv_timeline .container-fluid").css({"position":"absolute"});
                 positon_left = $("#trv_timeline .container-fluid").position().left +100;
-                
+
                 //put on right
                 $(this).css({
                     'left': 70,
                     'top':$.timeline_right_position_top,
                     'width': $(window).width() - positon_left
-                 });
+                });
                 $(this).addClass("right_timeline");
                 $.timeline_old_right_position_top = $.timeline_right_position_top;
                 $.timeline_right_position_top = $.timeline_right_position_top + $(this).outerHeight() + 40 ;
                 $(this).prepend("<a href=\"#\" class=\"right_timer\"><span class=\"glyphicon glyphicon-time\"></span></a>");
                 $(this).children("a.right_timer").css({left:-86, width: 60 ,});
-             
-                
+
+
             } else if($.timeline_left_position_top == 0) {
                 $("#trv_timeline .container-fluid").css({"position":"relative"});
-                
-                
+
+
                 //put on left
                 $(this).css({
                     'left':0,
                     'top':0,
                     'width': $.timeline_item_width - 50
-                 });
+                });
                 $(this).addClass("left_timeline");
                 $.timeline_old_left_position_top = $.timeline_left_position_top;
                 $.timeline_left_position_top = $.timeline_left_position_top + $(this).outerHeight() + 40 ;
                 $(this).prepend("<a href=\"#\" class=\"left_timer\"><span class=\"glyphicon glyphicon-time\"></span></a>");
                 $(this).children("a.left_timer").css({left:$.timeline_item_width-50,});
-              
-                
-                
-                
+
+
+
+
             } else if( $.timeline_right_position_top < $.timeline_left_position_top ){
                 $("#trv_timeline .container-fluid").css({"position":"relative"});
                 $.timeline_right_position_top = ($.timeline_old_left_position_top + 40) < $.timeline_right_position_top  ? $.timeline_right_position_top : $.timeline_right_position_top + 40;
-                
-                
+//
+
                 //put on right
                 $(this).css({
                     'left': $.timeline_item_width + 79,
                     'top':$.timeline_right_position_top,
                     'width': $.timeline_item_width - 50
-                 });
+                });
                 $(this).addClass("right_timeline");
                 $.timeline_old_right_position_top = $.timeline_right_position_top;
                 $.timeline_right_position_top = $.timeline_right_position_top + $(this).outerHeight() + 40 ;
                 $(this).prepend("<a href=\"#\" class=\"right_timer\"><span class=\"glyphicon glyphicon-time\"></span></a>");
                 $(this).children("a.right_timer").css({left:-99,});
-                
+
             }else{
                 $("#trv_timeline .container-fluid").css({"position":"relative"});
                 $.timeline_left_position_top = ($.timeline_old_right_position_top + 40) < $.timeline_left_position_top ? $.timeline_left_position_top : $.timeline_left_position_top + 40;
-               
-                                                           
-                
+
+
+
                 //put on left
                 $(this).css({
                     'left':0,
                     'top':$.timeline_left_position_top,
                     'width': $.timeline_item_width - 50
-                 });
+                });
                 $(this).addClass("left_timeline");
                 $.timeline_old_left_position_top = $.timeline_left_position_top;
                 $.timeline_left_position_top = $.timeline_left_position_top + $(this).outerHeight() + 40 ;
                 $(this).prepend("<a href=\"#\" class=\"left_timer\"><span class=\"glyphicon glyphicon-time\"></span></a>");
                 $(this).children("a.left_timer").css({left:$.timeline_item_width-50,});
-                
-                
+
+
             }
             //calculate and define container height
             if($.timeline_left_position_top > $.timeline_right_position_top ){
@@ -250,36 +250,34 @@ jQuery(function(){
                 $("#trv_timeline").height($.timeline_right_position_top+200);
             }
             $(this).slideDown("slow", function() {
-            	
+
             });
         });
     });
     //mobile menu and desktop menu
     $("#trv_mobile_menu").css({"right":-1500});
-    //$("#mobile_menu").click(function(){
-    $('mobile_menu').toggle(function(){
-    	$('body').css('opacity', '0.2');
-        $("#trv_mobile_menu").	show();
+
+    $("#mobile_menu").click(function(){
+        $("#trv_mobile_menu").show();
         $("#trv_mobile_menu").animate({"right":-100});
         return false;
-    }, function() {
-    	$('')
     });
+
     $(window).on("load resize", function(){
         if($(window).width()>768){
             $("#trv_mobile_menu").css({"right":-1500});
         }
     });
-    
+
     $(window).on("click", function(){
-    	
-    	$('#trv_mobile_menu').css({'right': -1500});
+
+        $('#trv_mobile_menu').css({'right': -1500});
     });
 
     jQuery.fn.anchorAnimate = function(settings) {
         settings = jQuery.extend({
             speed : 1100 // default 1100
-        }, settings);	
+        }, settings);
         return this.each(function(){
             var caller = this
             $(caller).click(function (event){
@@ -301,7 +299,7 @@ jQuery(function(){
         });
     }
     //animate scroll function call to rotate images 360 degrees.
-    $("#trv_mobile_menu a").anchorAnimate();    
+    $("#trv_mobile_menu a").anchorAnimate();
     //about
     $(document).scroll(function(){
         document_top = $(document).scrollTop();
@@ -350,5 +348,5 @@ jQuery(function(){
             $("#trv_events .event_animate_right").css({'left':0,'opacity':1});
             //console.log('not document_top<event_wapper_top');
         }
-    }); 
+    });
 });

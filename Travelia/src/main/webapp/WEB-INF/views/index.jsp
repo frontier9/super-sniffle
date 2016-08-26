@@ -191,11 +191,11 @@
 
 		<ul class="nav nav-pills nav-stacked">
 
-			<li><a href="#trv_banner_slide"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
-			<li><a href="#trv_about"><span class="fa fa-plane fa-fw"></span>&nbsp;Travelia?</a></li>
-			<li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>
-			<li><a href="#trv_timeline"><span class="fa fa-clock-o fa-fw"></span>&nbsp;Timeline</a></li>
-			<li><a href="#trv_contact"><span class="fa fa-book fa-fw"></span>&nbsp;Contact</a></li>
+			<li><a href="#"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
+			<li><a href="#"><span class="fa fa-book fa-fw"></span>&nbsp;Travelnote</a></li>
+			<li><a href="#"><span class="fa  fa-calendar fa-fw"></span>&nbsp;Schedule</a></li>
+			<li><a href="#"><span class="fa fa-pencil-square-o fa-fw"></span>&nbsp;Board</a></li>
+			<li><a href="#"><span class="fa fa-user fa-fw"></span>&nbsp;Profile</a></li>
 			<!-- login 전 -->
 			<c:if test="${empty pageContext.request.userPrincipal }">
 			<li>

@@ -191,11 +191,11 @@
 
 		<ul class="nav nav-pills nav-stacked">
 
-			<li><a href="#trv_banner_slide"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
-			<li><a href="#trv_about"><span class="fa fa-plane fa-fw"></span>&nbsp;Travelia?</a></li>
-			<li><a href="#trv_events"><span class="fa fa-television fa-fw"></span>&nbsp;UI</a></li>
-			<li><a href="#trv_timeline"><span class="fa fa-clock-o fa-fw"></span>&nbsp;Timeline</a></li>
-			<li><a href="#trv_contact"><span class="fa fa-book fa-fw"></span>&nbsp;Contact</a></li>
+			<li><a href="#"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
+			<li><a href="/travelnote/list"><span class="fa fa-book fa-fw"></span>&nbsp;Travelnote</a></li>
+			<li><a href="/schedule/add"><span class="fa  fa-calendar fa-fw"></span>&nbsp;Schedule</a></li>
+			<li><a href="/board/board"><span class="fa fa-pencil-square-o fa-fw"></span>&nbsp;Board</a></li>
+			<li><a href="/profile/profile"><span class="fa fa-user fa-fw"></span>&nbsp;Profile</a></li>
 			<!-- login 전 -->
 			<c:if test="${empty pageContext.request.userPrincipal }">
 			<li>
@@ -208,7 +208,7 @@
 			<!-- login 후 -->
 			<c:if test="${not empty pageContext.request.userPrincipal }">
 			<li>
-				<a href=""  data-toggle="modal" data-target="#login_modal">
+				<a href="/logout">
 					<span class="fa fa-sign-in fa-fw"></span>
 						&nbsp;Logout
 				</a>
@@ -237,11 +237,18 @@
 					<div class="col-sm-9 hidden-xs">
 						<ul class="nav nav-justified">
 							<li class="active"><a href="#home">Home</a></li>
-							<li><a href="#about">Travelnote</a></li>
-							<li><a href="#works">Schedule</a></li>
-							<li><a href="#partners">Board</a></li>
-							<li><a href="#contact">Profile</a></li>
+							<li><a href="/travelnote/list">Travelnote</a></li>
+							<li><a href="/schedule/add">Schedule</a></li>
+							<li><a href="/board/board">Board</a></li>
+							<li><a href="/profile/profile">Profile</a></li>
+							<!-- login 전 -->
+						<c:if test="${empty pageContext.request.userPrincipal }">			
 							<li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Login</a></li>
+						</c:if>
+							<!-- login 후 -->
+						<c:if test="${not empty pageContext.request.userPrincipal }">			
+							<li><a href="/logout"><span class="fa fa-sign-in"></span>&nbsp;Logout</a></li>
+						</c:if>							
 						</ul>
 					</div>
 

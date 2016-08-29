@@ -11,7 +11,7 @@
 		define( ["jquery"], factory );
 	} else {
 		factory( jQuery );
-	}x
+	}
 }(function( $ ) {
 	
 	var i = 1;

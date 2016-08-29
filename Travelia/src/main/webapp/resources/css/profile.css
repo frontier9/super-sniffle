@@ -1,47 +1,11 @@
 @CHARSET "EUC-KR";
 
-.navbar {
-     background-image: linear-gradient(#54B4EB, #2FA4E7 60%, #1D9CE5);
-     background-repeat: no-repeat;
-     border-bottom: 1px solid #178ACC;
-     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
-     border-radius: 0px;
+.note{
+	  margin-right: 5px;
 }
-
-.navbar-default {
-     background-color: #2FA4E7;
-     border-color: #1995DC;
-}
-
-.navbar-default .navbar-brand,
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus ,
-.navbar-default .navbar-nav > li > a {
-     color: #FFF;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-     color: #FFF;
-     background-color: #178ACC;
-}
-
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-    background-color: #178ACC;
-}
-
-.navbar-default .navbar-toggle {
-    border-color: #178ACC;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #FFF;
-}
-
 
 .profile-all{
-	 margin-top : 100px;
+	 margin-top : 170px;
 	 background: white;
    box-shadow:  0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
    border-color: white;
@@ -72,7 +36,7 @@
 /* named upload */
 .filebox .upload-name {
   display: inline-block;
-  padding: .5em .75em;  /* labelì˜ íŒ¨ë”©ê°’ê³¼ ì¼ì¹˜ */
+  padding: .5em .75em;  /* labelÀÇ ÆÐµù°ª°ú ÀÏÄ¡ */
   font-size: inherit;
   font-family: inherit;
   line-height: normal;
@@ -81,16 +45,16 @@
   border: 1px solid #ebebeb;
   border-bottom-color: #e2e2e2;
   border-radius: .25em;
-  -webkit-appearance: none; /* ë„¤ì´í‹°ë¸Œ ì™¸í˜• ê°ì¶”ê¸° */
+  -webkit-appearance: none; /* ³×ÀÌÆ¼ºê ¿ÜÇü °¨Ãß±â */
   -moz-appearance: none;
   appearance: none;
 }
 
-.filebox .upload-display {  /* ì´ë¯¸ì§€ê°€ í‘œì‹œë  ì§€ì—­ */
+.filebox .upload-display {  /* ÀÌ¹ÌÁö°¡ Ç¥½ÃµÉ Áö¿ª */
   margin-bottom: 5px;
 }
 
-.filebox .upload-thumb-wrap {  /* ì¶”ê°€ë  ì´ë¯¸ì§€ë¥¼ ê°ì‹¸ëŠ” ìš”ì†Œ */
+.filebox .upload-thumb-wrap {  /* Ãß°¡µÉ ÀÌ¹ÌÁö¸¦ °¨½Î´Â ¿ä¼Ò */
   display: inline-block;
   width: 160px;
   padding: 2px;
@@ -100,17 +64,37 @@
   background-color: #fff;
 }
 
-.filebox .upload-display img {  /* ì¶”ê°€ë  ì´ë¯¸ì§€ */
+.filebox .upload-display img {  /* Ãß°¡µÉ ÀÌ¹ÌÁö */
   display: block;
   max-width: 100%;
   width: 100% \9;
   height: auto;
 }
 
+.panel-info>.panel-heading {
+    color: #232E36 ;
+    background-color: #E4E2E0;
+    border-color: #E4E2E0;
+}
+
+.label-info {
+    background-color:#E4E2E0;
+}
+
+.label {
+  color: #232E36;
+
+}
+
+.pps{
+
+		margin-top: 5px;
+}
+
 @media (max-width: 700px) {
 
   .profile-all{
-  	 margin-top : 0px;
+  	 margin-top : 58px;
   	 background: white;
      box-shadow:  0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
      border-color: white;

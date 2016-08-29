@@ -21,16 +21,16 @@
 <div class ="row">
  <div id ="col-md-4-R">
  	<img src="<c:url value="/resources/images/1920x1080.90.83176-2560x1440.90.Untitled-3 copy.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/header-bg.jpg"/>" style="width:100%">
+ 	<img src="<c:url value="/resources/images/header-bg.jpg"/>" style="width:100%">
  	<img src="<c:url value="/resources/images/img_bridge.jpg"/>" style="width:100%">
  	<img src="<c:url value="/resources/images/img_gondol.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/images/img_rocks.jpg"/>" style="width:100%">
+ 	<img src="<c:url value="/resources/images/img_rocks.jpg"/>" style="width:100%">
  	<img src="<c:url value="/resources/images/img_gondol.jpg"/>" style="width:100%">
 </div>
 
 <div id = "col-md-4-R"> 
 <img src="<c:url value="/resources/images/img_coffee.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/img_gondol.jpg"/>" style="width:100%">
+ 	<img src="<c:url value="/resources/images/img_gondol.jpg"/>" style="width:100%">
  	<img src="<c:url value="/resources/images/img_nature.jpg"/>" style="width:100%">
  	<img src="<c:url value="/resources/images/1920x1080.90.117269-_.jpeg"/>" style="width:100%">
  	<img src="<c:url value="/resources/images/1920x1080.90.83176-2560x1440.90.Untitled-3 copy.jpg"/>" style="width:100%">
@@ -40,7 +40,7 @@
 
 <div id = "col-md-4-R">
 <img src="<c:url value="/resources/images/img_rocks.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/img_sound.jpg"/>" style="width:100%">
+ 	<img src="<c:url value="/resources/images/img_sound.jpg"/>" style="width:100%">
  	<img src="<c:url value="/resources/images/img1.jpg"/>" style="width:100%">
  	<img src="<c:url value="/resources/images/profile.png"/>" style="width:100%">
  	<img src="<c:url value="/resources/images/img_rocks.jpg"/>" style="width:100%">

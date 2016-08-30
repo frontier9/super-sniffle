@@ -8,13 +8,13 @@
 
 jQuery(function(){
     $ = jQuery;
-    $(window).load( function() {
-        $('.external-link').unbind('click');
-    });
+
     //main menu
-    $("#trv_banner_menu ul").singlePageNav({offset: $('#trv_banner_menu').outerHeight()});
+   // $("#trv_banner_menu ul").singlePageNav({offset: $('#trv_banner_menu').outerHeight()});
+
     //banner slide
     $('.banner').unslider({ fluid: true, speed: 4500, delay: 3000 });
+
     //Banner slider on scroll
     $(window).on("load scroll resize", function(){
         banner_height = ($(document).width()/1920) * 740; //default : 760
@@ -64,7 +64,7 @@ jQuery(function(){
             $.current_testimonial_prev.fadeIn();
             $.current_testimonial = $.current_testimonial_prev;
         });
-        return false;
+        // return false;
     });
     $("#next_testimonial").click(function(){
         $.current_testimonial.effect("fade",{},200,function(){
@@ -72,7 +72,7 @@ jQuery(function(){
             $.current_testimonial_next.fadeIn();
             $.current_testimonial = $.current_testimonial_next;
         });
-        return false;
+        // return false;
     });
     //event
     $(".event_box_img").load(function(){
@@ -260,7 +260,7 @@ jQuery(function(){
     $("#mobile_menu").click(function(){
         $("#trv_mobile_menu").show();
         $("#trv_mobile_menu").animate({"right":-100});
-        return false;
+        // return false;
     });
 
     $(window).on("load resize", function(){
@@ -281,7 +281,7 @@ jQuery(function(){
         return this.each(function(){
             var caller = this
             $(caller).click(function (event){
-                event.preventDefault();
+                // event.preventDefault();
                 var locationHref = window.location.href;
                 var elementClick = $(caller).attr("href");
                 var destination = $(elementClick).offset().top - $('#trv_banner_menu').outerHeight();
@@ -294,7 +294,7 @@ jQuery(function(){
                         history.pushState(null, null, elementClick);
                     }
                 });
-                return false;
+                // return false;
             });
         });
     }

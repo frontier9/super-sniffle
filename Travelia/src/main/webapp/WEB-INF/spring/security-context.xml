@@ -18,22 +18,22 @@
 			delete-cookies = jsessionid, remember-me 등 로그인에 관련된 쿠키 및 세션 삭제 -->
 				
 	<!--Spring Security -->
-  	<security:http auto-config="true" use-expressions="true">
-  		<security:intercept-url pattern ="/login" access="hasRole('ROLE_USER')"/>		
+  	<security:http auto-config="true" use-expressions="true">	
   		<security:form-login login-page="/"
   							authentication-success-handler-ref="loginSuccessHandler"
   							authentication-failure-handler-ref="loginFailureHandler"/>
   		<security:logout logout-url ="/logout" 
   						 logout-success-url="/"
-  						 invalidate-session ="true"/>
+  						 invalidate-session ="true"
+  						 delete-cookies="JSESSIONID,SPRING_SECURITY_REMEMBER_ME_COOKIE"/>
 
 	<!--<security:http auto-config="false" use-expressions="true" create-session="never" disable-url-rewriting="true">
 		<security:form-login 		
 					login-processing-url = "/login/loginPrc"					
 					always-use-default-target="true"/>
 					
-		<security:logout invalidate-session="true" 
-					logout-success-url="/" delete-cookies="JSESSIONID,SPRING_SECURITY_REMEMBER_ME_COOKIE"/>-->	
+		<security:logout 
+					 delete-cookies="JSESSIONID,SPRING_SECURITY_REMEMBER_ME_COOKIE"/>-->	
 		<!-- 자동 로그인 
 			key=...?SSS
 			token-validity-seconds=세션유지시간(브라우저 닫은 뒤에도 자동 로그인)	

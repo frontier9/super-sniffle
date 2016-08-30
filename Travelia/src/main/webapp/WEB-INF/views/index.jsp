@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <c:url value="/login" var="loginUrl"/>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -197,23 +199,24 @@
 			<li><a href='<c:url value="/board/board" />'><span class="fa fa-pencil-square-o fa-fw"></span>&nbsp;Board</a></li>
 			<li><a href='<c:url value="/profile/profile"/>'><span class="fa fa-user fa-fw"></span>&nbsp;Profile</a></li>
 			<!-- login 전 -->
-			<c:if test="${empty pageContext.request.userPrincipal }">
+			<sec:authorize access="! isAuthenticated()">		
 			<li>
 				<a href=""  data-toggle="modal" data-target="#login_modal">
 					<span class="fa fa-sign-in fa-fw"></span>
 						&nbsp;Login
 				</a>
 			</li>
-			</c:if>
+			</sec:authorize>
 			<!-- login 후 -->
-			<c:if test="${not empty pageContext.request.userPrincipal }">
-			<li>
-				<a href="/logout">
+			<sec:authorize access="isAuthenticated()">	
+			<li><form name="logoutmobile" method="post" action="${pageContext.request.contextPath}/logout">
+				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+				<a href="javascript:document.logoutmobile.submit();">
 					<span class="fa fa-sign-in fa-fw"></span>
 						&nbsp;Logout
 				</a>
-			</li>
-			</c:if>
+			</form></li>
+			</sec:authorize>
 
 		</ul>
 	</div>
@@ -240,18 +243,19 @@
 							<li><a href='<c:url value="/board/board" />'>Board</a></li>
 							<li><a href='<c:url value="/profile" />'>Profile</a></li>
 							<!-- login 전 -->
-						<c:if test="${empty pageContext.request.userPrincipal }">			
+						<sec:authorize access="! isAuthenticated()">			
 							<li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Login</a></li>
-						</c:if>
+						</sec:authorize>
 							<!-- login 후 -->
-						<c:if test="${not empty pageContext.request.userPrincipal }">			
-							<li>
-								<a href='<c:url value="/logout"/>'>
+						<sec:authorize access="isAuthenticated()">				
+							<li><form name="logout" method="post" action="${pageContext.request.contextPath}/logout">
+								<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+								<a href="javascript:document.logout.submit();">
 									<span class="fa fa-sign-in"></span>
 									&nbsp;Logout
 								</a>
-							</li>
-						</c:if>							
+							</form></li>
+						</sec:authorize>						
 						</ul>
 					</div>
 

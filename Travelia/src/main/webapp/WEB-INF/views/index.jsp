@@ -192,10 +192,10 @@
 		<ul class="nav nav-pills nav-stacked">
 
 			<li><a href="#"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
-			<li><a href="/travelnote/list"><span class="fa fa-book fa-fw"></span>&nbsp;Travelnote</a></li>
-			<li><a href="/schedule/add"><span class="fa  fa-calendar fa-fw"></span>&nbsp;Schedule</a></li>
-			<li><a href="/board/board"><span class="fa fa-pencil-square-o fa-fw"></span>&nbsp;Board</a></li>
-			<li><a href="/profile/profile"><span class="fa fa-user fa-fw"></span>&nbsp;Profile</a></li>
+			<li><a href='<c:url value="/travelnote/list" />'><span class="fa fa-book fa-fw"></span>&nbsp;Travelnote</a></li>
+			<li><a href='<c:url value="/schedule/add" />'><span class="fa  fa-calendar fa-fw"></span>&nbsp;Schedule</a></li>
+			<li><a href='<c:url value="/board/board" />'><span class="fa fa-pencil-square-o fa-fw"></span>&nbsp;Board</a></li>
+			<li><a href='<c:url value="/profile/profile"/>'><span class="fa fa-user fa-fw"></span>&nbsp;Profile</a></li>
 			<!-- login 전 -->
 			<c:if test="${empty pageContext.request.userPrincipal }">
 			<li>
@@ -235,10 +235,10 @@
 					<div class="col-sm-9 hidden-xs">
 						<ul class="nav nav-justified">
 							<li class="active"><a href="#home">Home</a></li>
-							<li><a href="/travelnote/list">Travelnote</a></li>
-							<li><a href="/schedule/add">Schedule</a></li>
-							<li><a href="/board/board">Board</a></li>
-							<li><a href="/profile">Profile</a></li>
+							<li><a href='<c:url value="/travelnote/list" />'>Travelnote</a></li>
+							<li><a href='<c:url value="/schedule/add" />'>Schedule</a></li>
+							<li><a href='<c:url value="/board/board" />'>Board</a></li>
+							<li><a href='<c:url value="/profile" />'>Profile</a></li>
 							<!-- login 전 -->
 						<c:if test="${empty pageContext.request.userPrincipal }">			
 							<li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Login</a></li>
@@ -246,7 +246,7 @@
 							<!-- login 후 -->
 						<c:if test="${not empty pageContext.request.userPrincipal }">			
 							<li>
-								<a href="/logout">
+								<a href='<c:url value="/logout"/>'>
 									<span class="fa fa-sign-in"></span>
 									&nbsp;Logout
 								</a>

@@ -11,6 +11,8 @@ jQuery(function(){
     $(window).load( function() {
         $('.external-link').unbind('click');
     });
+    //main menu
+    $("#trv_banner_menu ul").singlePageNav({offset: $('#trv_banner_menu').outerHeight()});
     //banner slide
     $('.banner').unslider({ fluid: true, speed: 4500, delay: 3000 });
     //Banner slider on scroll

@@ -207,7 +207,7 @@
 				</a>
 			</li>
 			</sec:authorize>
-			<!-- login 후 -->
+			<!-- login 후 ${pageContext.request.userPrincipal.name} -->
 			<sec:authorize access="isAuthenticated()">	
 			<li><form name="logoutmobile" method="post" action="${pageContext.request.contextPath}/logout">
 				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />

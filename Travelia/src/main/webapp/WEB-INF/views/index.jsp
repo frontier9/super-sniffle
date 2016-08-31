@@ -197,7 +197,7 @@
 			<li><a href='<c:url value="/travelnote/list" />'><span class="fa fa-book fa-fw"></span>&nbsp;Travelnote</a></li>
 			<li><a href='<c:url value="/schedule/add" />'><span class="fa  fa-calendar fa-fw"></span>&nbsp;Schedule</a></li>
 			<li><a href='<c:url value="/board/board" />'><span class="fa fa-pencil-square-o fa-fw"></span>&nbsp;Board</a></li>
-			<li><a href='<c:url value="/profile/profile"/>'><span class="fa fa-user fa-fw"></span>&nbsp;Profile</a></li>
+			<li><a href='<c:url value="/profile"/>'><span class="fa fa-user fa-fw"></span>&nbsp;Profile</a></li>
 			<!-- login 전 -->
 			<sec:authorize access="! isAuthenticated()">		
 			<li>

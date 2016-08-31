@@ -14,7 +14,7 @@
 	 <div class="container-fluid fluid-user traveltitle">
   		<h1>Travel note</h1>
   		<p>A template made by w3.css for photographers.</p>
-  		<p><button class="pedding-btn" onclick="myFunction()">Toggle Grid Padding</button></p>
+  		<p><button class="pedding-btn" onclick="myFunction()">글쓰기</button></p>
 	 </div>
 
 

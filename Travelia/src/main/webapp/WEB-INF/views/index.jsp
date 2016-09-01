@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
-<c:url value="/login" var="loginUrl"/>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -44,7 +43,7 @@
           <!-- </div> -->
             <!-- login  -->
             <div class="tab-pane fade in active" id="signin">
-               <form class="form center-block" action="${loginUrl}" method="post">
+               <form class="form center-block" action='<c:url value="/login"/>' method="post">
                		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
                     <fieldset>
                     <br>
@@ -89,12 +88,13 @@
 
     <!-- sign up -->
     <div class="tab-pane fade" id="signup">
-         <form class="form center-block" action="#" method="post" id="sign_up" name="sign_up">
+         <form class="form center-block" action='<c:url value="/join"/>' method="post" id="sign_up" name="sign_up">
+         	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
             <fieldset>
                <br>
                <div class="form-group">
                    <div class="input-group">
-                       <input type="email" class="form-control" id="user_email" name="user_email" placeholder="이메일을 입력해주세요">
+                       <input type="email" class="form-control" id="user_email" name="mem_email" placeholder="이메일을 입력해주세요">
                        <span class="input-group-btn">
                        	<button class="btn btn-info" type="button">중복확인</button>
                        </span>
@@ -104,7 +104,7 @@
              
                <div class="form-group">
                    <div class="input-group">
-                       <input type="text" class="form-control" id="user_nick" name="user_nick" placeholder="닉네임을 입력해주세요">
+                       <input type="text" class="form-control" id="user_nick" name="mem_nick" placeholder="닉네임을 입력해주세요">
                        <span class="input-group-btn">
                        	 <button class="btn btn-info" type="button">중복확인</button>
                        </span>
@@ -114,14 +114,14 @@
                
                <div>            
 	               <div class="form-group">
-	                   <input type="password" class="form-control" id="user_pw" name="user_pw" placeholder="비밀번호를 입력해주세요" >
+	                   <input type="password" class="form-control" id="user_pw" name="mem_pw" placeholder="비밀번호를 입력해주세요" >
 	               </div>
 	               <p></p>
                </div>
                
                <div>
 	               <div class="form-group">
-	                   <input type="password" class="form-control" id="user_pw_chk" name="user_pw_chk" placeholder="비밀번호를 한번 더 입력해주세요">
+	                   <input type="password" class="form-control" id="user_pw_chk" name="mem_pw_chk" placeholder="비밀번호를 한번 더 입력해주세요">
 	               </div>
 				   <p></p>
                </div>
@@ -197,7 +197,7 @@
 			<li><a href='<c:url value="/travelnote/list" />'><span class="fa fa-book fa-fw"></span>&nbsp;Travelnote</a></li>
 			<li><a href='<c:url value="/schedule/add" />'><span class="fa  fa-calendar fa-fw"></span>&nbsp;Schedule</a></li>
 			<li><a href='<c:url value="/board/board" />'><span class="fa fa-pencil-square-o fa-fw"></span>&nbsp;Board</a></li>
-			<li><a href='<c:url value="/profile/profile"/>'><span class="fa fa-user fa-fw"></span>&nbsp;Profile</a></li>
+			<li><a href='<c:url value="/profile"/>'><span class="fa fa-user fa-fw"></span>&nbsp;Profile</a></li>
 			<!-- login 전 -->
 			<sec:authorize access="! isAuthenticated()">		
 			<li>
@@ -209,7 +209,7 @@
 			</sec:authorize>
 			<!-- login 후 ${pageContext.request.userPrincipal.name} -->
 			<sec:authorize access="isAuthenticated()">	
-			<li><form name="logoutmobile" method="post" action="${pageContext.request.contextPath}/logout">
+			<li><form name="logout" method="post" action='<c:url value="/logout"/>'>
 				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 				<a href="javascript:document.logoutmobile.submit();">
 					<span class="fa fa-sign-in fa-fw"></span>
@@ -248,7 +248,7 @@
 						</sec:authorize>
 							<!-- login 후 -->
 						<sec:authorize access="isAuthenticated()">				
-							<li><form name="logout" method="post" action="${pageContext.request.contextPath}/logout">
+							<li><form name="logout" method="post" action='<c:url value="/logout"/>'>
 								<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 								<a href="javascript:document.logout.submit();">
 									<span class="fa fa-sign-in"></span>

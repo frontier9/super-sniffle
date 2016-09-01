@@ -21,16 +21,16 @@
 
       <div class="panel-body  profile-inner">
 
-    <form class="text-center filebox preview-image"  name = "form">
+  <form class="text-center filebox preview-image"  name = "form">
 
   <div class="firstone">
-    <img src="<c:url value="/resources/images/avatar.jpg" />" class="img-thumbnail, nm_img"  alt="Your Avatar" style="width:160px"/><h6 class="text-muted">upload image</h6>
+    <img src="<c:url value="/resources/images/avatar.jpg" />" class="img-circle"  alt="Your Avatar" style="width:160px" id="normal"/><h6 class="text-muted">이미지 눌러서 사진을 등록하세요.</h6>
 
   </div>
 
-    <label for="input-file" class="btn btn-default" type="button" >등록</label>
-    <input type="file" id="input-file" class="upload-hidden" name = "aFile">
-    <input type="button" class="btn btn-default cancel" value="취소">
+   
+    <input type="file" id="input-file" class="upload-hidden" name = "aFile" style="display: none;"/>
+    
 
   </form>
 
@@ -56,9 +56,41 @@
    </div>
 
     <div class= "col-md-12">
-         <button class="btn btn-default pps" type="submit">비밀번호 변경</button>
+         <button class="btn btn-default pps" type="submit"  data-toggle="modal" data-target="#pwdmodal">비밀번호 변경</button>
            <button class="btn btn-default pps" type="submit">수정완료</button>
     </div>
+    
+    <div class="modal fade" id="pwdmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="exampleModalLabel">비밀번호 변경</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="now-pwd" class="control-label">현재 비밀번호</label>
+              <input type="text" class="form-control" id="now-pwd">
+            </div>
+            <div class="form-group">
+              <label for="new-pwd" class="control-label">변경 비밀번호</label>
+              <input type="text" class="form-control" id="new-pwd">
+            </div>
+            <div class="form-group">
+              <label for="pwd-cf" class="control-label">비밀번호 확인</label>
+              <input type="text" class="form-control" id="pwd-cf">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+          <button type="button" class="btn btn-primary">변경</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
 
   </div>
 
@@ -66,6 +98,6 @@
 
 </div>
 
-<script type="text/javascript" src="<c:url value="js/click.js"/>" ></script>
+<script type="text/javascript" src="<c:url value="/resources/js/click.js"/>" ></script>
 </body>
 </html>

@@ -145,15 +145,23 @@ file2.onchange = function () {
     };
 };
 
+
 $(document).on('click', '#nt_img4', function() {
     $('input[id="note4"]').click();
 });
 
 
-$('.note_wt').on('change', function(){
+
+$('#note_add').on('click',function(){
+	
+	
+	
     var file3 = document.getElementById('note4');
 
     file3.onchange = function(){
+    	
+    	
+    	
         var fileList3 = file3.files;
 
         var reader3 = new FileReader();
@@ -166,8 +174,162 @@ $('.note_wt').on('change', function(){
 
 
 
+$(document).on('click', '#nt_img5', function() {
+    $('input[id="note5"]').click();
+});
+
+
+$('#note_add').on('click',function(){
+	
+
+	
+    var file4 = document.getElementById('note5');
+
+    file4.onchange = function(){
+    	
+    	
+    	
+        var fileList4 = file4.files;
+
+        var reader4 = new FileReader();
+        reader4.readAsDataURL(fileList4[0]);
+        reader4.onload = function(){
+            document.querySelector('#nt_img5').src = reader4.result;
+        }
+    }
+});
 
 
 
+
+$(document).on('click', '#nt_img6', function() {
+    $('input[id="note6"]').click();
+});
+
+
+$('#note_add').on('click',function(){
+	
+
+	
+    var file5 = document.getElementById('note6');
+
+    file5.onchange = function(){
+    	
+    
+    	
+        var fileList5 = file5.files;
+
+        var reader5 = new FileReader();
+        reader5.readAsDataURL(fileList5[0]);
+        reader5.onload = function(){
+            document.querySelector('#nt_img6').src = reader5.result;
+        }
+    }
+});
+
+
+
+$(document).on('click', '#nt_img7', function() {
+    $('input[id="note7"]').click();
+});
+
+
+$('#note_add').on('click',function(){
+	
+	
+	
+    var file6 = document.getElementById('note7');
+
+    file6.onchange = function(){
+    	
+    	
+        var fileList6 = file6.files;
+
+        var reader6 = new FileReader();
+        reader6.readAsDataURL(fileList6[0]);
+        reader6.onload = function(){
+            document.querySelector('#nt_img7').src = reader6.result;
+        }
+    }
+});
+
+
+
+$(document).on('click', '#nt_img8', function() {
+    $('input[id="note8"]').click();
+});
+
+
+$('#note_add').on('click',function(){
+	
+	
+	
+    var file7 = document.getElementById('note8');
+
+    file7.onchange = function(){
+    	
+    	
+    	
+        var fileList7 = file7.files;
+
+        var reader7 = new FileReader();
+        reader7.readAsDataURL(fileList7[0]);
+        reader7.onload = function(){
+            document.querySelector('#nt_img8').src = reader7.result;
+        }
+    }
+});
+
+
+
+$(document).on('click', '#nt_img9', function() {
+    $('input[id="note9"]').click();
+});
+
+
+$('#note_add').on('click',function(){
+	
+	
+    var file8 = document.getElementById('note9');
+
+    file8.onchange = function(){
+    	
+    	
+    	
+        var fileList8 = file8.files;
+
+        var reader8 = new FileReader();
+        reader8.readAsDataURL(fileList8[0]);
+        reader8.onload = function(){
+            document.querySelector('#nt_img9').src = reader8.result;
+        }
+    }
+});
+
+
+$(document).on('click', '#nt_img10', function() {
+    $('input[id="note10"]').click();
+});
+
+
+$('#note_add').on('click',function(){
+	
+
+	
+    var file9 = document.getElementById('note10');
+
+    file9.onchange = function(){
+    	
+    	
+    	
+        var fileList9 = file9.files;
+
+        var reader9 = new FileReader();
+        reader9.readAsDataURL(fileList9[0]);
+        reader9.onload = function(){
+            document.querySelector('#nt_img10').src = reader9.result;
+        }
+    }
+});
 
 

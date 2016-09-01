@@ -52,7 +52,7 @@
       <input type="text" class="form-control title" name="title0" placeholder="제목을 입력해 주세요.">
       <textarea class="form-control" rows="6"  style="width:494.25px;" placeholder="여행 일지를 작성해 주세요." name="nt0"></textarea>
       </div>
-      <input type="file" id="noteo" name="img1" style="display: none;"/>
+      <input type="file" id="note1" name="img1" style="display: none;"/>
       </div>
 
 
@@ -64,7 +64,7 @@
       <input type="text" class="form-control title" name="title1" placeholder="제목을 입력해 주세요."/>
       <textarea class="form-control" rows="6"  style="width:494.25px;" placeholder="여행 일지를 작성해 주세요." name="nt1"></textarea>
       </div>
-      <input type="file" id="notet" name="img2" style="display: none;"/>
+      <input type="file" id="note2" name="img2" style="display: none;"/>
       </div>
 
       <div class="row wt">
@@ -75,7 +75,7 @@
       <input type="text" class="form-control title" name="title2" placeholder="제목을 입력해 주세요.">
       <textarea class="form-control" rows="6"  style="width:494.25px;" placeholder="여행 일지를 작성해 주세요." name="nt2"></textarea>
       </div>
-      <input type="file" id="noteh" name="img3" style="display: none;"/>
+      <input type="file" id="note3" name="img3" style="display: none;"/>
       </div>
 
 

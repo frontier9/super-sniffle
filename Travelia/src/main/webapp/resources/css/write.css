@@ -13,7 +13,7 @@
 .main_img{
 
 	margin-top: 50px;
-  outline: 1px dashed black;
+  	outline: 1px dashed black;
 	padding: 75px;
 
 }
@@ -21,19 +21,25 @@
 .note_wt{
 
 	margin-top: 30px;
-	border-right: 1px solid black;
+	
 
 }
 
 .wt{
 
 	margin-top: 30px;
+	
 }
 
+#time_wt{
+	
+	border-left: 1px solid black;
+}
 
 .time_note{
-
+	
 	margin-top: 30px;
+	
 }
 
 .bt_end{

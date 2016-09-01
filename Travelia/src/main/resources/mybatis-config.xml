@@ -48,7 +48,7 @@ PUBLIC "//mybatis.org//DTD Config 3.0//EN"
 
 	<typeAliases>
         <!--specify a package where MyBatis will search for beans.-->
-		<package name="com.kitri.travelia.domain"a />
+		<package name="com.kitri.travelia.domain" />
 	</typeAliases>
 
 

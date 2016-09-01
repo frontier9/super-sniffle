@@ -1,27 +1,47 @@
 package com.kitri.travelia.controller;
 
+import com.kitri.travelia.service.ArticleService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
 
 //게시판 컨트롤러
 @RequestMapping("/board")
 @Controller
 public class BoardController {
+
+	@Resource
+	private ArticleService articleService;
 	
 	//게시판 링크
 	@RequestMapping(value="/board")
-	public String boardlist(){
-		return "board/board";
+	public ModelAndView boardlist(Map<String, Object> mapList) throws Exception{
+		ModelAndView mv = new ModelAndView("/board/articlelist");
+
+		List<Map<String, Object>> list = articleService.selectArticleList(mapList);
+		mv.addObject("list", list);
+
+		return mv;
 	}
+
 	//게시판 상세보기 페이지
 	@RequestMapping(value="/view")
-	public String boardview(){
-		return "/board/view";
+	public ModelAndView boardview(){
+
+		ModelAndView mv = new ModelAndView("/board/view");
+		return mv;
 	}
+
 	//게시판 글 수정 페이지
 	@RequestMapping(value="/write")
-	public String boardwrite(){
-		return "/board/write";
+	public ModelAndView boardwrite(){
+
+		ModelAndView mv = new ModelAndView("/board/write");
+		return mv;
 	}
 /*
 	//글 등록

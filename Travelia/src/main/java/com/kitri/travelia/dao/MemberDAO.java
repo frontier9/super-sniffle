@@ -4,11 +4,14 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.kitri.travelia.domain.Member;
 
+import java.util.List;
+
 public interface MemberDAO {
 	public String getTime();
 	//로그인
-	public Member confirmEmail(String email) throws UsernameNotFoundException;
-	public int insertMember(Member member);
+	Member confirmEmail(String email) throws UsernameNotFoundException;
+	List<Member> selectMemberList() throws Exception;
+	int insertMember(Member member);
 	String overlapTest(String email);	//id중복체크
 	void updateMember(Member member);
 	Member getMemberInfo(String id);

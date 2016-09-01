@@ -10,5 +10,5 @@ public class Brd_com {
 	private String writer;
 	//fk
 	private int article_no;	
-	
+
 }

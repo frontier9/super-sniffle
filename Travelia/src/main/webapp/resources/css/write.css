@@ -1,0 +1,72 @@
+@CHARSET "EUC-KR";
+
+.fluid-usr{
+    max-width: 1200px;
+    background-color: #fff;
+}
+
+
+.header{
+  margin-top:120px;
+}
+
+.main_img{
+
+	margin-top: 50px;
+  	outline: 1px dashed black;
+	padding: 75px;
+
+}
+
+.note_wt{
+
+	margin-top: 30px;
+	
+
+}
+
+.wt{
+
+	margin-top: 30px;
+	
+}
+
+#time_wt{
+	
+	border-left: 1px solid black;
+}
+
+.time_note{
+	
+	margin-top: 30px;
+	
+}
+
+.bt_end{
+
+	margin-top: 60px;
+
+}
+
+.title{
+    margin-bottom:20px;
+}
+
+
+.navbar-nav > li > a{font-size: 1em;line-height: 3.6em;}
+.navbar-default{background:  #FFFFFF;}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{background: none;color: #E89F10;}
+
+
+@media (max-width: 1200px) {
+	.navbar-brand{padding-top: 11px;}
+
+}
+
+@media (max-width: 767px) {
+	.navbar-nav > li > a {line-height: 1em;}
+	.navbar-brand{padding: 7px;}
+	.navbar-brand img{height: 37px;}
+	.navbar-toggle{margin-top: 12px;}
+
+}

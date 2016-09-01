@@ -3,23 +3,54 @@
 PUBLIC "//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
 	<settings>
+        <!-- Globally enables or disables any caches configured in any mapper under this configuration. -->
 		<setting name="cacheEnabled" value="true" />
+        <!-- Globally enables or disables lazy loading. When enabled, all relations will be lazily loaded.
+         This value can be superseded for an specific relation by using the fetchType attribute on it. -->
 		<setting name="lazyLoadingEnabled" value="false" />
-		<setting name="multipleResultSetsEnabled" value="true" />
-		<setting name="useColumnLabel" value="true" />
-		<setting name="useGeneratedKeys" value="false" />
-		<setting name="autoMappingBehavior" value="PARTIAL" />
-		<setting name="defaultExecutorType" value="SIMPLE" />
-		<setting name="defaultStatementTimeout" value="25" />
-		<setting name="safeRowBoundsEnabled" value="false" />
-		<setting name="mapUnderscoreToCamelCase" value="false" />
-		<setting name="localCacheScope" value="SESSION" />
-		<setting name="jdbcTypeForNull" value="OTHER" />
-		<setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString" />
-	</settings>
+		<!-- Allows or disallows multiple ResultSets to be returned from a single statement (compatible driver required). -->
+        <setting name="multipleResultSetsEnabled" value="true" />
+		<!-- Uses the column label instead of the column name. Different drivers behave differently in this respect.  -->
+        <setting name="useColumnLabel" value="true" />
+        <!--Allows JDBC support for generated keys.-->
+        <setting name="useGeneratedKeys" value="false" />
+        <!--Specifies if and how MyBatis should automatically map columns to fields/properties.
+        => 'NONE' disables auto-mapping.
+        => 'PARTIAL' will only auto-map results with no nested result mappings defined inside.
+        => 'FULL' will auto-map result mappings of any complexity (containing nested or otherwise).-->
+        <setting name="autoMappingBehavior" value="PARTIAL" />
+        <!--&lt;!&ndash;Specify the behavior when detects an unknown column (or unknown property type) of automatic mapping target.&ndash;&gt;-->
+        <!--<setting name="autoMappingUnknownColumnBehavior" value="FAILING" />-->
+        <!--Configures the default executor.
+        => 'SIMPLE' executor does nothing special.
+        => 'REUSE' executor reuses prepared statements.
+        => 'BATCH' executor reuses statements and batches updates.-->
+        <setting name="defaultExecutorType" value="SIMPLE" />
+        <!--Sets the number of seconds the driver will wait for a response from the database.-->
+        <setting name="defaultStatementTimeout" value="25" />
+        <!--Allows using RowBounds on nested statements. If allow, set the false.-->
+        <setting name="safeRowBoundsEnabled" value="false" />
+        <!--Enables automatic mapping from classic database column names A_COLUMN to camel case classic Java property names aColumn.-->
+        <setting name="mapUnderscoreToCamelCase" value="false" />
+        <!--MyBatis uses local cache to prevent circular references and speed up repeated nested queries.
+        By default (SESSION) all queries executed during a session are cached.
+        If localCacheScope=STATEMENT local session will be used just for statement execution,
+        no data will be shared between two different calls to the same SqlSession.-->
+        <setting name="localCacheScope" value="SESSION" />
+        <!--Specifies the JDBC type for null values when no specific JDBC type was provided for the parameter.-->
+        <setting name="jdbcTypeForNull" value="OTHER" />
+        <!--Specifies which Object's methods trigger a lazy load-->
+        <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString" />
+	    <setting name="logPrefix" value="[TraVeliA Log]"/>
+    </settings>
+
 	<typeAliases>
+        <!--specify a package where MyBatis will search for beans.-->
 		<package name="com.kitri.travelia.domain" />
 	</typeAliases>
+
+
 
 </configuration>

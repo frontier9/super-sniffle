@@ -37,7 +37,7 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
 		HttpSession session = request.getSession(true);
 		session.setAttribute("email", member.getMem_email());
 		session.setAttribute("nick", member.getMem_nick());
-		session.setAttribute("No", member.getMem_no()); // 세션에 담아서 원래 페이지로 보냄
+		session.setAttribute("no", member.getMem_no()); // 세션에 담아서 원래 페이지로 보냄
 		/*
 		ObjectMapper om = new ObjectMapper();
 		String jsonString = om.writeValueAsString(map);

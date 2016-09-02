@@ -12,8 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.kitri.travelia.domain.Member;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Handles requests for the application home page.
@@ -24,10 +22,8 @@ public class MainController {
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	
 	//메인 화면
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ModelAndView home() {
-
-		/*
+	@RequestMapping(value = "/")
+	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
@@ -36,23 +32,10 @@ public class MainController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-		*/
-		ModelAndView model = new ModelAndView();
-		model.setViewName("index");
-
-		return model;
+		
+		return "index";
 	}
 	
-	@RequestMapping(value="/logout", method = RequestMethod.GET)
-	public ModelAndView login(){
-		//model.addAttribute("usernick", getMember().getNick());
-		//model.addAttribute("useremail", getMember().getEmail());
-
-		ModelAndView model = new ModelAndView();
-		model.setViewName("ex");
-
-		return model;
-	}
 	@RequestMapping(value="/test")
 	public String test(){
 		//model.addAttribute("usernick", getMember().getNick());
@@ -64,6 +47,12 @@ public class MainController {
 		//model.addAttribute("usernick", getMember().getNick());
 		//model.addAttribute("useremail", getMember().getEmail());
 		return "profile/profile";
+	}
+	@RequestMapping(value="/ex")
+	public String ex(){
+		//model.addAttribute("usernick", getMember().getNick());
+		//model.addAttribute("useremail", getMember().getEmail());
+		return "ex";
 	}
 	public Member getMember(){
 		return (Member)SecurityContextHolder.getContext().getAuthentication().getPrincipal();

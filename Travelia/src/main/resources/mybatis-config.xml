@@ -49,6 +49,7 @@ PUBLIC "//mybatis.org//DTD Config 3.0//EN"
 	<typeAliases>
         <!--specify a package where MyBatis will search for beans.-->
 		<package name="com.kitri.travelia.domain" />
+		<!-- <typeAlias type="java.util.Map" alias="map"/> -->
 	</typeAliases>
 
 

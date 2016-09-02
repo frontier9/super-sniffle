@@ -1,103 +1,64 @@
 package com.kitri.travelia.dao;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import com.kitri.travelia.domain.Member;
 
-import java.util.List;
-
 @Repository
 public class MemberDAOImpl implements MemberDAO {
 	
+	private static String namespace ="com.kitri.travelia.mapper.MemberMapper";
+	
 	@Inject
-	private SqlSessionFactory sqlSessionFactory;
-
-	private static final String namespace ="com.kitri.travelia.mapper.MemberMaper";
-
-	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
-		this.sqlSessionFactory = sqlSessionFactory;
-	}
-
+	private SqlSession sqlSession;
+	
+	//현재 시간 조회
 	@Override
-	public List<Member> selectMemberList() throws Exception {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-
-		try {
-			return sqlSession.selectList(namespace +".selectMemberList");
-		} finally {
-			sqlSession.close();
-		}
+	public String currentTime() {
+		return sqlSession.selectOne(namespace+".getTime");
 	}
-
+	
+	//회원 가입
 	@Override
-	public String getTime() {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-
-		try {
-			return sqlSession.selectOne(namespace + ".getTime");
-		} finally {
-			sqlSession.close();
-		}
+	public int create(Member member) throws Exception {
+		sqlSession.insert(namespace+".create",member);
+		System.out.println("(MemberDAO)member="+member.toString());
+		return 0;		
 	}
-
-
+	
+	//회원 조회 (Spring Security 사용)
 	@Override
-	public int insertMember(Member member) {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-
-		try {
-			int count = sqlSession.insert(namespace+".insertMember", member);
-			sqlSession.commit();
-			return count;
-		} finally {
-			sqlSession.close();
-		}
-	}
-
-	@Override
-	public Member confirmEmail(String email) throws UsernameNotFoundException {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-
-		System.out.println("(MemberDAOImpl) Email :" +email);
-		Member member = sqlSession.selectOne(namespace+".confirmEmail", email);
+	public Member read(String useremail) throws UsernameNotFoundException {	
+		System.out.println("(MemberDAOImpl) Email :" + useremail);
+		Member member = sqlSession.selectOne(namespace+".read", useremail);
 		System.out.print("(MemberDAOImpl) Member :"+ member.toString());
-
-		return sqlSession.selectOne(namespace+".confirmEmail",email);
-	}
-
-	@Override 
-	public String overlapTest(String id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	@Override
-	public void updateMember(Member VO) {
-		// TODO Auto-generated method stub
 		
+		return sqlSession.selectOne(namespace+".read",useremail);
 	}
-
+	
+	//회원 정보 수정
 	@Override
-	public Member getMemberInfo(String id) {
-		// TODO Auto-generated method stub
-		return null;
+	public int update(Member member) throws Exception {
+		sqlSession.update(namespace+".update",member);
+		return 0;		
 	}
-
+	
+	//회원 탈퇴
 	@Override
-	public String passwordCnt(Member memVO) {
-		// TODO Auto-generated method stub
-		return null;
+	public int delete(int mem_no) throws Exception {
+		sqlSession.delete(namespace+".delete",mem_no);
+		return 0;	
 	}
-
+	
+	//회원 리스트 조회
 	@Override
-	public String getPassword(String member_id) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Member> listAll() throws Exception {
+		return sqlSession.selectList(namespace+".listAll");
 	}
 }

@@ -17,14 +17,14 @@ public class CustomizeUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String useremail) throws UsernameNotFoundException {
 		
-		System.out.println("(UserDetailService) userEmail:" + useremail);
-		
+		System.out.println("(UserDetailService) userEmail : " + useremail);	
 		//StandardPasswordEncoder encoder = new StandardPasswordEncoder();
 		
 		//사용자가 입력한 계정명으로 해당 계정을 찾아옴
-		Member member = memberDAO.confirmEmail(useremail);
+		Member member = memberDAO.read(useremail);
 		
 		System.out.println("UserDetailService , Member = " + member.toString());
+		
 		//계정에 상태 설정
 		boolean enabled = member.isEnabled();	// 사용 가능한지
 		boolean accountNonExpired = member.isAccountNonExpired();	//계정이 만료됬는지
@@ -56,7 +56,7 @@ public class CustomizeUserDetailsService implements UserDetailsService {
 		member.setCredentialNonExpired(credentialsNonExpired);
 		member.setAuthorities(authorities);
 			
-				*/
+		*/
 		
 		return member;
 

@@ -1,5 +1,7 @@
 package com.kitri.travelia.dao;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -11,59 +13,52 @@ import com.kitri.travelia.domain.Member;
 @Repository
 public class MemberDAOImpl implements MemberDAO {
 	
+	private static String namespace ="com.kitri.travelia.mapper.MemberMapper";
+	
 	@Inject
 	private SqlSession sqlSession;
 	
-	private static final String namespace ="com.kitri.travelia.mapper.MemberMaper";
-	
+	//현재 시간 조회
 	@Override
-	public String getTime() {
+	public String currentTime() {
 		return sqlSession.selectOne(namespace+".getTime");
 	}
-
-
+	
+	//회원 가입
 	@Override
-	public int insertMember(Member member) {
-		return sqlSession.insert(namespace+".insertMember", member);
-
+	public int create(Member member) throws Exception {
+		sqlSession.insert(namespace+".create",member);
+		System.out.println("(MemberDAO)member="+member.toString());
+		return 0;		
 	}
-
+	
+	//회원 조회 (Spring Security 사용)
 	@Override
-	public Member confirmEmail(String email) throws UsernameNotFoundException {
-		System.out.println("(MemberDAOImpl) Email :" +email);
-		Member member = sqlSession.selectOne(namespace+".confirmEmail", email);
+	public Member read(String useremail) throws UsernameNotFoundException {	
+		System.out.println("(MemberDAOImpl) Email :" + useremail);
+		Member member = sqlSession.selectOne(namespace+".read", useremail);
 		System.out.print("(MemberDAOImpl) Member :"+ member.toString());
-		return sqlSession.selectOne(namespace+".confirmEmail",email);
-	}
-
-	@Override 
-	public String overlapTest(String id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	@Override
-	public void updateMember(Member VO) {
-		// TODO Auto-generated method stub
 		
+		return sqlSession.selectOne(namespace+".read",useremail);
 	}
-
+	
+	//회원 정보 수정
 	@Override
-	public Member getMemberInfo(String id) {
-		// TODO Auto-generated method stub
-		return null;
+	public int update(Member member) throws Exception {
+		sqlSession.update(namespace+".update",member);
+		return 0;		
 	}
-
+	
+	//회원 탈퇴
 	@Override
-	public String passwordCnt(Member memVO) {
-		// TODO Auto-generated method stub
-		return null;
+	public int delete(int mem_no) throws Exception {
+		sqlSession.delete(namespace+".delete",mem_no);
+		return 0;	
 	}
-
+	
+	//회원 리스트 조회
 	@Override
-	public String getPassword(String member_id) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Member> listAll() throws Exception {
+		return sqlSession.selectList(namespace+".listAll");
 	}
 }

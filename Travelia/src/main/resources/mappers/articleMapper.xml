@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kitri.travelia.mapper.MemberMaper">
+
+
+    <select id="selectArticleList" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+        select brd_article_no, brd_cat, brd_writer, brd_article_title, brd_attach, brd_article, brd_hit, brd_article_write_date, mem_no
+        from board
+        ]]>
+    </select>
+
+</mapper>

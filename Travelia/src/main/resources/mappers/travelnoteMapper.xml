@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kitri.travelia.mapper.TravelNoteMapper">
+	<!-- TravelNote List 조회 
+	<select id ="listTravelNote">
+		<![CDATA[select* from Travel_note where note_no>0 order by note_no desc, note_write_date desc]]>
+	</select>-->
+	<!-- TravelNote item 조회 -->
+	<!-- TravelNote item 등록
+	<insert id ="insertTravelNote">
+		insert into Travel_note(note_title, note, note_write_date, note_hit, note_nick, note_cat, note_recom, mem_no) 
+		values(#{note_title},#{note},#{note_write_date},#{note_hit},#{note_nick},#{note_cat},#{note_recom},#{mem_no})
+	</insert> -->
+	<!-- TravelNote item Image 등록 
+	<insert id ="insertTravelNote">
+		insert into Note_img(note_no, note_img, note_img, note_img, note_img, note_img, note_img, note_img, note_img, note_img, note_img) 
+		values(#{note_no},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img})
+	</insert>-->
+	<!-- TravelNote item 수정 
+	<update id="updateTravelNote">
+		update Travel_note set note_title = #{note_title}, note = #{note} where note_no = #{note_no}
+	</update>-->
+	<!-- TravelNote item 삭제
+	<delete id ="deleteTravelNote" parameterType ="int">
+		delete from member where note_no = #{note_no}
+	</delete> -->
+	<!-- TravelNote command list 조회 -->
+	<!-- TravelNote command item 조회 -->
+	<!-- TravelNote command item 등록 
+	<insert id ="insertNoteCommand">
+		insert into Note_com(com, com_write_date, writer, note_no) 
+		values(#{com},#{com_write_date},#{writer},#{note_no})
+	</insert>-->
+	<!-- TravelNote command item 삭제 
+	<delete id ="deleteNoteCommand" parameterType ="int">
+		delete from Note_com where trn_no = #{trn_no}
+	</delete>-->
+	<!-- TravelNote command item 수정 -->
+	
+	<!-- TravelNote 검색 -->
+	
+</mapper>

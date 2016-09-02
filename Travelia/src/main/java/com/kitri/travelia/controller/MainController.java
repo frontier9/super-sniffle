@@ -36,12 +36,6 @@ public class MainController {
 		return "index";
 	}
 	
-	@RequestMapping(value="/login")
-	public String login(){
-		//model.addAttribute("usernick", getMember().getNick());
-		//model.addAttribute("useremail", getMember().getEmail());
-		return "ex";
-	}
 	@RequestMapping(value="/test")
 	public String test(){
 		//model.addAttribute("usernick", getMember().getNick());
@@ -53,6 +47,12 @@ public class MainController {
 		//model.addAttribute("usernick", getMember().getNick());
 		//model.addAttribute("useremail", getMember().getEmail());
 		return "profile/profile";
+	}
+	@RequestMapping(value="/ex")
+	public String ex(){
+		//model.addAttribute("usernick", getMember().getNick());
+		//model.addAttribute("useremail", getMember().getEmail());
+		return "ex";
 	}
 	public Member getMember(){
 		return (Member)SecurityContextHolder.getContext().getAuthentication().getPrincipal();

@@ -2,15 +2,30 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.kitri.travelia.mapper.MemberMaper">
-	<select id="getTime" resultType="string">
+<mapper namespace="com.kitri.travelia.mapper.MemberMapper">
+	<select id="currentTime" resultType="string">
 		select now()
 	</select>
-	<insert id ="insertMember">
-		insert into member(mem_email, mem_pw, mem_nick, mem_avt, mem_reg_date, mem_intro, mem_auto_pending, mem_auth_key) 
+	<!-- 회원가입 -->
+	<insert id ="create" parameterType="Member">
+		insert into member(mem_email, mem_pw, mem_nick, mem_avt, mem_reg_date, mem_intro, mem_auth_pending, mem_auth_key) 
 		values(#{mem_email},#{mem_pw},#{mem_nick},#{mem_avt},#{mem_reg_date},#{mem_intro},#{mem_auth_pending},#{mem_auth_key})
 	</insert>
-	<select id ="confirmEmail" resultType="Member" parameterType="String">
+	<!-- 로그인 시 회원 조회 -->
+	<select id ="read" resultType="Member" parameterType="String">
 			select * from member where mem_email = #{mem_email}
+	</select>
+	<!-- 회원 정보 수정 -->
+	<update id="update">
+		update member set mem_pw = #{mem_pw}, mem_nick = #{mem_nick}, mem_avt = #{mem_avt}, mem_intro =#{mem_intro}
+		where mem_no = #{mem_no}
+	</update>
+	<!-- 회원탈퇴 -->
+	<delete id ="delete" parameterType ="int">
+		delete from member where mem_no = #{mem_no}
+	</delete>
+	<!-- 회원 리스트 조회 -->
+	<select id="listAll" resultType="Member">
+	<![CDATA[select * from member where mem_no > 0 order by mem_no desc, mem_reg_date desc]]>
 	</select>
 </mapper>

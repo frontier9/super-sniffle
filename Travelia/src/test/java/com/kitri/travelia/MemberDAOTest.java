@@ -19,22 +19,23 @@ public class MemberDAOTest {
 	
 	
 	public void testTime()throws Exception{
-		System.out.println(dao.getTime());
+		System.out.println(dao.currentTime());
 	}
 	
-	public void testInsertMember() throws Exception{
-		Member member = new Member();
-		/*
-		member.setEmail("aadsdsdsdfaaa");
-		member.setNick("ssfysdsda");
-		member.setPw("aaaasdsdsdsfa");
-		dao.insertMembertest(member);
-		*/
-	}
-	@Test
-	public void testConfirmEmail()throws Exception{
-		Member member = dao.confirmEmail("khs987872@gmail.com");
+	//@Test
+	public void testreadMember()throws Exception{
+		Member member = dao.read("kngt5965@naver.com");
 		System.out.println("member = " + member.toString());
 	}
-
+	
+	@Test
+	public void testInsert() throws Exception{
+		Member member = new Member();
+		member.setMem_email("asd9878@naver.com");
+		member.setMem_pw("1234");
+		member.setMem_nick("asd");
+		member.setMem_avt("default.png");
+		System.out.println(member.toString());
+		dao.create(member);
+	}
 }

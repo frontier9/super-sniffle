@@ -40,11 +40,11 @@
 <div class="table-responsive">
 	<table class="table table-striped">
     	<colgroup>
-        <col width="30%"/>
+        <col width="30"/>
         <col width="40"/>
-        <col width="70%"/>
-        <col width="30%"/>
-        <col width="20%"/>
+        <col width="70"/>
+        <col width="30"/>
+        <col width="20"/>
    		</colgroup>
     <thead>
     <tr class = "success">

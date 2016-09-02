@@ -78,5 +78,35 @@
     </tbody>
 </table>
 </div>
+<div class="row">
+   	<div class="col-md-4"></div>
+   		<div class="col-md-4"></div>
+   			<div class="col-md-4">
+   		<button type="button" class="btn btn-default">글쓰기</button>
+   	</div>
+   </div>
+		<div class="col-md-offset">
+ 		 <ul class="pagination pagination-lg">
+   			 <li>
+      			<a href="#" aria-label="Previous">
+        		<span aria-hidden="true">&laquo;</span>
+     			</a>
+    		 </li>
+   			 <li><a href="#">1</a></li>
+    		 <li><a href="#">2</a></li>
+    		 <li><a href="#">3</a></li>
+    		 <li><a href="#">4</a></li>
+    		 <li><a href="#">5</a></li>
+    		 <li>
+      		 <a href="#" aria-label="Next">
+        	 <span aria-hidden="true">&raquo;</span>
+      		 </a>
+    		 </li>
+ 		 </ul>
+ 	   </div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>

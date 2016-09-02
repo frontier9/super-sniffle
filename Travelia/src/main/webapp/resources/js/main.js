@@ -12,32 +12,3 @@ percentPosition: true
 });
 
 
-function lastPostFunc(){
-
-  $('div#lastPostsLoader').html('<img src="bigLoader.gif">');
-
-  $.post("scroll.asp?action=getLastPosts&lastID=" + $(".grid-item:last").attr("id"),
-
-  function(data){
-
-    if (data != "") {
-
-    $(".wrdLatest:last").after(data);
-
-    }
-
-    $('div#lastPostsLoader').empty();
-
-    });
-
-  }
-
-
-$(window).scroll(function(){
-
-  if  ($(window).scrollTop() >= $(document).height() - $(window).height()){
-    lastPostFunc();
-
-    }
-
-  });

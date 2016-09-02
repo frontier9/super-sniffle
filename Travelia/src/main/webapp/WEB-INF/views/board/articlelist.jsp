@@ -21,13 +21,13 @@
         <th scope="col">카테고리</th>
         <th scope="col">제목</th>
         <th scope="col">조회수</th>
-        <th scope="col">작성자</th>
+        <th scope="col">작성자</th>x[
     </tr>
     </thead>
     <tbody>
     <c:choose>
         <c:when test="${fn:length(list) > 0}">
-            <c:forEach items="${list }" var="row">
+            <c:forEach items="${list}" var="row">
                 <tr>
                     <td>${row.brd_article_no }</td>
                     <td>${row.brd_cat }</td>

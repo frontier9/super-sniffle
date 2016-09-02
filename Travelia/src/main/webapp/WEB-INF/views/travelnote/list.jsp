@@ -1,59 +1,540 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html lang="kr">
 <head>
-<meta http-equiv="Conent-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="<c:url value="/resources/css/Rcss.css"/>" rel="stylesheet">
 <title>Travel note</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href=<c:url value="/resources/css/main.css"/>">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
-<div class="travel-content">
-	 <div class="container-fluid fluid-user traveltitle">
-  		<h1>Travel note</h1>
-  		<p>A template made by w3.css for photographers.</p>
-  		<p><button class="pedding-btn" onclick="myFunction()">writee</button></p>
-	 </div>
+<body style="background-color:#1D2232;">
+<div class="container-fluid">
+  <div class="grid">
+
+    <div class="grid-sizer"></div>
+
+    <div class="grid-item">
+
+        <img src="<c:url value="/resources/images/kr1.jpg"/>" />
+
+        <div class="cornerLink">
+          <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+    </div>
+  </div>
+
+    </div>
+
+    <div class="grid-item">
+            <img src="<c:url value="/resources/images/kr2.jpg"/>" />
+
+            <div class="cornerLink">
+              <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+            <h3 class="text-center">제주도로 떠난 여행 </h3>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr3.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr4.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr5.png"/>" />
 
 
-<div class ="row">
- <div id ="col-md-4-R">
- 	<img src="<c:url value="/resources/images/1920x1080.90.83176-2560x1440.90.Untitled-3 copy.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/header-bg.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/img_bridge.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/img_gondol.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/img_rocks.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/img_gondol.jpg"/>" style="width:100%">
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr6.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr7.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr8.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr9.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr10.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+       <img src="<c:url value="/resources/images/kr1.jpg"/>" />
+
+        <div class="cornerLink">
+          <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+      <h3 class="text-center">제주도로 떠난 여행</h3>
+    </div>
+  </div>
+    </div>
+
+    <div class="grid-item">
+            <img src="<c:url value="/resources/images/kr2.jpg"/>" />
+
+            <div class="cornerLink">
+              <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+            <h3 class="text-center">제주도로 떠난 여행</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="<c:url value="/resources/images/kr3.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+    <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr4.jpg"/>" />
+
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr5.png"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr6.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+    <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr7.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr8.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr9.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr10.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+            <img src="<c:url value="/resources/images/kr2.jpg"/>" />
+
+            <div class="cornerLink">
+              <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="<c:url value="/resources/images/kr3.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr4.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+      <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="<c:url value="/resources/images/kr5.png"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="<c:url value="/resources/images/kr6.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr7.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr4.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="grid-item">
+        <img src="<c:url value="/resources/images/kr5.png"/>" />
+
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr6.jpg"/>" />
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr7.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr8.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+       <img src="<c:url value="/resources/images/kr9.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="<c:url value="/resources/images/kr10.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+      <img src="<c:url value="/resources/images/kr1.jpg"/>" />
+
+        <div class="cornerLink">
+          <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+      <h3 class="text-center">제주도로 떠난 여행</h3>
+    </div>
+  </div>
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr2.jpg"/>" />
+
+            <div class="cornerLink">
+              <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+            <h3 class="text-center">제주도로 떠난 여행</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr3.jpg"/>" />
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+    <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr4.jpg"/>" />
+
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="<c:url value="/resources/images/kr5.png"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr6.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+    <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr7.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr8.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+         <img src="<c:url value="/resources/images/kr9.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+        <img src="<c:url value="/resources/images/kr10.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+           <img src="<c:url value="/resources/images/kr2.jpg"/>" />
+
+            <div class="cornerLink">
+              <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr3.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr4.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+      <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr5.png"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr6.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+          <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid-item">
+          <img src="<c:url value="/resources/images/kr7.jpg"/>" />
+
+          <div class="cornerLink">
+            <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
+        <h3 class="text-center">제주도로 떠난 여행</h3>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+<div class="wt_icon">
+  <h2>
+     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+    노트쓰기</h2>
+
 </div>
 
-<div id = "col-md-4-R"> 
-<img src="<c:url value="/resources/images/img_coffee.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/img_gondol.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/img_nature.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/1920x1080.90.117269-_.jpeg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/1920x1080.90.83176-2560x1440.90.Untitled-3 copy.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/img_rocks.jpg"/>" style="width:100%">
-
 </div>
-
-<div id = "col-md-4-R">
-<img src="<c:url value="/resources/images/img_rocks.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/img_sound.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/img1.jpg"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/profile.png"/>" style="width:100%">
- 	<img src="<c:url value="/resources/images/img_rocks.jpg"/>" style="width:100%">
-  </div>
-  </div>
-  </div>
-  
-<!-- Footer -->
-<footer>
-
-</footer>
  
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
- <script src="js/bootstrap.js"></script>
+<script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+<script src="<c:url value="/resources/js/main.js"/>" type="text/javascript"></script>
 </body>
 </html>

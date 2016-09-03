@@ -19,8 +19,9 @@
 
     <div class="grid-sizer"></div>
 
+    
     <div class="grid-item">
-
+          
         <img src="<c:url value="/resources/images/kr1.jpg"/>" />
 
         <div class="cornerLink">
@@ -30,6 +31,7 @@
   </div>
 
     </div>
+  
 
     <div class="grid-item">
             <img src="<c:url value="/resources/images/kr2.jpg"/>" />

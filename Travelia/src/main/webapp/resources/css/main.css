@@ -49,4 +49,6 @@ width: 25%;
   left:0;
   top:0;
   z-index:10000;
+  cursor: pointer;
 }
+

@@ -17,11 +17,16 @@ import com.sun.istack.internal.logging.Logger;
 public class ArticleServiceImpl implements ArticleService {
     Logger log = Logger.getLogger(this.getClass());
 
-    @Resource(name="articleDAOimpl")
+    @Resource(name="articleDAOimp")
     private ArticleDaoImpl articleDao;
 
     @Override
     public List<Map<String, Object>> selectArticleList(Map<String, Object> map) throws Exception {
         return articleDao.selectArticleList(map);
+    }
+
+    @Override
+    public void insertBoard(Map<String, Object> map) throws Exception {
+        articleDao.insertBoard(map);
     }
 }

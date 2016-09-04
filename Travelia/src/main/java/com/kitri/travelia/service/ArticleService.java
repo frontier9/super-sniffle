@@ -8,4 +8,5 @@ import java.util.Map;
  */
 public interface ArticleService {
     List<Map<String,Object>> selectArticleList(Map<String, Object> map) throws Exception;
+    void insertBoard(Map<String, Object> map) throws Exception;
 }

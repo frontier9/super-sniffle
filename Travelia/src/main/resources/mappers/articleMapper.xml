@@ -8,9 +8,28 @@
 
     <select id="selectArticleList" parameterType="hashmap" resultType="hashmap">
         <![CDATA[
-        select brd_article_no, brd_cat, brd_writer, brd_article_title, brd_attach, brd_article, brd_hit, brd_article_write_date, mem_no
-        from board
+        SELECT brd_article_no, brd_cat, brd_writer, brd_article_title, brd_hit
+        FROM board
         ]]>
     </select>
+
+    <insert id="insertBoard" parameterType="hashmap">
+        <![CDATA[
+        INSERT INTO board
+        (
+          brd_cat,
+          brd_article_title,
+          brd_writer,
+          brd_article
+        )
+        VALUES
+        (
+         '기본값',
+         #{title},
+         'ADMIN',
+         #{contents}
+        )
+        ]]>
+    </insert>
 
 </mapper>

@@ -24,19 +24,19 @@
           
         <img src="<c:url value="/resources/images/kr1.jpg"/>" />
 
-        <div class="cornerLink">
+        <div class="cornerlink">
           <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
         <h3 class="text-center">제주도로 떠난 여행</h3>
     </div>
   </div>
 
     </div>
-  
+
 
     <div class="grid-item">
             <img src="<c:url value="/resources/images/kr2.jpg"/>" />
 
-            <div class="cornerLink">
+            <div class="cornerlink">
               <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
             <h3 class="text-center">제주도로 떠난 여행 </h3>
         </div>
@@ -47,7 +47,7 @@
     <div class="grid-item">
           <img src="<c:url value="/resources/images/kr3.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
           <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -58,7 +58,7 @@
     <div class="grid-item">
           <img src="<c:url value="/resources/images/kr4.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
           <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -70,7 +70,7 @@
           <img src="<c:url value="/resources/images/kr5.png"/>" />
 
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
           <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -81,7 +81,7 @@
     <div class="grid-item">
          <img src="<c:url value="/resources/images/kr6.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
         <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -91,7 +91,7 @@
     <div class="grid-item">
          <img src="<c:url value="/resources/images/kr7.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
         <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -102,7 +102,7 @@
     <div class="grid-item">
           <img src="<c:url value="/resources/images/kr8.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
           <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -112,7 +112,7 @@
     <div class="grid-item">
           <img src="<c:url value="/resources/images/kr9.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
         <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -122,7 +122,7 @@
     <div class="grid-item">
          <img src="<c:url value="/resources/images/kr10.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
         <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -132,7 +132,7 @@
     <div class="grid-item">
        <img src="<c:url value="/resources/images/kr1.jpg"/>" />
 
-        <div class="cornerLink">
+        <div class="cornerlink">
           <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
       <h3 class="text-center">제주도로 떠난 여행</h3>
     </div>
@@ -142,7 +142,7 @@
     <div class="grid-item">
             <img src="<c:url value="/resources/images/kr2.jpg"/>" />
 
-            <div class="cornerLink">
+            <div class="cornerlink">
               <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
             <h3 class="text-center">제주도로 떠난 여행</h3>
         </div>
@@ -152,7 +152,7 @@
     <div class="grid-item">
         <img src="<c:url value="/resources/images/kr3.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
     <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -163,7 +163,7 @@
           <img src="<c:url value="/resources/images/kr4.jpg"/>" />
 
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
           <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -173,7 +173,7 @@
     <div class="grid-item">
          <img src="<c:url value="/resources/images/kr5.png"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
         <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -183,7 +183,7 @@
     <div class="grid-item">
           <img src="<c:url value="/resources/images/kr6.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
     <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -193,7 +193,7 @@
     <div class="grid-item">
           <img src="<c:url value="/resources/images/kr7.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
           <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -204,7 +204,7 @@
     <div class="grid-item">
          <img src="<c:url value="/resources/images/kr8.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
         <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -214,7 +214,7 @@
     <div class="grid-item">
           <img src="<c:url value="/resources/images/kr9.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
           <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -224,7 +224,7 @@
     <div class="grid-item">
          <img src="<c:url value="/resources/images/kr10.jpg"/>" />
 
-          <div class="cornerLink">
+          <div class="cornerlink">
             <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
           <h3 class="text-center">제주도로 떠난 여행</h3>
       </div>
@@ -234,18 +234,11 @@
 
   
     
-
-  
-  
- 
-
   </div>
 
 <div class="wt_icon">
-  <h2>
+  
      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-    노트쓰기</h2>
-
 </div>
 
 </div>

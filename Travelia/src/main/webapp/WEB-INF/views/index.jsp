@@ -130,7 +130,7 @@
                
                <div>                            
 	               <div class="form-inline text-left">
-	                    <input type="file" class="form-control" style="display: block; visibility: hidden;" id="file_input" name="file_input" 
+	                    <input type="file" class="form-control" style="display: block; visibility: hidden;" id="file_input" name="mem_avt" 
 	                    accept="image/bmp, image/gif, image/jpeg, image/png">
 	                    <label for="file_input">선택해</label><div id="filename"></div>
 	               </div>

@@ -6,13 +6,4 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page pageEncoding="utf-8" %>
-<html>
-<head>
-    <title>Title</title>
-
-</head>
-<body>
 <form id="commonForm" name="commonForm"></form>
-
-</body>
-</html>

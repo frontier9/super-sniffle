@@ -12,7 +12,7 @@ import java.util.Map;
 @Repository("articleDAOimp")
 public class ArticleDaoImpl extends AbstractDAO  {
 
-    String namespace="com.kitri.travelia.mapper.MemberMaper";
+    String namespace="com.kitri.travelia.mapper.ArticleMapper";
 
 
     public List<Map<String, Object>> selectArticleList(Map<String, Object> map) throws Exception{
@@ -20,7 +20,7 @@ public class ArticleDaoImpl extends AbstractDAO  {
     }
 
     public void insertBoard(Map<String, Object> map) throws Exception {
-        insert(namespace + "insertBoard", map);
+        insert(namespace + ".insertBoard", map);
     }
 }
 

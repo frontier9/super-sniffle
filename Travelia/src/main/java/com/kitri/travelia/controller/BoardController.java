@@ -1,18 +1,19 @@
 package com.kitri.travelia.controller;
 
-import com.kitri.travelia.common.common.CommandMap;
-import com.kitri.travelia.service.ArticleService;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.method.support.ModelAndViewContainer;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.Resource;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import com.kitri.travelia.common.common.CommandMap;
+import com.kitri.travelia.service.ArticleService;
 
 @RequestMapping("/board")
 @Controller
@@ -21,7 +22,7 @@ public class BoardController {
 
 	@Resource
 	private ArticleService articleService;
-	
+
 	@RequestMapping(value="/board")
 	public ModelAndView boardlist(Map<String, Object> mapList) throws Exception{
 		ModelAndView mv = new ModelAndView("/board/articlelist");

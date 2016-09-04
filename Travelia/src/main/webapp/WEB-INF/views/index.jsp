@@ -90,7 +90,7 @@
 
     <!-- sign up -->
     <div class="tab-pane fade" id="signup">
-         <form class="form center-block" action='<c:url value="/join"/>' method="post" id="sign_up" name="sign_up">
+         <form class="form center-block" action='<c:url value="/join"/>' method="post" id="sign_up" enctype="multipart/form-data">
          	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
             <fieldset>
                <br>

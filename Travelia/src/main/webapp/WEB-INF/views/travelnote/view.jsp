@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="/resources/css/timeline.css">
-      <link href="/resources/css/one-page-wonder.css" rel="stylesheet">
+    <link href="/resources/css/one-page-wonder.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
@@ -91,7 +91,7 @@
               
                     <div class="timeline-item">
                         <div class="timeline-point">
-                            <i class="fa fa-star"></i>
+                            <i><strong>1</strong></i>
                         </div>
                         <div class="timeline-event">
                             <div class="timeline-heading">
@@ -112,7 +112,7 @@
                       
                     <div class="timeline-item">
                         <div class="timeline-point">
-                            <i class="fa fa-star"></i>
+                            <i><strong>2</strong></i>
                         </div>
                         <div class="timeline-event">
                             <div class="timeline-heading">
@@ -131,7 +131,7 @@
                     
                     <div class="timeline-item">
                         <div class="timeline-point">
-                            <i class="fa fa-star"></i>
+                             <i><strong>3</strong></i>
                         </div>
                         <div class="timeline-event">
                             <div class="timeline-heading">
@@ -151,7 +151,7 @@
                 
          	<div class="timeline-item">
                         <div class="timeline-point">
-                            <i class="fa fa-star"></i>
+                            <i><strong>4</strong></i>
                         </div>
                         <div class="timeline-event">
                             <div class="timeline-heading">
@@ -171,7 +171,7 @@
 
                        <div class="timeline-item">
                         <div class="timeline-point">
-                            <i class="fa fa-star"></i>
+                            <i><strong>5</strong></i>
                         </div>
                         <div class="timeline-event">
                             <div class="timeline-heading">
@@ -191,7 +191,7 @@
 
       				<div class="timeline-item">
                         <div class="timeline-point">
-                            <i class="fa fa-star"></i>
+                           <i><strong>6</strong></i>
                         </div>
                         <div class="timeline-event">
                             <div class="timeline-heading">
@@ -317,6 +317,7 @@
             </div>
         </div>
 
+<%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 
 </body>
 </html>

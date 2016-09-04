@@ -7,32 +7,118 @@ var title=['title3', 'title4', 'title5', 'title6', 'title7', 'title8', 'title9']
 var time_title=['time_title3', 'time_title4', 'time_title5', 'time_title6', 'time_title7', 'time_title8', 'time_title9'];
 var time=['time3','time4','time5','time6','time7','time8','time9'];
 var nt =["nt3", "nt4","nt5","nt6","nt7","nt8","nt9"];
+var nnum=["nn0","nn1","nn2","nn3","nn4","nn5","nn6"];
+var tnum=["tn0","tn1","tn2","tn3","tn4","tn5","tn6"];
 
 $("#note_add").click(function(){
-
+     
+	var lastid = $(".img-circle").length;
+		
+	console.log(lastid);
+	
+	if(lastid===4){
+		i=1;
+		cnt_note=1;
+	}else if(lastid===5){
+		
+		i=2;
+		cnt_note=2;
+	} else if(lastid===6){
+		i=3;
+		cnt_note=3;
+	}else if(lastid===7){
+		i=4;
+		cnt_note=4;
+	}else if(lastid===8){
+		i=5;
+		cnt_note=5;
+	}else if(lastid===9){
+		i=6;
+		cnt_note=6;
+	}else if(lastid===10){
+		i=7;
+		cnt_note=7;
+	}else{
+		i=0;
+		cnt_note=0;
+	}
+	
+	console.log(i);
+	
 	if(cnt_note<=6){
-	$(".note_wt").append('<div class="row wt">' +
+	$(".note_wt").append('<div class="row wt" id="'+nnum[i]+'">' +
         '<div class="col-md-3">' +
         '<img src="/resources/images/plus2.png" id="'+imgid[i]+'" style="width:150px; height:150px; cursor: pointer;"' +
         ' class="img-circle"></div><div class="col-md-9"><input type="text" name="'+title[i]+'"' +
         ' class="form-control title" placeholder="제목을 입력해 주세요."/>' +
-        '<textarea class="form-control" rows="6"  style="width:494.25px;" placeholder="여행일지를 작성해 주세요." name="'+nt[i]+'" >' +
+        '<textarea class="form-control" rows="6"  style="width:100%;" placeholder="여행일지를 작성해 주세요." name="'+nt[i]+'" >' +
         '</textarea>' +
         '</div><input type="file" id="'+intnm[i]+'" name="'+intn[i]+'" style="display: none;"/></div>');
 
-	$("#time_wt").append('<div class="row time_note">' +
+	$("#time_wt").append('<div class="row time_note" id="'+tnum[i]+'">' +
         '<div class="col-md-12"> ' +
         '<input type="text" class="form-control title" placeholder="제목을 입력해 주세요." name="'+time_title[i]+'"/>' +
-        '<textarea class="form-control" rows="6"  style="width:470px;" placeholder="타임라인을 작성해 주세요." name="'+time[i]+'" >' +
+        '<textarea class="form-control" rows="6"  style="width:100%;" placeholder="타임라인을 작성해 주세요." name="'+time[i]+'" >' +
         '</textarea>' +
         '</div>' +
         '</div>');
 	}
 
 	else{ alert('더 이상 작성 하실 수 없습니다.') };
-	cnt_note++;
-	i++;
+	
+	
+	
+	
+	
+});
 
+$("#note_del").on("click",function(){
+	
+	
+	
+	var lastid = $(".img-circle").length;
+	
+	
+	
+	if(lastid===4){
+	$("#nn0").remove();
+	$("#tn0").remove();
+	}
+	else if(lastid===5){
+		
+		$("#nn1").remove();
+		$("#tn1").remove();
+		
+	}	else if(lastid===6){
+		
+		$("#nn2").remove();
+		$("#tn2").remove();
+		
+	} 	else if(lastid===7){
+		
+		$("#nn3").remove();
+		$("#tn3").remove();
+		
+	}	else if(lastid===8){
+		
+		$("#nn4").remove();
+		$("#tn4").remove();
+		
+	}else if(lastid===9){
+		
+		$("#nn5").remove();
+		$("#tn5").remove();
+		
+	}else if(lastid===10){
+		
+		$("#nn6").remove();
+		$("#tn6").remove();
+		
+	}else{
+		alert('기본으로 작성해야 합니다.')
+	}
+		
+	console.log(lastid);
 });
 
 
@@ -56,7 +142,7 @@ filef.onchange = function(){
   readerf.onload=function(){
 
 	  $(".main_img").empty();
-	  $(".main_img").append('<img src="" class="add_img" style="width:1050px; height:300px;"/>');
+	  $(".main_img").append('<img src="" class="add_img img-responsive" style="width:1050px; height:300px;"/>');
 	  document.querySelector('.add_img').src = readerf.result;
   };
 

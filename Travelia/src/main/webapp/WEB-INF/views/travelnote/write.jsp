@@ -30,7 +30,7 @@
 
     <%--main image starts--%>
     <div class="form-group">
-        <div class="col-md-12 main_img">
+        <div class="col-md-12  main_img">
             <img src="<c:url value="/resources/images/plus.png"/>" class="center-block" style="width:35px; height:35px;" id="new_img">
             <h3 class="text-center">메인 이미지를 등록해 주세요.</h3>
         </div>
@@ -41,7 +41,7 @@
     <%--note & timeline start--%>
     <div class="form-group">
         <%--note starts--%>
-        <div class="col-md-7 note_wt">
+        <div class="col-md-7  note_wt">
 
             <%--first note--%>
           <div class="row">
@@ -51,7 +51,7 @@
 
             <div class="col-md-9">
                 <input type="text" class="form-control title" name="title0" placeholder="제목을 입력해 주세요.">
-                <textarea class="form-control" rows="6"  style="width:494.25px;" placeholder="여행 일지를 작성해 주세요." name="nt0">
+                <textarea class="form-control" rows="6"  style="width:100%;" placeholder="여행 일지를 작성해 주세요." name="nt0">
                 </textarea>
             </div>
             <input type="file" id="note1" name="img1" style="display: none;"/>
@@ -64,7 +64,7 @@
          </div>
          <div class="col-md-9">
             <input type="text" class="form-control title" name="title1" placeholder="제목을 입력해 주세요."/>
-            <textarea class="form-control" rows="6"  style="width:494.25px;" placeholder="여행 일지를 작성해 주세요." name="nt1"></textarea>
+            <textarea class="form-control" rows="6"  style="width:100%;" placeholder="여행 일지를 작성해 주세요." name="nt1"></textarea>
         </div>
         <input type="file" id="note2" name="img2" style="display: none;"/>
       </div>
@@ -76,7 +76,7 @@
          </div>
          <div class="col-md-9">
             <input type="text" class="form-control title" name="title2" placeholder="제목을 입력해 주세요.">
-            <textarea class="form-control" rows="6"  style="width:494.25px;" placeholder="여행 일지를 작성해 주세요." name="nt2"></textarea>
+            <textarea class="form-control" rows="6"  style="width:100%;" placeholder="여행 일지를 작성해 주세요." name="nt2"></textarea>
         </div>
         <input type="file" id="note3" name="img3" style="display: none;"/>
       </div>
@@ -92,7 +92,7 @@
            <div class="row">
                 <div class="col-md-12">
                     <input type="text" class="form-control title" placeholder="제목을 입력해 주세요." name="time_title0">
-                    <textarea class="form-control" rows="6"  style="width:470px;" placeholder="타임라인을 작성해 주세요." name="time0" ></textarea>
+                    <textarea class="form-control" rows="6"  style="width:100%;" placeholder="타임라인을 작성해 주세요." name="time0" ></textarea>
                 </div>
            </div>
             <%--first timeline ends--%>
@@ -101,7 +101,7 @@
            <div class="row time_note">
                <div class="col-md-12">
                    <input type="text" class="form-control title" placeholder="제목을 입력해 주세요." name="time_title1">
-                   <textarea class="form-control" rows="6"  style="width:470px;" placeholder="타임라인을 작성해 주세요." name="time1" ></textarea>
+                   <textarea class="form-control" rows="6"  style="width:100%;" placeholder="타임라인을 작성해 주세요." name="time1" ></textarea>
                </div>
            </div>
             <%--second timeline ends--%>
@@ -110,7 +110,7 @@
            <div class="row time_note">
                <div class="col-md-12">
                     <input type="text" class="form-control title" placeholder="제목을 입력해 주세요." name="time_title2">
-                    <textarea class="form-control" rows="6"  style="width:470px;" placeholder="타임라인을 작성해 주세요." name="time2" ></textarea>
+                    <textarea class="form-control" rows="6"  style="width:100%;" placeholder="타임라인을 작성해 주세요." name="time2" ></textarea>
                </div>
            </div>
             <%--third timeline ends--%>
@@ -126,6 +126,7 @@
     <div class="form-group">
         <div class="col-sm-offset-5 col-sm-10 bt_end">
             <button type="button" class="btn btn-default" id="note_add">추가하기</button>
+            <button type="button" class="btn btn-default" id="note_del">삭제하기</button>
             <button type="submit" class="btn btn-default">적성완료</button>
          </div>
      </div>

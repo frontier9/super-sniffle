@@ -56,5 +56,7 @@
    	 	<button type="button" class="btn btn-default">글쓰기</button>
    	 	</div>
     </div>
+<%@ include file="/WEB-INF/include/navbar-md.jsp"%>
+
 </body>
 </html>

@@ -97,7 +97,7 @@
 </div>
 
 </div>
-
+<%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 <script type="text/javascript" src="<c:url value="/resources/js/click.js"/>" ></script>
 </body>
 </html>

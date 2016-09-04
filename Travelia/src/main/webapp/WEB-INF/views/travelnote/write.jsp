@@ -142,7 +142,7 @@
 <h5>@travelia</h5>
 </footer>
 
-
+<%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 <script type="text/javascript" src="<c:url value="/resources/js/note.js"/>" charset="utf-8" ></script>
 
 

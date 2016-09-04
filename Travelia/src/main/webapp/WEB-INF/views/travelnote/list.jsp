@@ -249,6 +249,8 @@
 </div>
 
 </div>
+
+<%@ include file="/WEB-INF/include/navbar-md.jsp"%>
  
 <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
 <script src="<c:url value="/resources/js/main.js"/>" type="text/javascript"></script>

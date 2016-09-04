@@ -8,5 +8,7 @@
 </head>
 <body>
 
+
+<%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 </body>
 </html>

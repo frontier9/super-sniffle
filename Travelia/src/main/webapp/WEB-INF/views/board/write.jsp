@@ -32,6 +32,7 @@
     </form>
 
     <%@ include file="/WEB-INF/include/include-body.jsp"%>
+    <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 <script type="text/javascript">
     $(document).ready(function() {
         $('#list').on('click', function (e) {

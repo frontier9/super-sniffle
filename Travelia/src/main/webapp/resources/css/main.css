@@ -1,3 +1,8 @@
+.grid{
+
+    margin-top: 94px;
+}
+
 .grid-sizer{
 
 width: 25%;
@@ -7,7 +12,6 @@ width: 25%;
 .grid-item{
   float: left;
   width: 25%;
-
 }
 
 

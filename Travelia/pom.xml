@@ -179,6 +179,18 @@
 		    <artifactId>jackson-databind</artifactId>
 		    <version>2.8.1</version>
 		</dependency>
+		<!-- img upload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+		<!-- img resize -->
+		<dependency>
+		    <groupId>org.imgscalr</groupId>
+		    <artifactId>imgscalr-lib</artifactId>
+		    <version>4.2</version>
+		</dependency>
 
 
 	</dependencies>

@@ -167,7 +167,7 @@
 
     <ul class="nav nav-pills nav-stacked">
 
-        <li><a <a href="<c:url value="/"/>"><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
+        <li><a href='<c:url value="/"/>'><span class="fa fa-home fa-fw"></span>&nbsp;Home</a></li>
         <li><a href='<c:url value="/travelnote/list" />'><span class="fa fa-book fa-fw"></span>&nbsp;Travelnote</a></li>
         <li><a href='<c:url value="/schedule/add" />'><span class="fa  fa-calendar fa-fw"></span>&nbsp;Schedule</a></li>
         <li><a href='<c:url value="/board/board" />'><span class="fa fa-pencil-square-o fa-fw"></span>&nbsp;Board</a></li>

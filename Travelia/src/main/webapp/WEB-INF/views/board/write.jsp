@@ -8,6 +8,7 @@
 </head>
 <body>
     <form id="frm">
+    
         <table class="board_view">
             <colgroup>
                 <col width="15%">
@@ -28,6 +29,7 @@
         </table>
 
         <a href="#this" class="btn" id="write">POST</a>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
         <a href="#this" class="btn" id="list">LIST</a>
     </form>
 
@@ -53,8 +55,10 @@
     function fn_openBoardList() {
         console.log("in position");
         var submit = new ComSubmit();
+        
         submit.setUrl("<c:url value='/board/board' />");
-        submit.submit();
+        location.href="/board/board";
+        //submit.submit();
     }
 
     function fn_insertBoard() {

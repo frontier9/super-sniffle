@@ -27,7 +27,15 @@
     <servlet-name>appServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-
+ <!-- HiddenHttpMethod filter
+  <filter>
+   <filter-name>hiddenHttpMethodFilter</filter-name> 
+   <filter-class>org.springframework.web.filer.HiddenHttpMethodFilter</filter-class> 
+  </filter>
+  <filter-mapping> 
+   <filter-name>hiddenHttpMethodFilter</filter-name> 
+   <url-pattern>/</url-pattern> 
+   </filter-mapping>-->
   <!-- Spring dependent filter for security -->
   <filter>
     <filter-name>springSecurityFilterChain</filter-name>

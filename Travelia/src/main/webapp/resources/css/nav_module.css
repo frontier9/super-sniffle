@@ -10,6 +10,7 @@
 
 body {
 	font-family: 'Century Gothic', sans-serif;
+	margin-top:94px;
 }
 
 h1 {
@@ -55,6 +56,12 @@ h1 {
 	position: fixed;
 	top: 0;
 	z-index: 100;
+}
+
+#trv_banner_menu .container-fluid{
+	
+	max-width: 1600px;
+	
 }
 
 .img_sz{

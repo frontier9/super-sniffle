@@ -33,19 +33,19 @@ public class BoardController {
 		return mv;
 	}
 
-	@RequestMapping(value="/view")
-	public ModelAndView boardview(){
+//	@RequestMapping(value="/view")
+//	public ModelAndView boardview(){
+//
+//		ModelAndView mv = new ModelAndView("/board/view");
+//		return mv;
+//	}
 
-		ModelAndView mv = new ModelAndView("/board/view");
-		return mv;
-	}
-
-	@RequestMapping(value="/write")
-	public ModelAndView boardwrite(){
-
-		ModelAndView mv = new ModelAndView("/board/write");
-		return mv;
-	}
+//	@RequestMapping(value="/write")
+//	public ModelAndView boardwrite(){
+//
+//		ModelAndView mv = new ModelAndView("/board/write");
+//		return mv;
+//	}
 
 	@RequestMapping(value="/sampletest.do")
 	public ModelAndView testMapArgumentResolver(CommandMap commandMap) throws Exception {
@@ -74,6 +74,16 @@ public class BoardController {
 		ModelAndView mv = new ModelAndView("redirect:/board/board");
 
 		articleService.insertBoard(commandMap.getMap());
+
+		return mv;
+	}
+
+	@RequestMapping(value="/articleDetail.do")
+	public ModelAndView openArticleDetail(CommandMap commandMap) throws Exception {
+		ModelAndView mv = new ModelAndView("/board/articleDetail");
+
+		Map<String, Object> map = articleService.selectArticleDetail(commandMap.getMap());
+		mv.addObject("map", map);
 
 		return mv;
 	}

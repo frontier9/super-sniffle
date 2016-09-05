@@ -8,7 +8,7 @@ import java.util.Set;
  * Created by Kevin on 2016-09-02.
  */
 public class CommandMap {
-    Map<String, Object> map = new HashMap<>();
+    Map<String, Object> map = new HashMap<String, Object>();
 
     public Object get(String key) {
         return map.get(key);

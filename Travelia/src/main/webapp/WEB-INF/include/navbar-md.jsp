@@ -7,7 +7,7 @@
 --%>
 <%@ page pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <html lang="ko">
 <head>
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
@@ -173,16 +173,16 @@
         <li><a href='<c:url value="/board/board" />'><span class="fa fa-pencil-square-o fa-fw"></span>&nbsp;Board</a></li>
         <li><a href='<c:url value="/profile"/>'><span class="fa fa-user fa-fw"></span>&nbsp;Profile</a></li>
         <!-- login 전 -->
-        <sec:authorize access="! isAuthenticated()">
+        <security:authorize access="! isAuthenticated()">
             <li>
                 <a href=""  data-toggle="modal" data-target="#login_modal">
                     <span class="fa fa-sign-in fa-fw"></span>
                     &nbsp;Login
                 </a>
             </li>
-        </sec:authorize>
+        </security:authorize>
         <!-- login 후 ${pageContext.request.userPrincipal.name} -->
-        <sec:authorize access="isAuthenticated()">
+        <security:authorize access="isAuthenticated()">
             <li><form name="logout" method="post" action='<c:url value="/logout"/>'>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                 <a href="javascript:document.logoutmobile.submit();">
@@ -190,7 +190,7 @@
                     &nbsp;Logout
                 </a>
             </form></li>
-        </sec:authorize>
+        </security:authorize>
 
     </ul>
 </div>
@@ -217,11 +217,11 @@
                     <li><a href='<c:url value="/board/board" />'>Board</a></li>
                     <li><a href='<c:url value="/profile" />'>Profile</a></li>
                     <!-- login 전 -->
-                    <sec:authorize access="! isAuthenticated()">
+                    <security:authorize access="! isAuthenticated()">
                         <li><a href=""  data-toggle="modal" data-target="#login_modal"><span class="fa fa-sign-in"></span>&nbsp;Login</a></li>
-                    </sec:authorize>
+                    </security:authorize>
                     <!-- login 후 -->
-                    <sec:authorize access="isAuthenticated()">
+                    <security:authorize access="isAuthenticated()">
                         <li><form name="logout" method="post" action='<c:url value="/logout"/>'>
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                             <a href="javascript:document.logout.submit();">
@@ -229,7 +229,7 @@
                                 &nbsp;Logout
                             </a>
                         </form></li>
-                    </sec:authorize>
+                    </security:authorize>
                 </ul>
             </div>
 

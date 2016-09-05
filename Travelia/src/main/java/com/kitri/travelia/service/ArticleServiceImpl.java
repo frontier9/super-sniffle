@@ -29,4 +29,12 @@ public class ArticleServiceImpl implements ArticleService {
     public void insertBoard(Map<String, Object> map) throws Exception {
         articleDao.insertBoard(map);
     }
+
+    @Override
+    public Map<String, Object> selectArticleDetail(Map<String, Object> map) throws Exception {
+        articleDao.updateHitCnt(map);
+        Map<String, Object> resultMap = articleDao.selectArticleDetail(map);
+
+        return resultMap;
+    }
 }

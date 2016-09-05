@@ -37,10 +37,13 @@ function ComSubmit(opt_formId) {
 
     }
 
-    this.submit = function submit() {
+    this.submit = function submit(a, b) {
         var frm = $('#'+this.formId)[0];
-        frm.action = this.url;
+        frm.url = this.url;
         frm.method = 'post';
+        $(frm).attr({
+            action: frm.url + "?" + a + "=" + b,
+        });
         frm.submit();
     }
 }

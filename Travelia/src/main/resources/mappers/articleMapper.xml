@@ -3,33 +3,57 @@
         PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.kitri.travelia.mapper.ArticleMapper">
+<mapper namespace="com.kitri.travelia.mapper.articleMapper">
 
 
     <select id="selectArticleList" parameterType="hashmap" resultType="hashmap">
         <![CDATA[
-        SELECT brd_article_no, brd_cat, brd_writer, brd_article_title, brd_hit
-        FROM board
+            SELECT brd_article_no, brd_cat, brd_writer, brd_article_title, brd_hit, brd_article_write_date
+            FROM board
         ]]>
     </select>
 
     <insert id="insertBoard" parameterType="hashmap">
         <![CDATA[
-        INSERT INTO board
-        (
-          brd_cat,
-          brd_article_title,
-          brd_writer,
-          brd_article
-        )
-        VALUES
-        (
-         '기본값',
-         #{title},
-         'ADMIN',
-         #{contents}
-        )
+            INSERT INTO board
+            (
+              brd_cat,
+              brd_article_title,
+              brd_writer,
+              brd_article
+            )
+            VALUES
+            (
+             '기본값',
+             #{title},
+             'ADMIN',
+             #{contents}
+            )
         ]]>
     </insert>
 
+    <update id="updateHitCnt" parameterType="hashmap">
+    <![CDATA[
+          UPDATE board
+          SET
+            brd_hit = IFNULL(brd_hit, 0) + 1
+          WHERE
+            brd_article_no = #{idx}
+        ]]>
+    </update>
+
+    <select id="selectArticleDetail" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+          SELECT
+            brd_article_no,
+            brd_hit,
+            brd_writer,
+            brd_article_title,
+            brd_article
+          FROM
+            board
+          WHERE
+            brd_article_no = #{idx}
+        ]]>
+    </select>
 </mapper>

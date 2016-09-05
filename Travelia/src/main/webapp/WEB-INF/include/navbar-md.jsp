@@ -20,8 +20,7 @@
     <link rel="stylesheet" href="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>	">
     <link href="<c:url value="/resources/css/font-awesome.min.css" />" rel="stylesheet">
     <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
-    <link href="<c:url value="/resources/css/trv_style.css" />" rel="stylesheet">
-    <link href="<c:url value="/resources/css/navbar.css" />" rel="stylesheet">
+    <link href="<c:url value="/resources/css/nav_module.css" />" rel="stylesheet">
     <link rel="stylesheet" href="<c:url value="/resources/css/login.css" />">
     <title>navbar</title>
 </head>
@@ -203,7 +202,7 @@
         <div class="container-fluid">
 
             <div class="col-xs-3 trv_logo">
-                <a href="#"> <img src="<c:url value="/resources/images/hml.svg" />" id="logo_img" alt="TraVeliA" title="TraVeliA" />
+                <a href="<c:url value="/"/>"> <img src="<c:url value="/resources/images/hml.svg" />" id="logo_img" alt="TraVeliA" title="TraVeliA" />
                     <h1 id="logo_text">Tra<span>Veli</span>A</h1>
                 </a>
 

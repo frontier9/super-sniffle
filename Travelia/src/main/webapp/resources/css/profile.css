@@ -23,22 +23,6 @@
 }
 
 
-
-.panel-info>.panel-heading {
-    color: #232E36 ;
-    background-color: #E4E2E0;
-    border-color: #E4E2E0;
-}
-
-.label-info {
-    background-color:#E4E2E0;
-}
-
-.label {
-  color: #232E36;
-
-}
-
 .pps{
 
 		margin-top: 5px;
@@ -47,7 +31,7 @@
 @media (max-width: 700px) {
 
   .profile-all{
-  	 margin-top : 58px;
+  	 margin-top : 94px;
   	 background: white;
      box-shadow:  0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
      border-color: white;

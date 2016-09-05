@@ -17,12 +17,10 @@
 <div class="container-fluid">
   <div class="grid">
 
-    <div class="grid-sizer"></div>
-
-    
-    <div class="grid-item">
+ 
+    <div class="grid-item img-responsive">
           
-        <img src="<c:url value="/resources/images/kr1.jpg"/>" />
+        <img class="img-res" src="<c:url value="/resources/images/kr1.jpg"/>" />
 
         <div class="cornerlink">
           <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
@@ -33,8 +31,8 @@
     </div>
 
 
-    <div class="grid-item">
-            <img src="<c:url value="/resources/images/kr2.jpg"/>" />
+    <div class="grid-item img-responsive">
+            <img class="img-res" src="<c:url value="/resources/images/kr2.jpg"/>" />
 
             <div class="cornerlink">
               <div style="position: absolute; top:0px; width:300px; padding-top:100px; text-align:center; color:white;opacity: 1 ">
@@ -44,7 +42,7 @@
 
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
           <img src="<c:url value="/resources/images/kr3.jpg"/>" />
 
           <div class="cornerlink">
@@ -55,7 +53,7 @@
 
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
           <img src="<c:url value="/resources/images/kr4.jpg"/>" />
 
           <div class="cornerlink">
@@ -66,7 +64,7 @@
 
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
           <img src="<c:url value="/resources/images/kr5.png"/>" />
 
 
@@ -78,7 +76,7 @@
 
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
          <img src="<c:url value="/resources/images/kr6.jpg"/>" />
 
           <div class="cornerlink">
@@ -88,7 +86,7 @@
     </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
          <img src="<c:url value="/resources/images/kr7.jpg"/>" />
 
           <div class="cornerlink">
@@ -99,7 +97,7 @@
     </div>
 
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
           <img src="<c:url value="/resources/images/kr8.jpg"/>" />
 
           <div class="cornerlink">
@@ -109,7 +107,7 @@
     </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
           <img src="<c:url value="/resources/images/kr9.jpg"/>" />
 
           <div class="cornerlink">
@@ -119,7 +117,7 @@
     </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
          <img src="<c:url value="/resources/images/kr10.jpg"/>" />
 
           <div class="cornerlink">
@@ -129,7 +127,7 @@
     </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
        <img src="<c:url value="/resources/images/kr1.jpg"/>" />
 
         <div class="cornerlink">
@@ -139,7 +137,7 @@
   </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
             <img src="<c:url value="/resources/images/kr2.jpg"/>" />
 
             <div class="cornerlink">
@@ -149,7 +147,7 @@
       </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
         <img src="<c:url value="/resources/images/kr3.jpg"/>" />
 
           <div class="cornerlink">
@@ -159,7 +157,7 @@
     </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
           <img src="<c:url value="/resources/images/kr4.jpg"/>" />
 
 
@@ -170,7 +168,7 @@
     </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
          <img src="<c:url value="/resources/images/kr5.png"/>" />
 
           <div class="cornerlink">
@@ -180,7 +178,7 @@
     </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
           <img src="<c:url value="/resources/images/kr6.jpg"/>" />
 
           <div class="cornerlink">
@@ -190,7 +188,7 @@
     </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
           <img src="<c:url value="/resources/images/kr7.jpg"/>" />
 
           <div class="cornerlink">
@@ -201,7 +199,7 @@
     </div>
 
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
          <img src="<c:url value="/resources/images/kr8.jpg"/>" />
 
           <div class="cornerlink">
@@ -211,7 +209,7 @@
     </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
           <img src="<c:url value="/resources/images/kr9.jpg"/>" />
 
           <div class="cornerlink">
@@ -221,7 +219,7 @@
     </div>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item img-responsive">
          <img src="<c:url value="/resources/images/kr10.jpg"/>" />
 
           <div class="cornerlink">

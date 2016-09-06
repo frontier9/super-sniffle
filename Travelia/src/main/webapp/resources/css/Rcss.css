@@ -8,11 +8,11 @@
 	
 }
 
-.board-pagination{
+.pagination{
 	display: block;
 	text-align: center;
 }
-.board-pagination > li > a {
+.pagination > li > a {
 	float: none;
 	margin-left:-5px;
 }

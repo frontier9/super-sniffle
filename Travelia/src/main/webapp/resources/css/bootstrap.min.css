@@ -4486,10 +4486,11 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 }
 
 .pagination {
-	display: inline-block;
+	display: block;
 	padding-left: 0;
 	margin: 20px 0;
-	border-radius: 4px
+	border-radius: 4px;
+	text-align:center;
 }
 
 .pagination>li {

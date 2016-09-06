@@ -102,7 +102,7 @@
    	</div>
    </div>
 		<div class="col-md-offset">
- 		 <ul class="board-pagination pagination-lg">
+ 		 <ul class="pagination pagination-lg">
    			 <li>
       			<a href="#" aria-label="Previous">
         		<span aria-hidden="true">&laquo;</span>

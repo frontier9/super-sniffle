@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h2>BOARD</h2>
+                        <h1 class ="board-h1">BOARD</h1>
                  
                         <span class="subheading">자유로운 만큼 더욱 더 예절을 지켜주시기 바랍니다.</span>
                     </div>

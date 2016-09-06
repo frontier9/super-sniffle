@@ -1,5 +1,12 @@
 
-
+.board-h1{
+	color:inherit;
+	line-height:1.1;
+	font-weight: 500;
+	margin:.67em 0;
+	margin-bottom: 10px;
+	
+}
 
 .pagination{
 	display: block;

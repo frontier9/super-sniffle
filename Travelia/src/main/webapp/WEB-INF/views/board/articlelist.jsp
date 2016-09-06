@@ -7,14 +7,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-    <title>first</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/Rcss.css"/>" rel="stylesheet">
+    <title>boardlist</title>
 
     <sec:csrfMetaTags/>
 </head>
 <body>
-<h2>게시판 목록</h2>
-<table class="board_list">
+
+<header class="intro-header" style="background-image: url('resources/images/header-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>BOARD</h1>
+                 
+                        <span class="subheading">자유로운 만큼 더욱 더 예절을 지켜주시기 바랍니다.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class = "container-fluid fluid-user">
+	<div class = "row">
+ 		<div class="col-md-12">
+  		  <form class="form-inline" role="search">
+
+  			 	<select>
+  				<option selected>글번호</option>
+  				<option>글종류</option>
+  				<option>제목</option>
+  				<option>닉네임</option>
+				</select>
+    		     <input type="text" id="form-control" placeholder="Search">
+  			     <button type="submit" class="btn btn-default">검색</button>
+	  		</form>
+		</div>
+    </div>
+
+<div class="table-responsive">   
+<table class = "table table-striped">
     <colgroup>
         <col width="3%"/>
         <col width="15%"/>
@@ -58,8 +92,37 @@
     </c:choose>
     </tbody>
 </table>
+</div>
 
-<a href="#this" class="btn" id="write">글쓰기</a>
+<div class="row">
+   	<div class="col-md-4"></div>
+   		<div class="col-md-4"></div>
+   			<div class="col-md-4">
+   		<a href="#this" class="btn btn-default" id="write">글쓰기</a>
+   	</div>
+   </div>
+		<div class="col-md-offset">
+ 		 <ul class="pagination pagination-lg">
+   			 <li>
+      			<a href="#" aria-label="Previous">
+        		<span aria-hidden="true">&laquo;</span>
+     			</a>
+    		 </li>
+   			 <li><a href="#">1</a></li>
+    		 <li><a href="#">2</a></li>
+    		 <li><a href="#">3</a></li>
+    		 <li><a href="#">4</a></li>
+    		 <li><a href="#">5</a></li>
+    		 <li>
+      		 <a href="#" aria-label="Next">
+        	 <span aria-hidden="true">&raquo;</span>
+      		 </a>
+    		 </li>
+ 		 </ul>
+ 	   </div>
+	</div>
+	
+<!--  <a href="#this" class="btn" id="write">글쓰기</a>-->
 
 <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 <%@ include file="/WEB-INF/include/include-body.jsp" %>

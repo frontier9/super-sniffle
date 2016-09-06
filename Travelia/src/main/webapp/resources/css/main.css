@@ -1,17 +1,6 @@
-.grid{
-
-    margin-top: 94px;
-}
-
-.grid-sizer{
-
-width: 25%;
-
-}
-
 .grid-item{
   float: left;
-  width: 25%;
+  width: 468.25px;
 }
 
 
@@ -71,4 +60,41 @@ width: 25%;
 .glyphicon-pencil{
 
     font-size: 50px;
+}
+
+@media (max-width: 700px) {
+
+ .wt_icon{
+ 	
+ 	 margin-bottom: 10px;
+    margin-right: 10px;
+  padding: 30px 30px;
+  color: white;
+  background: #A2C;
+  position:fixed;
+  right:0;
+  bottom:0;
+  z-index:10000;
+  cursor: pointer;
+    border-radius:60px;
+    -moz-border-radius : 60px;
+    -webkit-border-radius : 60px;
+    -ms-border-radius :60px;
+    -khtml-border-radius : 60px;
+    -o-border-radius :60px;
+    box-shadow:0 5px 20px rgba(0, 0, 0, 0.8);
+      
+ }
+ 
+ .glyphicon-pencil{
+
+    font-size: 20px;
+}
+ 
+ .text-center{
+ 
+    float: center;
+    font-size: 20px;
+ }
+
 }

@@ -5,7 +5,7 @@
 }
 
 .profile-all{
-	 margin-top : 170px;
+	 margin-top : 70px;
 	 background: white;
    box-shadow:  0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
    border-color: white;
@@ -31,7 +31,7 @@
 @media (max-width: 700px) {
 
   .profile-all{
-  	 margin-top : 94px;
+  	 margin-top : 10px;
   	 background: white;
      box-shadow:  0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
      border-color: white;

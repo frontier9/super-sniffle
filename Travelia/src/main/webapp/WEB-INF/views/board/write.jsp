@@ -1,14 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@ include file="/WEB-INF/include/include-header.jsp"%>
-<%@ include file="/WEB-INF/include/include-body.jsp"%>
-<%@ include file="/WEB-INF/include/navbar-md.jsp"%>
-
 <!DOCTYPE html>
 <html>
 <head>
+    <%@ include file="/WEB-INF/include/include-header.jsp"%>
     <sec:csrfMetaTags/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
     <form id="frm">
@@ -25,7 +22,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" class="view_text">
-                        <textarea rows="20" cols="100" title="TITLE" id="contents" name="contents"></textarea>
+                        <textarea rows="20" cols="100" title="내용" id="contents" name="contents"></textarea>
                     </td>
                 </tr>
             </tbody>
@@ -36,6 +33,8 @@
         <a href="#this" class="btn" id="list">LIST</a>
     </form>
 
+    <%@ include file="/WEB-INF/include/include-body.jsp"%>
+    <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 
 <script type="text/javascript">
 //<![CDATA[
@@ -51,8 +50,6 @@
             e.stopPropagation();
             fn_insertBoard();
         });
-
-
     });
 
     function fn_openBoardList() {

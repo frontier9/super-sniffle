@@ -9,7 +9,7 @@ import java.util.Map;
  * Created by Kevin on 2016-09-01.
  */
 
-@Repository("articleDAOimp")
+@Repository("articleDAOImplementation")
 public class ArticleDaoImpl extends AbstractDAO  {
 
     String namespace="com.kitri.travelia.mapper.articleMapper";

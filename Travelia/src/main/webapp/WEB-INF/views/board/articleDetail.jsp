@@ -1,14 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Kevin
-  Date: 2016-09-04
-  Time: 오후 5:32
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE HTML>
 <html>
 <head>
+    <sec:csrfMetaTags/>
 <%@ include file="/WEB-INF/include/include-header.jsp"%>
 </head>
 <body>
@@ -45,6 +40,7 @@
 
 <a href="#this" class="btn" id="list">목록으로</a>
 <a href="#this" class="btn" id="update">수정하기</a>
+<%@ include file="/WEB-INF/include/include-body.jsp"%>
 
 <script type="text/javascript">
 //<![CDATA[
@@ -74,11 +70,13 @@ function fn_openBoardList() {
 }
 
 function fn_openArticleUpdate() {
-    var idx = "${map.idx}";
+    var idx = "${map.brd_article_no}";
+    var csrf_param = $("meta[name='_csrf_parameter']").attr('content');
+    var csrf_token = $("meta[name='_csrf']").attr('content');
     var submit = new ComSubmit();
-    submit.setUrl("<c:url value='/board/articleUpdate.do' />");
+    submit.setUrl("<c:url value='/board/openUpdateForm.do' />");
     submit.addParam("idx", idx);
-    submit.submit();
+    submit.submit(csrf_param, csrf_token);
 }
 //]]>
 

@@ -32,18 +32,16 @@ function ComSubmit(opt_formId) {
     }
 
     this.addParam = function addParam(key, value) {
-        //$('#'+this.formId).append("<input type='hidden' name='" + key + "' id='" + key + "' value='" + value+"' >");
-        $('#'+this.formId).append("<input type='hidden' name='${_csrf.parameterName}' id='" + key + "' value='${_csrf.token}' >");
+        $('#'+this.formId).append("<input type='hidden' name='" + key + "' id='" + key + "' value='" + value+"' >");
+        //$('#'+this.formId).append("<input type='hidden' name='${_csrf.parameterName}' id='" + key + "' value='${_csrf.token}' >");
 
     }
 
-    this.submit = function submit(a, b) {
+    this.submit = function submit(param, token) {
         var frm = $('#'+this.formId)[0];
         frm.url = this.url;
         frm.method = 'post';
-        $(frm).attr({
-            action: frm.url + "?" + a + "=" + b,
-        });
+        $(frm).attr('action', frm.url + "?" + param + "=" + token);
         frm.submit();
     }
 }

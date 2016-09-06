@@ -9,6 +9,7 @@ import javax.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -85,6 +86,34 @@ public class BoardController {
 		Map<String, Object> map = articleService.selectArticleDetail(commandMap.getMap());
 		mv.addObject("map", map);
 
+		return mv;
+	}
+
+	@RequestMapping(value="/openUpdateForm.do")
+	public ModelAndView openUpdateForm(CommandMap commandMap) throws Exception {
+		ModelAndView mv = new ModelAndView("/board/update");
+
+		Map<String, Object> map = articleService.selectArticleDetail(commandMap.getMap());
+		mv.addObject("map", map);
+
+		return mv;
+	}
+
+	@RequestMapping(value="/updateArticle.do")
+	public ModelAndView updateArticle(CommandMap commandMap) throws Exception {
+		ModelAndView mv = new ModelAndView("redirect:/board/articleDetail.do");
+
+		articleService.updateArticle(commandMap.getMap());
+
+		mv.addObject("idx", commandMap.get("idx"));
+		return mv;
+	}
+
+	@RequestMapping(value="/deleteArticle.do")
+	public ModelAndView deleteArticle(CommandMap commandMap) throws Exception {
+		ModelAndView mv = new ModelAndView("redirect:/board/board");
+
+		articleService.deleteArticle(commandMap.getMap());
 		return mv;
 	}
 

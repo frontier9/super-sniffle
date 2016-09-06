@@ -17,7 +17,7 @@ import com.sun.istack.internal.logging.Logger;
 public class ArticleServiceImpl implements ArticleService {
     Logger log = Logger.getLogger(this.getClass());
 
-    @Resource(name="articleDAOimp")
+    @Resource(name="articleDAOImplementation")
     private ArticleDaoImpl articleDao;
 
     @Override
@@ -36,5 +36,15 @@ public class ArticleServiceImpl implements ArticleService {
         Map<String, Object> resultMap = articleDao.selectArticleDetail(map);
 
         return resultMap;
+    }
+
+    @Override
+    public void updateArticle(Map<String, Object> map) throws Exception {
+        articleDao.updateBoard(map);
+    }
+
+    @Override
+    public void deleteArticle(Map<String, Object> map) throws Exception {
+        articleDao.deleteBoard(map);
     }
 }

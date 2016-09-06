@@ -6,12 +6,14 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Kevin on 2016-09-01.
  */
 public class AbstractDAO {
     protected Log log = LogFactory.getLog(AbstractDAO.class);
+    String namespace="com.kitri.travelia.mapper.articleMapper";
 
     @Autowired
     private SqlSessionTemplate sqlSession;
@@ -57,4 +59,11 @@ public class AbstractDAO {
         return sqlSession.selectList(queryId, params);
     }
 
+    public void updateBoard(Map<String, Object> map) throws Exception {
+        update(namespace + ".updateArticle", map);
+    }
+
+    public void deleteBoard(Map<String, Object> map) throws Exception {
+        delete(namespace + ".deleteArticle", map);
+    }
 }

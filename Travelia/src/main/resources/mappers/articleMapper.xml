@@ -8,8 +8,17 @@
 
     <select id="selectArticleList" parameterType="hashmap" resultType="hashmap">
         <![CDATA[
-            SELECT brd_article_no, brd_cat, brd_writer, brd_article_title, brd_hit, brd_article_write_date
-            FROM board
+            SELECT
+              brd_article_no,
+              brd_cat,
+              brd_writer,
+              brd_article_title,
+              brd_hit,
+              brd_article_write_date
+            FROM
+              board
+            WHERE
+              del_flag <> 1
         ]]>
     </select>
 
@@ -56,4 +65,25 @@
             brd_article_no = #{idx}
         ]]>
     </select>
+
+    <update id="updateArticle" parameterType="hashmap">
+        <![CDATA[
+          UPDATE board
+          SET
+            brd_article_title = #{title},
+            brd_article = #{contents}
+          WHERE
+            brd_article_no = #{idx}
+        ]]>
+    </update>
+
+    <update id="deleteArticle" parameterType="hashmap">
+        <![CDATA[
+          UPDATE board
+          SET
+            del_flag = 1
+          WHERE
+            brd_article_no = #{idx}
+        ]]>
+    </update>
 </mapper>

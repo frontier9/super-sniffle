@@ -101,7 +101,7 @@
    		<a href="#this" class="btn btn-default" id="write">글쓰기</a>
    	</div>
    </div>
-		<div class="col-md-offset">
+		<div class="col-md-offset-0">
  		 <ul class="pagination pagination-lg">
    			 <li>
       			<a href="#" aria-label="Previous">

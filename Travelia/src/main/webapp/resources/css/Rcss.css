@@ -15,10 +15,10 @@
 	text-align:right;
 	margin-top:2em;
 }
-.col-xs-12 col-md-12{
+/*.col-xs-12 col-md-12{
 	pedding-right:20px;
 	text-align:right;
-}
+}*/
 
 .table{
 	max-width:100%;
@@ -26,7 +26,7 @@
 }
 
 table th, table td{
-	text-align:left;
+	text-align:center;
 }
 
 a:link {

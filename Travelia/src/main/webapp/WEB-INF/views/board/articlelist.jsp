@@ -42,7 +42,7 @@
   				<option>닉네임</option>
 				</select>
     		     <input type="text" id="form-control" placeholder="Search">
-  			     <button type="submit" class="btn-search">검색</button>
+  			     <button type="submit" class="btn btn-default">검색</button>
 	  		</form>
 		</div>
     </div>
@@ -98,7 +98,7 @@
    	<div class="col-md-4"></div>
    		<div class="col-md-4"></div>
    			<div class="col-md-4">
-   		<a href="#this" class="btn-search" id="write">글쓰기</a>
+   		<a href="#this" class="btn btn-default" id="write">글쓰기</a>
    	</div>
    </div>
 		<div class="col-md-offset">

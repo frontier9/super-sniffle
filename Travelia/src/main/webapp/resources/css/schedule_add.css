@@ -1,0 +1,64 @@
+body {
+  background: #e2e1e0;
+}
+
+
+
+.title_schedule{
+	margin-top: 15px;
+	margin-bottom: 60px;
+	width: 15%;
+}
+
+
+
+.sm_map{
+	
+}
+
+.sm_img{
+	
+	height: 475px;
+	width: 400px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.big_img{
+	width:1049px;
+	height: 475px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.mx{
+	
+	max-width:1650px
+}
+
+.drag_card{
+	
+	margin-top: 20px;
+}
+
+.drop_card{
+	
+	margin-top: 20px;
+}
+
+
+.glyphicon-search{
+	
+	font-size:20px;
+}
+
+#custom-search-input{
+	
+	width:79%;
+	
+}
+
+.thead-inverse{
+	
+	background:#625859;
+	color:#FEFEFE;
+	
+}

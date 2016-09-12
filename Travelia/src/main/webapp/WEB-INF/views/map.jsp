@@ -31,8 +31,7 @@
 
 <div id="wrap" class="section">
     <div id="map" style="width:100%;height:900px;"></div>
-    <code id="snippet" class="snippet"></code>
-</div>
+ </div>
 <script id="code">
     var HOME_PATH = window.HOME_PATH || '.',
             urlPrefix = HOME_PATH +'/resources/data/region/region',

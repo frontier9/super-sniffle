@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java"  pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>        
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="kr">
@@ -21,13 +20,15 @@
 <div class="col-md-12">
 <div class="title_schedule center-block page-header">
  <h2 class="text-center">
- <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+ 
  Schedule</h2>
 </div>
 </div>
 
 <div class="col-md-4 sm_map ">
-<img src="<c:url value="/resources/images/korea_all.png"/>"  class="sm_img">
+
+<%@ include file="/WEB-INF/views/map.jsp"%>
+
 </div>
 
 <div class="col-md-8 lg_map">
@@ -66,7 +67,7 @@
 </tr>
 </thead>
 <tr>
-<td><h4>0:00</h4></td>
+<td><h4>00:00 ~ 01:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -76,7 +77,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>1:00</h4></td>
+<td><h4>01:00 ~ 02:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -86,7 +87,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>2:00</h4></td>
+<td><h4>02:00 ~ 03:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -96,7 +97,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>3:00</h4></td>
+<td><h4>03:00 ~ 04:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -106,7 +107,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>4:00</h4></td>
+<td><h4>04:00 ~ 05:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -116,7 +117,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>5:00</h4></td>
+<td><h4>05:00 ~ 06:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -126,7 +127,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>6:00</h4></td>
+<td><h4>06:00 ~ 07:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -136,7 +137,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>7:00</h4></td>
+<td><h4>07:00 ~ 08:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -146,7 +147,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>8:00</h4></td>
+<td><h4>08:00 ~ 09:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -156,7 +157,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>9:00</h4></td>
+<td><h4>09:00 ~ 10:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -166,7 +167,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>10:00</h4></td>
+<td><h4>10:00 ~ 11:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -176,7 +177,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>11:00</h4></td>
+<td><h4>11:00 ~ 12:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -186,7 +187,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>12:00</h4></td>
+<td><h4>12:00 ~ 13:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -196,7 +197,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>13:00</h4></td>
+<td><h4>13:00 ~ 14:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -206,7 +207,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>14:00</h4></td>
+<td><h4>14:00 ~ 15:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -216,7 +217,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>15:00</h4></td>
+<td><h4>15:00 ~ 16:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -226,7 +227,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>16:00</h4></td>
+<td><h4>16:00 ~ 17:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
@@ -236,7 +237,7 @@
 <td></td>
 </tr>
 <tr>
-<td><h4>17:00</h4></td>
+<td><h4>17:00 ~ 18:00</h4></td>
 <td></td>
 <td></td>
 <td></td>

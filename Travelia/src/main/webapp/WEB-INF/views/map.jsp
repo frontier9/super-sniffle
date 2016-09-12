@@ -34,7 +34,7 @@
  </div>
 <script id="code">
     var HOME_PATH = window.HOME_PATH || '.',
-            urlPrefix = HOME_PATH +'/resources/data/region/region',
+            urlPrefix = HOME_PATH +'./resources/data/region/region',
             urlSuffix = '.json',
             regionGeoJson = [],
             loadCount = 0;

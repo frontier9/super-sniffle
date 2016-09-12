@@ -27,7 +27,7 @@
 
 <div class="col-md-4 sm_map ">
 
-<%@ include file="/WEB-INF/views/map.jsp"%>
+<%@ include file="/WEB-INF/views/map_hybrid.jsp"%>
 
 </div>
 

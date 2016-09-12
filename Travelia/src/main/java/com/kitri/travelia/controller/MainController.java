@@ -36,12 +36,19 @@ public class MainController {
 		return "index";
 	}
 	
-	@RequestMapping(value="/test")
-	public String test(){
+	@RequestMapping(value="/test_hybrid.do")
+	public String test_hybrid(){
 		//model.addAttribute("usernick", getMember().getNick());
 		//model.addAttribute("useremail", getMember().getEmail());
-		return "map";
+		return "map_hybrid";
 	}
+
+    @RequestMapping(value="/test_normal.do")
+    public String test_normal(){
+        //model.addAttribute("usernick", getMember().getNick());
+        //model.addAttribute("useremail", getMember().getEmail());
+        return "map_normal";
+    }
 
 
 

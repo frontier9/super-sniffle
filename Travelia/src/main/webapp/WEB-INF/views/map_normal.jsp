@@ -30,8 +30,8 @@
 <!-- @category DataLayer -->
 
 <div id="wrap" class="section">
-    <div id="map" style="width:100%;height:900px;"></div>
-</div>
+    <div id="map" style="width:100%;height:450px;"></div>
+ </div>
 
 <script id="code">
     var HOME_PATH = window.HOME_PATH || '.',

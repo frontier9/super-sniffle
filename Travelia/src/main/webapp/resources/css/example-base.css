@@ -1,9 +1,9 @@
-html, body { margin:0;padding:0;font-size:14px;font-family:nanumgothic, "나눔고딕", NanumGothic, "Malgun Gothic", "돋움", Dotum, AppleGothic, Sans-serif; }
+html, body { margin:0;padding:0;font-size:14px;font-family:nanumgothic, "�굹�닎怨좊뵓", NanumGothic, "Malgun Gothic", "�룍��", Dotum, AppleGothic, Sans-serif; }
 h1, h2, h3, h4, h5 { display:block;font-weight:bold;line-height:110%;padding:0 0 5px 0;margin:0; }
 h1 { font-size:30px; }
 h2 { font-size:26px; }
 h3 { font-size:20px;border-bottom:solid 1px #cdcdcd; }
-h4 { font-size:18px;border-bottom:solid 1px #cdcdcd; }
+h4 { font-size:18px;}
 h5 { font-size:16px; }
 p { margin:10px 0; }
 a { color:#006ac8; }
@@ -18,7 +18,7 @@ a.back { font-size:16px;margin-bottom:10px;color:#006ac8;text-decoration:underli
 
 #console { width:100%;height:200px;margin:10px 0 0 0;border:0 none;background-color:#efefef;font-size:12px;line-height:150%; }
 
-/* 요약정보레이어 예제 */
+/* �슂�빟�젙蹂대젅�씠�뼱 �삁�젣 */
 .iw_inner { padding:10px; }
 .iw_inner h3 { font-size:16px;font-weight:bold;padding-bottom:5px;margin:10px 0; }
 .iw_inner p { font-size:12px;color:#333; }

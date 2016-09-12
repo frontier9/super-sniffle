@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="<c:url value="/resources/css/schedule_add.css"/>" >
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -31,8 +32,12 @@
 
 </div>
 
+<br>
+
 <div class="col-md-8 lg_map">
-<img src="<c:url value="/resources/images/mapjs-sample.png"/>"  class="big_img">
+
+<%@ include file="/WEB-INF/views/map_normal.jsp"%>
+
 </div>
 
 <div class="col-md-4 drag_card">
@@ -47,8 +52,6 @@
                     </span>
                 </div>
             </div>
-
-
 </div>
 
 <div class="col-md-8 drop_card">
@@ -258,5 +261,6 @@
 
 <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 <script src="<c:url value="/resources/js/schedule_add.js"/>" type="text/javascript"></script>
+
 </body>
 </html>

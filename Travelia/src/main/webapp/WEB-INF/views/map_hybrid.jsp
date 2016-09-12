@@ -30,7 +30,7 @@
 <!-- @category DataLayer -->
 
 <div id="wrap" class="section">
-    <div id="map" style="width:100%;height:900px;"></div>
+    <div id="map3" style="width:100%;height:450px;"></div>
  </div>
 
 <script id="code">
@@ -63,7 +63,7 @@
         });
     }
 
-    var map = new naver.maps.Map(document.getElementById('map'), {
+    var map = new naver.maps.Map(document.getElementById('map3'), {
         zoom: 2,
         mapTypeId: 'hybrid',
         center: new naver.maps.LatLng(36.4203004, 128.317960)

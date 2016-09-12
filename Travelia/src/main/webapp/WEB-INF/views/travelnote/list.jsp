@@ -16,7 +16,7 @@
 <body style="background-color:#1D2232;">
 <div class="container-fluid">
   <div class="grid">
-
+  <div class="grid-sizer"></div>
  
     <div class="grid-item img-responsive">
           

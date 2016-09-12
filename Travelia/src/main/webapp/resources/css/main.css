@@ -1,6 +1,10 @@
+.grid-sizer{
+	width:25%;
+}
+
 .grid-item{
   float: left;
-  width: 468.25px;
+  width: 25%;
 }
 
 
@@ -60,6 +64,17 @@
 .glyphicon-pencil{
 
     font-size: 50px;
+}
+
+@media(max-width: 1070px){
+	
+	.grid-item{
+  float: left;
+  width: 472.5px;
+}
+	
+	
+	
 }
 
 @media (max-width: 700px) {

@@ -1,11 +1,22 @@
+if(matchMedia("screen and (max-width: 1070px)").matches){
 $(".grid").masonry({
 
-// set itemSelector so .grid-sizer is not used in layout
-itemSelector: '.grid-item',
-// use element for option
-columnWidth: 468.25
+	columnWidth: 472.5,
+	itemSelector: '.grid-item',
 
 });
+} else{
+	
+	$(".grid").masonry({
+
+		columnWidth: '.grid-sizer',
+		itemSelector: '.grid-item',
+		percentPosition: true
+
+	});
+	
+	
+}
 
 $(".wt_icon").on("click", function(){
 	

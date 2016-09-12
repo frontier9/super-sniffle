@@ -85,7 +85,7 @@
             </c:forEach>
         </c:when>
         <c:otherwise>
-            <tr>
+            <tr>;l
                 <td colspan="4">조회된 결과가 없습니다.</td>
             </tr>
         </c:otherwise>
@@ -153,11 +153,12 @@ $(document).ready(function() {
 
 function fn_openBoardList() {
     console.log("in position");
-    //var submit = new ComSubmit();
-
-    //submit.setUrl("<c:url value='/board/board' />");
-    location.href="/board/board";
-    //submit.submit();
+    var submit = new ComSubmit();
+    var csrf_param = $("meta[name='_csrf_parameter']").attr('content');
+    var csrf_token = $("meta[name='_csrf']").attr('content');
+    submit.setUrl("<c:url value='/board/board' />");
+    //location.href="/board/board";
+    submit.submit(csrf_param, csrf_token);
 }
 
 function fn_openArticleDetail(obj) {

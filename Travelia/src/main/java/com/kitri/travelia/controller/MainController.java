@@ -42,6 +42,9 @@ public class MainController {
 		//model.addAttribute("useremail", getMember().getEmail());
 		return "map";
 	}
+
+
+
 	@RequestMapping(value="/profile")
 	public String test2(){
 		//model.addAttribute("usernick", getMember().getNick());

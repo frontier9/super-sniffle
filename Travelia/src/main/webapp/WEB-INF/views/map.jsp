@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Kevin
@@ -13,15 +14,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <script
-            src="https://code.jquery.com/jquery-1.12.4.js"
+            src="<c:url value='https://code.jquery.com/jquery-1.12.4.js'/>"
             integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/example-base.js"></script>
-    <script type="text/javascript" src="js/highlight.min.js"></script>
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=drdLdlwXdcgkoSa00hlT&amp;submodules=panorama"></script>
-    <link rel="stylesheet" type="text/css" href="css/example-base.css" />
+    <script type="text/javascript" src="<c:url value='/resources/js/example-base.js'/>"></script>
+    <script type="text/javascript" src="<c:url value='/resources/js/highlight.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='https://openapi.map.naver.com/openapi/v3/maps.js?clientId=drdLdlwXdcgkoSa00hlT&amp;submodules=panorama'/>"></script>
+    <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/example-base.css'/>">
     <script>
-        var HOME_PATH = 'YOUT_CONTEXTPATH FOR PROJECT';
+        var HOME_PATH = ''; //YOUT_CONTEXTPATH FOR PROJECT
     </script>
 </head>
 <body>
@@ -34,7 +35,7 @@
 </div>
 <script id="code">
     var HOME_PATH = window.HOME_PATH || '.',
-            urlPrefix = HOME_PATH +'/data/region/region',
+            urlPrefix = HOME_PATH +'/resources/data/region/region',
             urlSuffix = '.json',
             regionGeoJson = [],
             loadCount = 0;

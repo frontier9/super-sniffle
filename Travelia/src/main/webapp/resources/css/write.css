@@ -18,11 +18,23 @@
 
 }
 
+.add_img{
+	
+	float: center;
+}
+
 .note_wt{
 
 	margin-top: 30px;
 	
 
+}
+
+.img-circle{
+	
+	width:150px; 
+	height:150px; 
+	cursor: pointer;
 }
 
 .wt{
@@ -52,5 +64,6 @@
     margin-bottom:20px;
 }
 
-
-
+.glyphicon-remove-circle{
+	cursor: pointer;
+}

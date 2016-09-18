@@ -6,12 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Insert title here</title>
+<title>Schedule</title>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="<c:url value="/resources/css/schedule_add.css"/>" >
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 
@@ -26,23 +25,43 @@
 </div>
 </div>
 
-<div class="col-md-4 sm_map ">
 
-<%@ include file="/WEB-INF/views/map_hybrid.jsp"%>
-
-</div>
-
-<br>
-
-<div class="col-md-8 lg_map">
+<div class="col-md-12 lg_map">
 
 <%@ include file="/WEB-INF/views/map_normal.jsp"%>
 
 </div>
 
-<div class="col-md-4 drag_card">
 
-     <div id="custom-search-input">
+
+
+<div class="col-md-4">
+<div class="drag_card">
+
+<div  id="sel_city">
+
+
+<ul class="nav nav-pills">
+  <li role="presentation" class="active city"><h3>서울</h3></li>
+  <li role="presentation" class="dropdown down">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+     	 지역선택 <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+    <li><a href="#">전체</a></li>
+       <li role="separator" class="divider"></li>
+     <li><a href="#">서울</a></li>
+    <li><a href="#">인천</a></li>
+    <li><a href="#">제주도</a></li>
+     <li><a href="#">순천</a></li>    
+    </ul>
+  </li>
+</ul>
+
+
+</div>
+
+<div id="custom-search-input">
                 <div class="input-group col-md-12">
                     <input type="text" class="form-control" placeholder="여행지 검색" />
                     <span class="input-group-btn">
@@ -51,8 +70,80 @@
                         </button>
                     </span>
                 </div>
-            </div>
+ </div>
+
+
+<div class="list-group">
+
+  <div  class="list-group-item" id="seoul">
+    
+    <img src="<c:url value="/resources/images/kr1.jpg"/>" />
+    
+    <div class="list_contents">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">인천</p>
+    </div>
+  </div>
+  
+   <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">인천</p>
+  </a>
+  
+   <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">인천</p>
+  </a>
+  
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">인천</p>
+  </a>
+  
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">인천</p>
+  </a>
+  
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">인천</p>
+  </a>
+  
+  <div  class="list-group-item" id="seoul">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">인천</p>
+  </div>
+  
+  <div  class="list-group-item" id="seoul">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">인천</p>
+  </div>
+  
+  <div  class="list-group-item" id="seoul">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">인천</p>
+  </div>
+  
+  <div  class="list-group-item" id="seoul">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">인천</p>
+  </div>
+  
+  <div  class="list-group-item" id="seoul">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">인천</p>
+  </div>
+  
+  
 </div>
+
+
+</div>
+</div>
+
+
+
 
 <div class="col-md-8 drop_card">
 <div class="table-responsive">
@@ -261,6 +352,5 @@
 
 <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 <script src="<c:url value="/resources/js/schedule_add.js"/>" type="text/javascript"></script>
-
 </body>
 </html>

@@ -30,7 +30,7 @@
 <!-- @category DataLayer -->
 
 <div id="wrap" class="section">
-    <div id="map3" style="width:100%;height:450px;"></div>
+    <div id="map3" style="width:500px;height:450px;"></div>
  </div>
 
 <script id="code">

@@ -13,39 +13,63 @@ body {
 
 
 .lg_map{
-	
-	
-	
-}
-
-.sm_img{
-	
-	height: 475px;
-	width: 400px;
+	background: #FEFEFE;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-.big_img{
-	width:1049px;
-	height: 475px;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
 
 .mx{
 	
-	max-width:1650px
+	max-width:1750px
 }
 
 .drag_card{
+	background: #FEFEFE;
+	display: block;
+	width: 450px;
+	margin-top: 30px;
 	
-	margin-top: 20px;
+}
+
+.list_img{
+	width:30%;
+	margin-bottom:10px;
+	margin-right:30px;
+}
+
+.list_contents{
+	width:50%;
+}
+
+.list-group-item img{
+	
+	width: 120px;
+	height: 100px;
 }
 
 .drop_card{
+	background: #FEFEFE;
+	margin-top: 30px;
 	
-	margin-top: 20px;
+} 
+
+#sel_city{
+	margin-bottom: 15px;
+	background: #1a7ad9;
 }
 
+.city{
+  
+   color:  #FEFEFE;
+   margin-right: 260px;	
+   margin-left: 15px;	
+}
+
+.down{
+	display:inline;
+	background: #FEFEFE;
+	margin-top: 16px;
+}
 
 .glyphicon-search{
 	
@@ -54,7 +78,8 @@ body {
 
 #custom-search-input{
 	
-	width:79%;
+	width:100%;
+    margin-bottom: 15px;
 	
 }
 

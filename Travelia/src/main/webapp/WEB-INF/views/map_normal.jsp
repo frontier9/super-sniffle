@@ -29,8 +29,8 @@
 
 <!-- @category DataLayer -->
 
-<div id="wrap" class="section">
-    <div id="map" style="width:100%;height:450px;"></div>
+<div id="wrap1" class="section">
+    <div id="map" style="width:1655px;height:550px;"></div>
  </div>
 
 <script id="code">

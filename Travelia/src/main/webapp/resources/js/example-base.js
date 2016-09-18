@@ -5,7 +5,7 @@ $(document).ready(function() {
         } catch(ignored) {};
     });
 
-    $("#wrap")[0] && $(window).on("load", function() {
+    $("#wrap, #wrap1")[0] && $(window).on("load", function() {
         window.setTimeout(function() {
             if (window.map && window.naver && window.naver.maps && map instanceof naver.maps.Map) {
                 var mapModel = map.getMapModel(),
@@ -13,7 +13,7 @@ $(document).ready(function() {
                     mapHeight = parseInt(mapView.get("mapDiv").style.height, 10) || 400;
 
                 $(window).on("resize", function() {
-                    var wrapper = $("#wrap");
+                    var wrapper = $("#wrap, #wrap1");
 
                     wrapper.length && map.setSize(new naver.maps.Size(wrapper.width(), mapHeight));
                 });

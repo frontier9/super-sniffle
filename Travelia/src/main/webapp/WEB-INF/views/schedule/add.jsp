@@ -21,7 +21,7 @@
 <div class="title_schedule center-block page-header">
  <h2 class="text-center">
  
- Schedule</h2>
+ 여행 제목 </h2>
 </div>
 </div>
 
@@ -35,8 +35,10 @@
 
 
 
-<div class="col-md-4">
-<div class="drag_card">
+<div class="col-md-4 drag_card">
+
+
+<!-- list navbar -->  
 
 <div  id="sel_city">
 
@@ -61,6 +63,11 @@
 
 </div>
 
+<!-- list navbar end -->  
+
+<!-- search bar -->  
+
+<div class="col-md-12 search_bar">
 <div id="custom-search-input">
                 <div class="input-group col-md-12">
                     <input type="text" class="form-control" placeholder="여행지 검색" />
@@ -71,75 +78,116 @@
                     </span>
                 </div>
  </div>
+ </div>
+ 
+ <!-- search bar end -->  
+  
+<!-- tour list -->  
+  
+<div class="tour_group">
 
 
-<div class="list-group">
-
-  <div  class="list-group-item" id="seoul">
+  <div  class="col-md-12 tour_item" id="seoul">
+    <div class="col-md-4 list_img">
+    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
+    </div>
     
-    <img src="<c:url value="/resources/images/kr1.jpg"/>" />
-    
-    <div class="list_contents">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">인천</p>
+    <div class="col-md-8 list_contents">
+    <h4 >북촌 한옥 마을</h4>
+    <p >인천</p>
     </div>
   </div>
   
-   <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">인천</p>
-  </a>
   
-   <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">인천</p>
-  </a>
-  
-  <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">인천</p>
-  </a>
-  
-  <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">인천</p>
-  </a>
-  
-  <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">인천</p>
-  </a>
-  
-  <div  class="list-group-item" id="seoul">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">인천</p>
-  </div>
-  
-  <div  class="list-group-item" id="seoul">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">인천</p>
-  </div>
-  
-  <div  class="list-group-item" id="seoul">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">인천</p>
-  </div>
-  
-  <div  class="list-group-item" id="seoul">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">인천</p>
-  </div>
-  
-  <div  class="list-group-item" id="seoul">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">인천</p>
+ 
+  <div  class="col-md-12 tour_item" id="seoul">
+    <div class="col-md-4 list_img">
+    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
+    </div>
+    
+    <div class="col-md-8 list_contents">
+    <h4 >북촌 한옥 마을</h4>
+    <p >인천</p>
+    </div>
   </div>
   
   
+
+  <div  class="col-md-12 tour_item" id="seoul">
+    <div class="col-md-4 list_img">
+    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
+    </div>
+    
+    <div class="col-md-8 list_contents">
+    <h4 >북촌 한옥 마을</h4>
+    <p >인천</p>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div  class="col-md-12 tour_item" id="seoul">
+    <div class="col-md-4 list_img">
+    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
+    </div>
+    
+    <div class="col-md-8 list_contents">
+    <h4 >북촌 한옥 마을</h4>
+    <p >인천</p>
+    </div>
+  </div>
+  
+  
+  
+
+  <div  class="col-md-12 tour_item" id="seoul">
+    <div class="col-md-4 list_img">
+    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
+    </div>
+    
+    <div class="col-md-8 list_contents">
+    <h4 >북촌 한옥 마을</h4>
+    <p >인천</p>
+    </div>
+  </div>
+  
+  
+  
+  <div  class="col-md-12 tour_item" id="seoul">
+    <div class="col-md-4 list_img">
+    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
+    </div>
+    
+    <div class="col-md-8 list_contents">
+    <h4 >북촌 한옥 마을</h4>
+    <p >인천</p>
+    </div>
+  </div>
+  
+  
+  <div  class="col-md-12 tour_item" id="seoul">
+    <div class="col-md-4 list_img">
+    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
+    </div>
+    
+    <div class="col-md-8 list_contents">
+    <h4 >북촌 한옥 마을</h4>
+    <p >인천</p>
+    </div>
+  </div>
+  
+  
+
 </div>
+
+<!-- tour end -->  
+
+<div class="col-md-12 box_footer">
 
 
 </div>
+
 </div>
 
 
@@ -151,190 +199,140 @@
 <thead class="thead-inverse">
 <tr>
 <th><h4 class="text-center"><span class="glyphicon glyphicon-time" aria-hidden="true" style="font-size:25px;"></span></h4></th>
-<th><h4 class="text-center"><strong>Mon</strong></h4></th>
-<th><h4 class="text-center"><strong>Tue</strong></h4></th>
-<th><h4 class="text-center"><strong>Wed</strong></h4></th>
-<th><h4 class="text-center"><strong>Thus</strong></h4></th>
-<th><h4 class="text-center"><strong>Fri</strong></h4></th>
-<th><h4 class="text-center"><strong>Sat</strong></h4></th>
-<th><h4 class="text-center"><strong>Sun</strong></h4></th>
+<th><h4 class="text-center"><strong>Day2/9.10.sat</strong></h4></th>
+<th><h4 class="text-center"><strong>Day2/9.10.sat</strong></h4></th>
+<th><h4 class="text-center"><strong>Day2/9.10.sat</strong></h4></th>
+<th><h4 class="text-center"><strong>Day2/9.10.sat</strong></h4></th>
 </tr>
 </thead>
 <tr>
-<td><h4>00:00 ~ 01:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><h4>01:00 ~ 02:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
+<td><h4>06:00AM</h4></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><h4>02:00 ~ 03:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><h4>03:00 ~ 04:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
+<td><h4>07:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><h4>04:00 ~ 05:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><h4>05:00 ~ 06:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
+<td><h4>08:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><h4>06:00 ~ 07:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><h4>07:00 ~ 08:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
+<td><h4>09:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><h4>08:00 ~ 09:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><h4>09:00 ~ 10:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
+<td><h4>10:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><h4>10:00 ~ 11:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><h4>11:00 ~ 12:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
+<td><h4>11:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><h4>12:00 ~ 13:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><h4>13:00 ~ 14:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
+<td><h4>12:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><h4>14:00 ~ 15:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><h4>15:00 ~ 16:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
+<td><h4>13:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><h4>16:00 ~ 17:00</h4></td>
-<td></td>
-<td></td>
-<td></td>
+<td><h4>14:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><h4>17:00 ~ 18:00</h4></td>
+<td><h4>15:00</h4></td>
 <td></td>
 <td></td>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td><h4>16:00</h4></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><h4>17:00</h4></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><h4>18:00</h4></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><h4>19:00</h4></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><h4>20:00</h4></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><h4>21:00</h4></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><h4>22:00</h4></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><h4>23:00</h4></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><h4>24:00</h4></td>
 <td></td>
 <td></td>
 <td></td>

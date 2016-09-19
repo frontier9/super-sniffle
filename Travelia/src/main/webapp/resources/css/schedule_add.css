@@ -20,7 +20,7 @@ body {
 
 .mx{
 	
-	max-width:1750px
+	max-width:1500px
 }
 
 .drag_card{
@@ -28,23 +28,34 @@ body {
 	display: block;
 	width: 450px;
 	margin-top: 30px;
+
 	
 }
 
-.list_img{
-	width:30%;
-	margin-bottom:10px;
-	margin-right:30px;
+.tour_group{
+	
+	overflow-y:scroll; 
+	height:650px; 
+	width:460px;
+
+}
+.tour_item{
+	display:block;
+	position: relative;
+	padding: 10px 15px;
+    margin-bottom: -1px;
+    border: 1px solid #ddd;
+}
+
+
+.list_img img{
+	
+	width: 90px;
+	height: 70px;
 }
 
 .list_contents{
-	width:50%;
-}
-
-.list-group-item img{
 	
-	width: 120px;
-	height: 100px;
 }
 
 .drop_card{
@@ -54,7 +65,6 @@ body {
 } 
 
 #sel_city{
-	margin-bottom: 15px;
 	background: #1a7ad9;
 }
 
@@ -76,12 +86,33 @@ body {
 	font-size:20px;
 }
 
+
+
+.search_bar{
+	
+	background:#D7DFE6;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
 #custom-search-input{
 	
 	width:100%;
     margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.box_footer{
+	
+	background: #1a7ad9;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	
 }
+
+
+
+
 
 .thead-inverse{
 	
@@ -89,3 +120,5 @@ body {
 	color:#FEFEFE;
 	
 }
+
+table thead{border: 0px;}

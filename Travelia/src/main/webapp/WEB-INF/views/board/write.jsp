@@ -1,38 +1,109 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ include file="/WEB-INF/include/include-header.jsp"%>
+
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/Rcss.css"/>" rel="stylesheet">
     <%@ include file="/WEB-INF/include/include-header.jsp"%>
     <sec:csrfMetaTags/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
-    <form id="frm">
-        <table class="board_view">
-            <colgroup>
-                <col width="15%">
-                <col width="*"/>
-            </colgroup>
-            <caption>글쓰기</caption>
-            <tbody>
-                <tr>
-                    <th scope="row">title</th>
-                    <td><input type="text" id="title" name="title" class="wdp_90"/></td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="view_text">
-                        <textarea rows="20" cols="100" title="내용" id="contents" name="contents"></textarea>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+		<header class="intro-header" style="background-image: url('/resources/images/제목 없음1231.png')">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	                    <div class="site-heading">
+	                        <h1 class ="board-h1">BOARD</h1>
+	    
+	                        <span class="subheading">자유로운 만큼 더욱 더 예절을 지켜주시기 바랍니다.</span>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </header>
+	    
+	    <div class = "container-fluid fluid-user">
 
-        <a href="#this" class="btn" id="write">POST</a>
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-        <a href="#this" class="btn" id="list">LIST</a>
+		<div class="editor">
+   		 <form id="frm" class="form-horizontal">
+   		 
+				   		  <!--   <div class="form-group">
+				 		<label for = "inputPassword" class="col-sm-2 control-label">글 분류</label>
+				 		<div class="col-sm-10">
+				 		<select>
+				  				<option selected>Q&A</option>
+				  				<option>TIP</option>
+				  				<option>ETC</option>
+								</select>
+				 		</div>
+				 	</div>
+				   	<div class="form-group">
+				 	<label for = "inputPassword" class="col-sm-2 control-label">제목</label>
+				 	<div class="col-sm-6">
+                    <input type="text" id="inputPassword" name="title" class="form-control"/>  
+                    </div>
+        			</div>
+        			
+        			
+        			<label for="comment">Comment:</label>
+                    <textarea class= "writearea"title="내용" id="contents" name="contents" ></textarea>
+                    -->
+                      <div class = "form-group ">
+				 	<label class ="col-sm-2 control-label">작성자</label>
+				    
+				    <div class="col-sm-10">
+				 	<p class="form-control-static"> 정동원</p>
+				 	</div>
+				 	</div>
+				 	
+				
+				 	<div class="form-group">
+				 		<label for = "inputPassword" class="col-sm-2 control-label">카테고리</label>
+				 		<div class="col-sm-10">
+				 		<select>
+				  				<option selected>Q&A</option>
+				  				<option>TIP</option>
+				  				<option>ETC</option>
+								</select>
+				 		</div>
+				 	</div>
+				 	<div class="form-group">
+				 	<label for = "inputPassword" class="col-sm-2 control-label">제목</label>
+				 	<div class="col-sm-6">
+				 	<input type="text" id="inputPassword" name="title" class="form-control">
+				 	</div>
+				 	</div>
+								 	
+				 	<div class="form-group">
+					 	<label for = "inputPassword" class="col-sm-2 control-label">내용</label>
+					 	<div class="col-sm-6">
+					 			<textarea class="form-control" rows="10" id="contents" name="contents">
+					  			
+					  			</textarea>
+					 	</div>
+					 	</div>
+	 	
+                    
+			        
+			   		<div class="col-sm-3"></div>
+			   		<div class="col-sm-3"></div>
+			   		<div class="col-sm-2">		
+			         <a href="#this" class="btn btn-default" id="list">목록</a>
+			       		 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+			         <a href="#this" class="btn btn-default" id="write">확인</a>
+			        </div>
+			        
     </form>
-
+</div>
+</div>
+    <div class="bottom-empty">
+	</div> 
     <%@ include file="/WEB-INF/include/include-body.jsp"%>
     <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 

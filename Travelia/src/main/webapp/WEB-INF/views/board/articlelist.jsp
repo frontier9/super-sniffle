@@ -4,19 +4,17 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ include file="/WEB-INF/include/include-header.jsp"%>
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
-<link href="<c:url value="/resources/css/Rcss.css"/>" rel="stylesheet">
-    <title>boardlist</title>
-
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/Rcss.css"/>" rel="stylesheet">
     <sec:csrfMetaTags/>
+<%@ include file="/WEB-INF/include/include-header.jsp"%>
 </head>
 <body>
-
-<header class="intro-header" style="background-image: url('/resources/images/header-bg.jpg')">
+		<header class="intro-header" style="background-image: url('/resources/images/제목 없음1231.png')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -28,107 +26,86 @@
                 </div>
             </div>
         </div>
-    </header>
-    
-    <div class = "container-fluid fluid-user">
-	<div class = "row">
- 		<div class="col-md-12">
-  		  <form class="form-inline" role="search">
+    	</header>
 
-  			 	<select>
-  				<option selected>글번호</option>
-  				<option>글종류</option>
-  				<option>제목</option>
-  				<option>닉네임</option>
-				</select>
-    		     <input type="text" id="form-control" placeholder="Search">
-  			     <button type="submit" class="btn btn-default">검색</button>
-	  		</form>
-		</div>
-    </div>
 
-<div class="table-responsive">   
-<table class = "table table-striped">
-    <colgroup>
-        <col width="3%"/>
-        <col width="15%"/>
-        <col width="30%"/>
-        <col width="3%"/>
-        <col width="5%"/>
-        <col width="8%"/>
-    </colgroup>
-    <thead>
-    <tr>
-        <th scope="col" style="text-align: center">번호</th>
-        <th scope="col" style="text-align: center">카테고리</th>
-        <th scope="col" style="text-align: center">제목</th>
-        <th scope="col" style="text-align: center">조회수</th>
-        <th scope="col" style="text-align: center">작성자</th>
-        <th scope="col" style="text-align: center">작성일자</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:choose>
-        <c:when test="${fn:length(list) > 0}">
-            <c:forEach items="${list}" var="row">
-                <tr>
-                    <td>${row.brd_article_no }</td>
-                    <td>${row.brd_cat }</td>
-                    <td class="title">
-                        <a href="<c:url value = '/board/articleDetail.do?idx=${row.brd_article_no}' />" name="title">${row.brd_article_title}</a>
-                        <input type="hidden" id="idx" value="${row.brd_article_no}"/>
-                    </td>
-                    <td>${row.brd_hit }</td>
-                    <td>${row.brd_writer }</td>
-                    <td>${row.brd_article_write_date}</td>
-                </tr>
-            </c:forEach>
-        </c:when>
-        <c:otherwise>
-            <tr>;l
-                <td colspan="4">조회된 결과가 없습니다.</td>
-            </tr>
-        </c:otherwise>
-    </c:choose>
-    </tbody>
-</table>
-</div>
-
-<div class="row">
-   	<div class="col-md-4"></div>
-   		<div class="col-md-4"></div>
-   			<div class="col-md-4">
-   		<a href="#this" class="btn btn-default" id="write">글쓰기</a>
+		<div class = tableview>
+	  	<div class = " tb firstline">
+	    	<div class ="tb tb1">
+	    		<span>No: ${map.brd_article_no}</span>
+	   		</div>
+	   		<div class ="tb tb2">
+	   			<span>${map.brd_cat}</span>
+	   		</div>
+	   		<div class ="tb tb3">
+	   			<span>2016.09.09</span>
+	   		</div>
+	   		
+	   	</div>
+	   	<div class = "tb secondline">
+	   		<div class ="tb tb-hit">
+	   			<span>Hit:${map.brd_hit}</span>
+		    </div>
+	   		<div class ="tb tb-nick">
+	   			<span>${map.brd_writer}</span>
+		    </div>
+		 </div>   
+	   		<div class ="tb tb-title">
+	   			<span>${map.brd_article_title}</span>
+	    	</div>
+		    <div class ="tb tb-contents">
+		    	<span>${map.brd_article}</span>
+		    </div>
+	 </div>   
+	 <div class=col-md-3></div>
+   	<div class=col-md-5>
+   			<a href="#this" class="btn btn-default" id="list">목록</a>
    	</div>
-   </div>
-		<div class="col-md-12">
- 		 <ul class="pagination pagination-lg">
-   			 <li>
-      			<a href="#" aria-label="Previous">
-        		<span aria-hidden="true">&laquo;</span>
-     			</a>
-    		 </li>
-   			 <li><a href="#">1</a></li>
-    		 <li><a href="#">2</a></li>
-    		 <li><a href="#">3</a></li>
-    		 <li><a href="#">4</a></li>
-    		 <li><a href="#">5</a></li>
-    		 <li>
-      		 <a href="#" aria-label="Next">
-        	 <span aria-hidden="true">&raquo;</span>
-      		 </a>
-    		 </li>
- 		 </ul>
- 	   </div>
-	</div>
-	
-<!--  <a href="#this" class="btn" id="write">글쓰기</a>-->
+   	
+   	<div class=col-md-1>
+	   		<a href="#this" class="btn btn-default" id ="update">수정</a>
+	   		<a href="#this" class="btn btn-default" id ="delete">삭제</a>
+   	 </div>
+    <div class="bottom-empty">
+	</div> 
+    <!--  <table class="board_view">
+        <colgroup>
+            <col width="15%"/>
+            <col width="35%"/>
+            <col width="15%"/>
+            <col width="35%"/>
+        </colgroup>
+        <caption>상세 조회 페이지</caption>
+        <tbody>
+            <tr>
+                <th scope="row">글 번호</th>
+                <td>${map.brd_article_no}</td>
+                <th scope="row">조회수</th>
+                <td>${map.brd_hit}</td>
+            </tr>
+            <tr>
+                <th scope="row">작성자</th>
+                <td>${map.brd_writer}</td>
+                <th scope="row">카테고리</th>
+                <td>${map.brd_cat}</td>
+            </tr>
+            <tr>
+                <th scope="row">제목</th>
+                <td colspan="3">${map.brd_article_title}</td>
+            </tr>
+            <tr>
+                <td colspan="4">${map.brd_article}</td>
+            </tr>
+        </tbody>
+    </table>
 
+<a href="#this" class="btn" id="list">목록으로</a>
+<a href="#this" class="btn" id="update">수정하기</a>
+-->
+<%@ include file="/WEB-INF/include/include-body.jsp"%>
 <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
-<%@ include file="/WEB-INF/include/include-body.jsp" %>
-
 <script type="text/javascript">
-//<[CDATA[
+//<![CDATA[
 $(document).ready(function() {
     $('#list').on('click', function (e) {
         e.preventDefault();
@@ -136,39 +113,36 @@ $(document).ready(function() {
         fn_openBoardList();
     });
 
-    $("a[name='title']").on('click', function(e) {
-        //e.preventDefault();
-        //e.stopPropagation();
-        //fn_openArticleDetail($(this));
+    $('#update').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        fn_openArticleUpdate();
     });
+    
 
-    $('#write').on('click', function(e){
-        var submit = new ComSubmit();
-        var csrf_param = $("meta[name='_csrf_parameter']").attr('content');
-        var csrf_token = $("meta[name='_csrf']").attr('content');
-        submit.setUrl("<c:url value='/board/post.do'/>");
-        submit.submit(csrf_param, csrf_token);
-    })
 });
 
 function fn_openBoardList() {
     console.log("in position");
-    var submit = new ComSubmit();
-    var csrf_param = $("meta[name='_csrf_parameter']").attr('content');
-    var csrf_token = $("meta[name='_csrf']").attr('content');
-    submit.setUrl("<c:url value='/board/board' />");
-    //location.href="/board/board";
-    submit.submit(csrf_param, csrf_token);
+    //var submit = new ComSubmit();
+
+    //submit.setUrl("<c:url value='/board/board' />");
+    location.href="/board/board";
+    //submit.submit();
 }
 
-function fn_openArticleDetail(obj) {
+function fn_openArticleUpdate() {
+    var idx = "${map.brd_article_no}";
+    var csrf_param = $("meta[name='_csrf_parameter']").attr('content');
+    var csrf_token = $("meta[name='_csrf']").attr('content');
     var submit = new ComSubmit();
-    submit.setUrl("<c:url value='/board/articleDetail.do' />");
-    submit.addParam("idx", obj.parent().find('#idx').val());
-    submit.submit();
+    submit.setUrl("<c:url value='/board/openUpdateForm.do' />");
+    submit.addParam("idx", idx);
+    submit.submit(csrf_param, csrf_token);
 }
 //]]>
 
 </script>
+
 </body>
 </html>

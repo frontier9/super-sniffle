@@ -21,7 +21,7 @@
 <div class="title_schedule center-block page-header">
  <h2 class="text-center">
  
- 여행 제목 </h2>
+ 여행 제목을 적으시요 </h2>
 </div>
 </div>
 

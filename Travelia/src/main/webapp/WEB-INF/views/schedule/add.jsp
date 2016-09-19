@@ -28,12 +28,13 @@
 
 <div class="col-md-12 lg_map">
 
-<%@ include file="/WEB-INF/views/map_normal.jsp"%>
+<%@ include file="/WEB-INF/views/map_hybrid.jsp"%>
 
 </div>
 
 
 
+<div class="ddr">
 
 <div class="col-md-4 drag_card">
 
@@ -84,104 +85,27 @@
   
 <!-- tour list -->  
   
-<div class="tour_group">
+<div  class="tour_group" id="result">
 
-
-  <div  class="col-md-12 tour_item" id="seoul">
-    <div class="col-md-4 list_img">
-    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
+  <div  class="col-md-12 tour_item" id="seoul1">
+    <div class="col-md-4 list_img" id="result2">
+    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>"   />
     </div>
     
     <div class="col-md-8 list_contents">
-    <h4 >북촌 한옥 마을</h4>
-    <p >인천</p>
+    <h4 id="result">북촌 한옥 마을</h4>
+    <p id="result1">인천</p>
     </div>
   </div>
+  
   
   
  
-  <div  class="col-md-12 tour_item" id="seoul">
-    <div class="col-md-4 list_img">
-    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
-    </div>
-    
-    <div class="col-md-8 list_contents">
-    <h4 >북촌 한옥 마을</h4>
-    <p >인천</p>
-    </div>
-  </div>
-  
-  
-
-  <div  class="col-md-12 tour_item" id="seoul">
-    <div class="col-md-4 list_img">
-    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
-    </div>
-    
-    <div class="col-md-8 list_contents">
-    <h4 >북촌 한옥 마을</h4>
-    <p >인천</p>
-    </div>
-  </div>
-  
-  
-  
-  
-  <div  class="col-md-12 tour_item" id="seoul">
-    <div class="col-md-4 list_img">
-    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
-    </div>
-    
-    <div class="col-md-8 list_contents">
-    <h4 >북촌 한옥 마을</h4>
-    <p >인천</p>
-    </div>
-  </div>
-  
-  
-  
-
-  <div  class="col-md-12 tour_item" id="seoul">
-    <div class="col-md-4 list_img">
-    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
-    </div>
-    
-    <div class="col-md-8 list_contents">
-    <h4 >북촌 한옥 마을</h4>
-    <p >인천</p>
-    </div>
-  </div>
-  
-  
-  
-  <div  class="col-md-12 tour_item" id="seoul">
-    <div class="col-md-4 list_img">
-    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
-    </div>
-    
-    <div class="col-md-8 list_contents">
-    <h4 >북촌 한옥 마을</h4>
-    <p >인천</p>
-    </div>
-  </div>
-  
-  
-  <div  class="col-md-12 tour_item" id="seoul">
-    <div class="col-md-4 list_img">
-    <img class="img-rounded img-responsive" src="<c:url value="/resources/images/kr1.jpg"/>" />
-    </div>
-    
-    <div class="col-md-8 list_contents">
-    <h4 >북촌 한옥 마을</h4>
-    <p >인천</p>
-    </div>
-  </div>
-  
-  
-
-</div>
+ </div>
 
 <!-- tour end -->  
+
+
 
 <div class="col-md-12 box_footer">
 
@@ -190,9 +114,10 @@
 
 </div>
 
+<!-- drag card -->  
 
 
-
+<!-- drop card table -->  
 <div class="col-md-8 drop_card">
 <div class="table-responsive">
 <table class="table table-bordered table-hover text-center">
@@ -344,11 +269,16 @@
 
 </div>
 
+<!-- drop card table end-->  
+
+</div>
+
 
 
 
 
 <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
+<script src="<c:url value="/resources/js/jquery-ui.min.js"/>" type="text/javascript"></script>
 <script src="<c:url value="/resources/js/schedule_add.js"/>" type="text/javascript"></script>
 </body>
 </html>

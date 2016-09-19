@@ -165,7 +165,7 @@
             xhr.open("GET", "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?" +
                     "ServiceKey=mT7AA8FcGoNUx91TYsnY2xSzr33aNx3h6NqX%2FHYlVIj0rrY%2F3dtaJ25fyOD8GjZoafWkGBeokkEueSETu81kMA%3D%3D&" +
                     "contentTypeId=12&areaCode=" + code + "&sigunguCode=&cat1=&cat2=&cat3=&listYN=Y&MobileOS=ETC&ContentTypeId=12&MobileApp=TourAPI3.0_Guide&arrange=A&" +
-                    "numOfRows=10&pageNo=1&_type=json", false);
+                    "numOfRows=10000&pageNo=1&_type=json", false);
 
             xhr.send();
             console.log(xhr.status);
@@ -176,11 +176,86 @@
 
             //$('div#result').text(response.body.items.item.title);
 
-            $('#result').empty();
-            for(i=0; i<res.response.body.items.item.length; i++) {
-                console.log(res.response.body.items.item[i].title);
-                $('#result').append("<p>" +  res.response.body.items.item[i].title + "</p>");
+                $('#result').empty();
+            
+               for(var i=0; i<res.response.body.items.item.length; i++) {
+
+           
+                var recode;
+                var recoder =res.response.body.items.item[i].areacode;
+                
+                switch(recoder) {
+                case 1:
+                    recode = "서울특별시";
+                    break;
+                case 2:
+                    recode = "인천광역시";
+                    break;
+                case 3:
+                   recode = '대전광역시';
+                    break;
+                case 4:
+                    recode = '대구광역시';
+                    break;
+                case 5:
+                    recode = '광주광역시';
+                    break;
+                case 6:
+                    recode = '부산광역시';
+                    break;
+                case 7:
+                    recode = '울산광역시';
+                    break;
+                case 8:
+                    recode = '세종특별자치시';
+                    break;
+                case 31:
+                    recode = '경기도';
+                    break;
+                case 32:
+                    recode = '강원도';
+                    break;
+                case 33:
+                    recode = '충청북도';
+                    break;
+                case 34:
+                    recode = '충청남도';
+                    break;
+                case 35:
+                    recode = '경상북도';
+                    break;
+                case 36:
+                    recode = '경상남도';
+                    break;
+                case 37:
+                    recode = '전라북도';
+                    break;
+                case 38:
+                    recode = '전라남도';
+                    break;
+                case 39:
+                    recode = '제주특별자치도';
+                    break;
+                default:
+                    recode = 1;
             }
+                
+                
+               
+                
+                console.log(res.response.body.items.item[i].firstimage2);
+                
+                
+                
+                $('#result').append('<div class="col-md-12 tour_item" id="seoul2">'+
+                        '<div class="col-md-4 list_img"><img class="img-rounded img-responsive"'+ 
+                        'src="'+res.response.body.items.item[i].firstimage2+'" /></div> <div class="col-md-8 list_contents"><h4 >'+res.response.body.items.item[i].title+'</h4>'+
+                                   	                    '<p >'+recode+'</p></div> </div>');
+                
+                
+                
+               }
+                
 //            var feature = e.feature;
 //
 //            if (feature.getProperty('focus') !== true) {

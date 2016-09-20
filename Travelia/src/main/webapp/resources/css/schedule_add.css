@@ -1,67 +1,102 @@
-#sidebar-wrapper {
-  margin-left: -250px;
-  top:95px;
-  left: 250px;
-  width: 250px;
-  background: #ffffff;
+#see{
+  top:150px;
+  left: 200px;
+
   position: fixed;
-  height: 100%;
-  
+
   z-index: 1000;
   transition: all 0.4s ease 0s;
 }
 
-
-
-
-#side_head{
-	
-	color:white;
-	display:block;
-	padding:20px;
-	background:#2E3742 ;
+.start{
+	float:right;
+	font-size: 15px;
 }
 
-.reg img{
+.sch{
 	
-	width:80px;
-	height:60px;
+	width: 350px;
+	
+}
+
+
+.cen_line{
+	margin-top: 10px;
 	margin-left:10px;
-	
-}
-
-#side_list{
-	
-	margin-top:30px;
-	overflow-y:scroll; 
-	height:730px; 
-	width: 250px;
-	
+	margin-right:60px;
+	font-size:18px;
 }
 
 
-.reg{
-	
-	padding-top:15px;
-	padding-bottom:10px;
-	 border: 1px solid #ddd;
-}
-
-.list_img{
+.ip_gr{
 	
 	
-	float:left;
-	width:50%;
-}
-
-.list_text{
 	display:inline-block; 
-	width:50%;
+	float:right;
+    margin-top: 5px;
+    margin-right: 10px;
+	width:110px;
+	
+}
+
+.ip_gr input{
+	
+	width:50px;
+}
+
+.sel_text{
+	display:inline-block; 
+	
+}
+
+.line{
+	
+	margin-top:10px;
+	margin-left:15px;
+	font-size:24px;
+	margin-bottom:10px;
+}
+
+.sel_city{
+	
+	display:block;
+	
+ 	width: 100%;
+	height: 40px;
+	background: #D9DEE6;
+	 -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+	
+}
+
+.modal-header-info {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #225DA4;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
 }
 
 
-.list_footer{
-	
-	padding-bottom:126px;
-	background:#2E3742;
+.modal-header-success {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5cb85c;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
 }

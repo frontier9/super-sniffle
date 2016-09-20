@@ -34,20 +34,6 @@ public class BoardController {
 		return mv;
 	}
 
-//	@RequestMapping(value="/view")
-//	public ModelAndView boardview(){
-//
-//		ModelAndView mv = new ModelAndView("/board/view");
-//		return mv;
-//	}
-
-//	@RequestMapping(value="/write")
-//	public ModelAndView boardwrite(){
-//
-//		ModelAndView mv = new ModelAndView("/board/write");
-//		return mv;
-//	}
-
 	@RequestMapping(value="/sampletest.do")
 	public ModelAndView testMapArgumentResolver(CommandMap commandMap) throws Exception {
 		ModelAndView mv = new ModelAndView("");
@@ -116,38 +102,4 @@ public class BoardController {
 		articleService.deleteArticle(commandMap.getMap());
 		return mv;
 	}
-
-
-/*
-	//글 등록
-	@RequestMapping(value="/insertBoard.html")
-	public String insertBoard(Board board, BoardBAO boardDAO){
-		boardDAO.insertBoard(board);
-		return "board.html";
-	}
-	//글 수정
-	@RequestMapping("/updateBoard.html")
-	public String updateBoard(Board board, BoardDAO boardDAO){
-		boardDAO.updateBoard(board);
-		return "board.html";
-	}
-	//글삭제
-	@RequestMapping("/deleteBoard.html")
-	public String deleteBoard(Board board,BoardDAO boardDAO){
-		boarDAO.deleteBoard(board);
-		return "board.html";
-	}
-	//글 상세조회
-	@RequestMapping("/view.html")
-	public String getBoard(Board board, BoardDAO boardDAO, Model model){
-		model.addAttribute("board",boardDAO.getBoard(board));
-		return "view";
-	}
-	//글 목록 검색
-	@RequestMapping("/board.html")
-	public String BoardList(Board board, BoardDAO boardDAO, Model model){
-		model.addAttribute("boardList",boardDAO.getBoardList(board));
-		return "board";
-	}
-	*/
 }

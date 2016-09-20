@@ -14,19 +14,11 @@
 </head>
 <body>
 
- 
-
-
-<div class="container-fluid">
-
-
-<div class="col-md-1 side bar"></div>
-
-<div class="col-md-11 naver_map">
 
 <%@ include file="/WEB-INF/views/map_hybrid.jsp"%>
 
-</div>
+<div class="container-fluid">
+
 
 
 

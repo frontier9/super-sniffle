@@ -22,9 +22,7 @@
 
 <!-- @category DataLayer -->
 
-<div id="wrap">
-    <div id="map3" class="test" style="width:100%;height:700px;"></div>
- </div>
+<div id="map3" style="min-height: 100%;"></div>
 
 <script id="code">
     var HOME_PATH = window.HOME_PATH || '.',
@@ -57,13 +55,18 @@
     }
 
     var map3 = new naver.maps.Map(document.getElementById('map3'), {
-        zoom: 2,
+        zoom: 3,
         mapTypeId: 'hybrid',
-        center: new naver.maps.LatLng(36.4203004, 128.317960)
+        center: new naver.maps.LatLng(36.3504119, 127.38454750000005),
+        scaleControl: true,
+        logoControl: true,
+        mapDataControl: true,
+        mapTypeControl: false,
+        zoomControl: false
     });
 
     var marker3 = new naver.maps.Marker({
-        position: new naver.maps.LatLng(37.5624945,126.97529570000006),
+        position: new naver.maps.LatLng(36.3504119,127.38454750000005),
         map: map3,
         animation: 2
     });

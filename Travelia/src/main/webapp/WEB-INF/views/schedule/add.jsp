@@ -17,13 +17,131 @@
 
 <%@ include file="/WEB-INF/views/map_hybrid.jsp"%>
 
-<div class="container-fluid">
 
 
-
-
-</div>
-
+        <!-- Sidebar -->
+ <div id="sidebar-wrapper">
+            <div id="side_head">
+              <h3 class="text-center">대한민국</h3>
+            </div>
+            
+            <div id="side_list">
+              
+              <div class="reg">
+                
+                <div class="list_img">
+                <img src="<c:url value="/resources/images/kr1.jpg"/>">    
+                </div>
+                
+                <div class="list_text">
+                 <h4>서울</h4>
+                 <h5>seoul </h5>
+                 </div>
+                 
+              </div>
+              
+              
+               <div class="reg">
+                
+                <div class="list_img">
+                <img src="<c:url value="/resources/images/kr1.jpg"/>">    
+                </div>
+                
+                <div class="list_text">
+                 <h4>서울</h4>
+                 <h5>seoul </h5>
+                 </div>
+                 
+              </div>
+              
+              
+               <div class="reg">
+                
+                <div class="list_img">
+                <img src="<c:url value="/resources/images/kr1.jpg"/>">    
+                </div>
+                
+                <div class="list_text">
+                 <h4>서울</h4>
+                 <h5>seoul </h5>
+                 </div>
+                 
+              </div>
+              
+              
+               <div class="reg">
+                
+                <div class="list_img">
+                <img src="<c:url value="/resources/images/kr1.jpg"/>">    
+                </div>
+                
+                <div class="list_text">
+                 <h4>서울</h4>
+                 <h5>seoul </h5>
+                 </div>
+                 
+              </div>
+              
+               <div class="reg">
+                
+                <div class="list_img">
+                <img src="<c:url value="/resources/images/kr1.jpg"/>">    
+                </div>
+                
+                <div class="list_text">
+                 <h4>서울</h4>
+                 <h5>seoul </h5>
+                 </div>
+                 
+              </div>
+              
+               <div class="reg">
+                
+                <div class="list_img">
+                <img src="<c:url value="/resources/images/kr1.jpg"/>">    
+                </div>
+                
+                <div class="list_text">
+                 <h4>서울</h4>
+                 <h5>seoul </h5>
+                 </div>
+                 
+              </div>
+              
+               <div class="reg">
+                
+                <div class="list_img">
+                <img src="<c:url value="/resources/images/kr1.jpg"/>">    
+                </div>
+                
+                <div class="list_text">
+                 <h4>서울</h4>
+                 <h5>seoul </h5>
+                 </div>
+                 
+              </div>
+              
+               <div class="reg">
+                
+                <div class="list_img">
+                <img src="<c:url value="/resources/images/kr1.jpg"/>">    
+                </div>
+                
+                <div class="list_text">
+                 <h4>서울</h4>
+                 <h5>seoul </h5>
+                 </div>
+                 
+              </div>
+            
+            
+            </div>
+            
+            <div class="list_footer">
+            
+            
+            </div>
+         </div>
 
 
 

@@ -361,10 +361,12 @@ $(function(){
           return; // 스크롤값을 받아서 리턴한다.
 if ((st > lastScrollTop) && (lastScrollTop>0)) {
       $("#trv_banner_menu ").css("top","-94px"); // 스크롤을 내렸을때 #header의 CSS 속성중 top 값을 -94px로 변경한다.
+      $("#sidebar-wrapper").css("top", "0");
   
    } else {
       $("#trv_banner_menu ").css("top","0px"); // 스크롤을 올렸을때 #header의 CSS 속성중 top 값을 0px로 변경한다.
-   }
+      $("#sidebar-wrapper").css("top", "95px");
+   }  
        lastScrollTop = st;
     });
 });

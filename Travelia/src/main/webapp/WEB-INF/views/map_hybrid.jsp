@@ -15,12 +15,10 @@
     <script type="text/javascript" src="<c:url value='https://openapi.map.naver.com/openapi/v3/maps.js?clientId=drdLdlwXdcgkoSa00hlT&amp;submodules=panorama'/>"></script>
     <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/example-base.css'/>">
     <script>
-        var HOME_PATH = ''; //YOUT_CONTEXTPATH FOR PROJECT
+        var HOME_PATH = ''; // CONTEXT PATH FOR PROJECT
     </script>
 </head>
 <body>
-
-<!-- @category DataLayer -->
 
 <div id="map3" style="min-height: 100%;"></div>
 
@@ -54,33 +52,34 @@
         });
     }
 
+    var daejeon = naver.maps.LatLng(36.3504119, 127.38454750000005);
     var map3 = new naver.maps.Map(document.getElementById('map3'), {
         zoom: 3,
         mapTypeId: 'hybrid',
-        center: new naver.maps.LatLng(36.3504119, 127.38454750000005),
+        center: daejeon,
         scaleControl: true,
         logoControl: true,
-        mapDataControl: true,
-        mapTypeControl: false,
         zoomControl: false
     });
 
     var marker3 = new naver.maps.Marker({
-        position: new naver.maps.LatLng(36.3504119,127.38454750000005),
+        position: daejeon,
         map: map3,
-        animation: 2
+        animation: 1
     });
 
     var tooltip_ = $('<div style="position:absolute;z-index:1000;padding:5px 10px;background-color:#fff;border:solid 2px #000;font-size:14px;pointer-events:none;display:none;"></div>');
+
+
 
     tooltip_.appendTo(map3.getPanes().floatPane);
 
     function startDataLayer() {
         map3.data.setStyle(function(feature) {
             var styleOptions = {
-                fillColor: '#ff0000',
+                fillColor: '#606060',
                 fillOpacity: 0.0001,
-                strokeColor: '#ff0000',
+                strokeColor: '#ffff00',
                 strokeWeight: 2,
                 strokeOpacity: 0.4
             };
@@ -100,6 +99,8 @@
             map3.data.addGeoJson(geojson);
         });
 
+
+//        Start of click event
         map3.data.addListener('click', function(e) {
             var feature = e.feature,
                 regionName = feature.getProperty('area1');
@@ -164,6 +165,8 @@
             console.log(regionName + ' / ' + code );
 
 
+
+
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?" +
                     "ServiceKey=mT7AA8FcGoNUx91TYsnY2xSzr33aNx3h6NqX%2FHYlVIj0rrY%2F3dtaJ25fyOD8GjZoafWkGBeokkEueSETu81kMA%3D%3D&" +
@@ -175,111 +178,133 @@
             console.log(xhr.statusText);
 
             var res = JSON.parse(xhr.responseText);
-            console.log(res);
+            //console.log(res);
 
             //$('div#result').text(response.body.items.item.title);
-               
-                var recode;
-                var recoder =res.response.body.items.item[0].areacode;
-                
-                switch(recoder) {
-                case 1:
-                    recode = "서울특별시";
-                    break;
-                case 2:
-                    recode = "인천광역시";
-                    break;
-                case 3:
-                   recode = '대전광역시';
-                    break;
-                case 4:
-                    recode = '대구광역시';
-                    break;
-                case 5:
-                    recode = '광주광역시';
-                    break;
-                case 6:
-                    recode = '부산광역시';
-                    break;
-                case 7:
-                    recode = '울산광역시';
-                    break;
-                case 8:
-                    recode = '세종특별자치시';
-                    break;
-                case 31:
-                    recode = '경기도';
-                    break;
-                case 32:
-                    recode = '강원도';
-                    break;
-                case 33:
-                    recode = '충청북도';
-                    break;
-                case 34:
-                    recode = '충청남도';
-                    break;
-                case 35:
-                    recode = '경상북도';
-                    break;
-                case 36:
-                    recode = '경상남도';
-                    break;
-                case 37:
-                    recode = '전라북도';
-                    break;
-                case 38:
-                    recode = '전라남도';
-                    break;
-                case 39:
-                    recode = '제주특별자치도';
-                    break;
-                default:
-                    recode = 1;
-            }
-                
-            
-            
 
-                $('#result').empty();
-                $('.city').empty();
-                $('.city').append('<h4>'+recode+'</h4>');
-                
+//                var recode;
+//                var recoder =res.response.body.items.item[0].areacode;
+//
+//                switch(recoder) {
+//                case 1:
+//                    recode = "서울특별시";
+//                    break;
+//                case 2:
+//                    recode = "인천광역시";
+//                    break;
+//                case 3:
+//                   recode = '대전광역시';
+//                    break;
+//                case 4:
+//                    recode = '대구광역시';
+//                    break;
+//                case 5:
+//                    recode = '광주광역시';
+//                    break;
+//                case 6:
+//                    recode = '부산광역시';
+//                    break;
+//                case 7:
+//                    recode = '울산광역시';
+//                    break;
+//                case 8:
+//                    recode = '세종특별자치시';
+//                    break;
+//                case 31:
+//                    recode = '경기도';
+//                    break;
+//                case 32:
+//                    recode = '강원도';
+//                    break;
+//                case 33:
+//                    recode = '충청북도';
+//                    break;
+//                case 34:
+//                    recode = '충청남도';
+//                    break;
+//                case 35:
+//                    recode = '경상북도';
+//                    break;
+//                case 36:
+//                    recode = '경상남도';
+//                    break;
+//                case 37:
+//                    recode = '전라북도';
+//                    break;
+//                case 38:
+//                    recode = '전라남도';
+//                    break;
+//                case 39:
+//                    recode = '제주특별자치도';
+//                    break;
+//                default:
+//                    recode = 1;
+//            }
+//
+//                $('#result').empty();
+//                $('.city').empty();
+//                $('.city').append('<h4>'+recode+'</h4>');
+
+            if(pointer !== null) {
+
+            }
+
                for(var i=0; i<res.response.body.items.item.length; i++) {
 
-           
-                
-               
-                
-                console.log(res.response.body.items.item[i].firstimage2);
-                
-               
-               
-              
-                
-                $('#result').append('<div class="col-md-12 tour_item" id="seoul2">'+
-                        '<div class="col-md-4 list_img"><img class="img-rounded img-responsive"'+ 
-                        'src="'+res.response.body.items.item[i].firstimage2+'" /></div> <div class="col-md-8 list_contents"><h4 >'+res.response.body.items.item[i].title+'</h4>'+
-                                   	                    '<p >'+recode+'</p></div> </div>');
-                
-                
-                
-               }
-                
-//            var feature = e.feature;
-//
-//            if (feature.getProperty('focus') !== true) {
-//                feature.setProperty('focus', true);
-//            } else {
-//                feature.setProperty('focus', false);
-//            }
+                   var coord = naver.maps.LatLng(res.response.body.items.item[i].mapy, res.response.body.items.item[i].mapx);
+                   var pointer = new naver.maps.Marker({
+                       position: coord,
+                       map: map3,
+                       animation: 2
+                   });
 
+//                    $('#result').append(
+//                            '<div class="col-md-12 tour_item" id="seoul2">' +
+//                            '   <div class="col-md-4 list_img">' +
+//                            '       <img class="img-rounded img-responsive" src="'+res.response.body.items.item[i].firstimage2+'" />' +
+//                            '   </div>' +
+//                            '   <div class="col-md-8 list_contents">' +
+//                            '       <h4>'+res.response.body.items.item[i].title+'</h4>' +
+//                            '       <p>'+recode+'</p>' +
+//                            '   </div>' +
+//                            '</div>');
+               }
 
             marker3.setPosition(e.coord);
             marker3.setAnimation(2);
-
-
         });
+// End of click event
+
+        var contentString = [
+            '<div class="iw_inner">',
+            '   <h3>대전광역시청</h3>',
+            '   <p>대전광역시 서구 둔산로 100<br />',
+            '       <img src="<c:url value='/resources/images/img_gondol.jpg'/>" width="55" height="55" alt="서울시청" class="thumb" /><br />',
+            '       공공,사회기관 &gt; 광역시청<br />',
+            '   </p>',
+            '</div>'
+        ].join('');
+
+        var infowindow = new naver.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 200,
+            backgroundColor: "#eee",
+            borderColor: "#ffff00",
+            borderWidth: 3.5,
+            anchorSize: new naver.maps.Size(30, 30),
+            anchorSkew: true,
+            anchorColor: "#eee",
+            pixelOffset: new naver.maps.Point(26, -23)
+        });
+
+        naver.maps.Event.addListener(marker3, "click", function(e) {
+            if (infowindow.getMap()) {
+                infowindow.close();
+            } else {
+                infowindow.open(map3, marker3);
+            }
+        });
+
 
         map3.data.addListener('mouseover', function(e) {
             var feature = e.feature,
@@ -307,4 +332,3 @@
 
 </body>
 </html>
-

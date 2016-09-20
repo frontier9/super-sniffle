@@ -568,12 +568,10 @@
   	          </div>
   	        </div>
 
-	<script src="<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" />"> </script>
+	<script src="<c:url value="/resources/js/jquery-2.2.4.min.js" />"> </script>
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />"> </script>
-
+	<script src="<c:url value="/resources/js/bootstrap-3.3.7.min.js" />"> </script>
 	<script src="<c:url value="/resources/js/trv_script.js" />"></script>
-
 	<script src="<c:url value="/resources/js/jquery.validate.js" />"></script>
 	<script src="<c:url value="/resources/js/additional_methods.js" />"></script>
 	<script src="<c:url value="/resources/js/form_validation_msg.js" />"></script>

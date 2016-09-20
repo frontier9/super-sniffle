@@ -21,15 +21,6 @@ $(document).ready(function() {
         }, 0);
     });
     
-    // $(document).ready(function(){
-    // 	$('.test').css('width', $(window).width() - 50 );
-    // 	$('.test').css('height', $(window).height() - 50 );
-    // 	$(window).resize(function() {
-    // 		$('.test').css('width', $(window).width() - 50 );
-    // 		$('.test').css('height', $(window).height() - 50 );
-    // 	});
-    // });
-
     var snippetEl = $("#snippet"),
         codeEl = $("#code");
 

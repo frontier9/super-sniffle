@@ -8,6 +8,7 @@ import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.multipart.MultipartFile;
 
 public class Member implements UserDetails{
 	/**
@@ -24,7 +25,7 @@ public class Member implements UserDetails{
 	private String mem_intro;
 	private String mem_auth_pending;
 	private String mem_auth_key;
-	
+	private MultipartFile profileImg;
 	
 	public Member() {
 		super();
@@ -98,8 +99,13 @@ public class Member implements UserDetails{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
-	
+	//파일 업로드 부분
+	public MultipartFile getProfileImg() {
+		return profileImg;
+	}
+	public void setProfileImg(MultipartFile profileImg) {
+		this.profileImg = profileImg;
+	}
 	@Override
 	public String toString() {
 		return "Member [mem_no=" + mem_no + ", mem_email=" + mem_email + ", mem_pw=" + mem_pw + ", mem_nick=" + mem_nick

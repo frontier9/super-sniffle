@@ -61,4 +61,14 @@ public class MemberDAOImpl implements MemberDAO {
 	public List<Member> listAll() throws Exception {
 		return sqlSession.selectList(namespace+".listAll");
 	}
+	//회원 리스트 페이지 조회
+	@Override
+	public List<Member> listPage(int page) throws Exception {
+		if(page<=0){
+			page=1;
+		}
+		page =(page-1)*10;
+		
+		return sqlSession.selectList(namespace+".listPage",page);
+	}
 }

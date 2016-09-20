@@ -6,12 +6,9 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.kitri.travelia.domain.Member;
 
 /**
  * Handles requests for the application home page.
@@ -23,7 +20,7 @@ public class MainController {
 	
 	//메인 화면
 	@RequestMapping(value = "/")
-	public String home(Locale locale, Model model) {
+	public String main(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
@@ -35,37 +32,5 @@ public class MainController {
 		
 		return "index";
 	}
-	
-	@RequestMapping(value="/test_hybrid.do")
-	public String test_hybrid(){
-		//model.addAttribute("usernick", getMember().getNick());
-		//model.addAttribute("useremail", getMember().getEmail());
-		return "map_hybrid";
-	}
 
-    @RequestMapping(value="/test_normal.do")
-    public String test_normal(){
-        //model.addAttribute("usernick", getMember().getNick());
-        //model.addAttribute("useremail", getMember().getEmail());
-        return "map_normal";
-    }
-
-
-
-	@RequestMapping(value="/profile")
-	public String test2(){
-		//model.addAttribute("usernick", getMember().getNick());
-		//model.addAttribute("useremail", getMember().getEmail());
-		return "profile/profile";
-	}
-	@RequestMapping(value="/ex")
-	public String ex(){
-		//model.addAttribute("usernick", getMember().getNick());
-		//model.addAttribute("useremail", getMember().getEmail());
-		return "ex";
-	}
-	public Member getMember(){
-		return (Member)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-	}
-	
 }

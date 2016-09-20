@@ -14,7 +14,7 @@ import com.kitri.travelia.domain.Member;
 public class MemberServiceImpl implements MemberService {
 
 	@Inject
-	MemberDAO dao;
+	private MemberDAO dao;
 
 	@Override
 	@Transactional

@@ -34,7 +34,7 @@ public class MemberDAOTest {
 		member.setMem_email("asd9878@naver.com");
 		member.setMem_pw("1234");
 		member.setMem_nick("asd");
-		member.setMem_avt("default.png");
+		//member.setMem_avt("default.png");
 		System.out.println(member.toString());
 		dao.create(member);
 	}

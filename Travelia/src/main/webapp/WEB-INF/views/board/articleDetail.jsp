@@ -38,7 +38,7 @@
 	   		<div class ="tb tb3">
 	   			<span>2016.09.09</span>
 	   		</div>
-	   		
+	   	
 	   	</div>
 	   	<div class = "tb secondline">
 	   		<div class ="tb tb-hit">

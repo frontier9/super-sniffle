@@ -13,7 +13,7 @@
     <%@ include file="/WEB-INF/include/include-header.jsp"%>
     <sec:csrfMetaTags/>
 </head>
-<body>
+	<body>
 		<header class="intro-header" style="background-image: url('/resources/images/제목 없음1231.png')">
 	        <div class="container">
 	            <div class="row">

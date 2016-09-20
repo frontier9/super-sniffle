@@ -123,8 +123,6 @@
 	</div>
 	<div class="bottom-empty">
 </div>
-	
-
 
 <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 <%@ include file="/WEB-INF/include/include-body.jsp" %>

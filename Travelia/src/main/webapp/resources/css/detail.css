@@ -1,0 +1,230 @@
+@CHARSET "EUC-KR";
+
+.mx{
+	width:1092px;
+	min-height:500px;
+	position:relative;
+	margin:20px auto;
+	padding:20px;
+	}
+.main_img{
+	background: url('/resources/images/1920x1080.90.83176-2560x1440.90.Untitled-3 copy.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+	width:100%;
+	height:350px;
+	position:relative;
+	left:0px;
+	top:0px;
+	margin-bottom:20px;
+	z-index: 1;
+}
+.user_box{
+	position:absolute;
+	left:50px;
+	top:180px;
+	color:white;
+	z-index:10;
+}
+.puser_img{
+	width: 40px;
+    height: 40px;
+    float: left;
+    background: white;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(229, 229, 229);
+    border-image: initial;
+}
+.user_name{
+	color:white;
+	font-size:22px;
+	font-weight:bold;
+	float:left;
+	margin-left:2px;
+	line-height:40px;
+}
+.header_title{
+	width: 600px;
+    height: 100px;
+    position: relative;
+    z-index: 2;
+    left: 0px;
+    bottom: 0px;
+    padding-top: 10px;
+    padding-left: 2px;
+    padding-right: 25px;
+	font-size:30px;
+	font-weight:bold;
+	float:left;
+}
+.datetime{
+	font-size:14px;
+	
+}
+.btn_phone{
+	font-weight: bold;
+    font-size: 12px;
+    color: rgb(73, 178, 233);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.day_box{
+	float: left;
+    width: 744px;
+    min-height: 180px;
+    padding-right: 25px;
+   
+}
+
+.sch_two{
+	min-height: 130px;
+}
+
+.day_info_box{
+	width:100%;
+	height:60px;
+}
+.day_txt{
+	float: left;
+    background: #203341;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    width: 110px;
+    text-align: center;
+}
+.day_info{
+	float: left;
+    width: 609px;
+    background: white;
+    border-top: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    height: 60px;
+}
+.day_info_left {
+    float: left;
+    width: 430px;
+    padding-left: 10px;
+}
+.date {
+    font-size: 12px;
+    color: #b3b3b3;
+    font-weight: bold;
+    padding-top: 13px;
+}
+.day_title {
+    color: #363636;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 5px;
+}
+.day_sch_box {
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    background: white;
+    min-height: 100px;
+}
+.day_sch_num {
+    height: 100%;
+    text-align: center;
+    float: left;
+    width: 110px;
+}
+.sch_num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    background: #223b68;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    text-align: center;
+    margin-top: 35px;
+}
+.day_info_right {
+    width: 172px;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    color: #555555;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 15px;
+}
+.clear{
+	clear:both;
+}
+.spot_img{
+	float: left;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.spot_content_box {
+    width: 425px;
+    float: left;
+    padding-left: 10px;
+}
+.spot_name {
+    font-size: 17px;
+    color: #555555;
+    font-weight: bold;
+}
+.spot_info {
+    height: 35px;
+    padding-top: 10px;
+}
+.sch_content{
+	width: 604px;
+    float: left;
+    padding-top: 15px;
+}
+.spot_btn{
+	    float: right;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.spot_btn_box{
+	width: 109px;
+    float: left;
+    height: 100%;
+    padding-right: 15px;
+    margin-top: 20px;
+}
+.day_empty{
+	 width: 719px;
+    height: 28px;
+    line-height: 30px;
+    background-position: 57px center;
+    padding-left: 117px;
+    color: #555555;
+    font-size: 12px;
+}
+
+.cover_bleft {
+    float: left;
+    width: 520px;
+    height: 100%;
+}
+.plan_title {
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+}
+.plan_datetheme {
+    width: 100%;
+    padding-top: 8px;
+}
+.plan_date {
+    color: white;
+    font-size: 14px;
+    float: left;
+    line-height: 20px;
+}

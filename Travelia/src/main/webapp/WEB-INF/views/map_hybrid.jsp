@@ -1,11 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: Kevin
-  Date: 2016-07-23
-  Time: 오후 11:12
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -29,9 +22,7 @@
 
 <!-- @category DataLayer -->
 
-<div id="wrap" class="section">
-    <div id="map3" style="width:500px;height:450px;"></div>
- </div>
+<div id="map3" style="min-height: 100%;"></div>
 
 <script id="code">
     var HOME_PATH = window.HOME_PATH || '.',
@@ -63,18 +54,29 @@
         });
     }
 
-    var map = new naver.maps.Map(document.getElementById('map3'), {
-        zoom: 2,
+    var map3 = new naver.maps.Map(document.getElementById('map3'), {
+        zoom: 3,
         mapTypeId: 'hybrid',
-        center: new naver.maps.LatLng(36.4203004, 128.317960)
+        center: new naver.maps.LatLng(36.3504119, 127.38454750000005),
+        scaleControl: true,
+        logoControl: true,
+        mapDataControl: true,
+        mapTypeControl: false,
+        zoomControl: false
     });
 
-    var tooltip = $('<div style="position:absolute;z-index:1000;padding:5px 10px;background-color:#fff;border:solid 2px #000;font-size:14px;pointer-events:none;display:none;"></div>');
+    var marker3 = new naver.maps.Marker({
+        position: new naver.maps.LatLng(36.3504119,127.38454750000005),
+        map: map3,
+        animation: 2
+    });
 
-    tooltip.appendTo(map.getPanes().floatPane);
+    var tooltip_ = $('<div style="position:absolute;z-index:1000;padding:5px 10px;background-color:#fff;border:solid 2px #000;font-size:14px;pointer-events:none;display:none;"></div>');
+
+    tooltip_.appendTo(map3.getPanes().floatPane);
 
     function startDataLayer() {
-        map.data.setStyle(function(feature) {
+        map3.data.setStyle(function(feature) {
             var styleOptions = {
                 fillColor: '#ff0000',
                 fillOpacity: 0.0001,
@@ -95,39 +97,210 @@
         });
 
         regionGeoJson.forEach(function(geojson) {
-            map.data.addGeoJson(geojson);
+            map3.data.addGeoJson(geojson);
         });
 
-        map.data.addListener('click', function(e) {
-            var feature = e.feature;
+        map3.data.addListener('click', function(e) {
+            var feature = e.feature,
+                regionName = feature.getProperty('area1');
+            var code;
 
-            if (feature.getProperty('focus') !== true) {
-                feature.setProperty('focus', true);
-            } else {
-                feature.setProperty('focus', false);
+            switch(regionName) {
+                case "서울특별시":
+                    code = 1;
+                    break;
+                case "인천광역시":
+                    code = 2;
+                    break;
+                case '대전광역시':
+                    code = 3
+                    break;
+                case '대구광역시':
+                    code = 4;
+                    break;
+                case '광주광역시':
+                    code = 5;
+                    break;
+                case '부산광역시':
+                    code = 6;
+                    break;
+                case '울산광역시':
+                    code = 7;
+                    break;
+                case '세종특별자치시':
+                    code = 8;
+                    break;
+                case '경기도':
+                    code = 31;
+                    break;
+                case '강원도':
+                    code = 32;
+                    break;
+                case '충청북도':
+                    code = 33;
+                    break;
+                case '충청남도':
+                    code = 34;
+                    break;
+                case '경상북도':
+                    code = 35;
+                    break;
+                case '경상남도':
+                    code = 36;
+                    break;
+                case '전라북도':
+                    code = 37;
+                    break;
+                case '전라남도':
+                    code = 38;
+                    break;
+                case '제주특별자치도':
+                    code = 39;
+                    break;
+                default:
+                    code = 1;
             }
+
+            console.log(regionName + ' / ' + code );
+
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?" +
+                    "ServiceKey=mT7AA8FcGoNUx91TYsnY2xSzr33aNx3h6NqX%2FHYlVIj0rrY%2F3dtaJ25fyOD8GjZoafWkGBeokkEueSETu81kMA%3D%3D&" +
+                    "contentTypeId=12&areaCode=" + code + "&sigunguCode=&cat1=&cat2=&cat3=&listYN=Y&MobileOS=ETC&ContentTypeId=12&MobileApp=TourAPI3.0_Guide&arrange=A&" +
+                    "numOfRows=10000&pageNo=1&_type=json", false);
+
+            xhr.send();
+            console.log(xhr.status);
+            console.log(xhr.statusText);
+
+            var res = JSON.parse(xhr.responseText);
+            console.log(res);
+
+            //$('div#result').text(response.body.items.item.title);
+               
+                var recode;
+                var recoder =res.response.body.items.item[0].areacode;
+                
+                switch(recoder) {
+                case 1:
+                    recode = "서울특별시";
+                    break;
+                case 2:
+                    recode = "인천광역시";
+                    break;
+                case 3:
+                   recode = '대전광역시';
+                    break;
+                case 4:
+                    recode = '대구광역시';
+                    break;
+                case 5:
+                    recode = '광주광역시';
+                    break;
+                case 6:
+                    recode = '부산광역시';
+                    break;
+                case 7:
+                    recode = '울산광역시';
+                    break;
+                case 8:
+                    recode = '세종특별자치시';
+                    break;
+                case 31:
+                    recode = '경기도';
+                    break;
+                case 32:
+                    recode = '강원도';
+                    break;
+                case 33:
+                    recode = '충청북도';
+                    break;
+                case 34:
+                    recode = '충청남도';
+                    break;
+                case 35:
+                    recode = '경상북도';
+                    break;
+                case 36:
+                    recode = '경상남도';
+                    break;
+                case 37:
+                    recode = '전라북도';
+                    break;
+                case 38:
+                    recode = '전라남도';
+                    break;
+                case 39:
+                    recode = '제주특별자치도';
+                    break;
+                default:
+                    recode = 1;
+            }
+                
+            
+            
+
+                $('#result').empty();
+                $('.city').empty();
+                $('.city').append('<h4>'+recode+'</h4>');
+                
+               for(var i=0; i<res.response.body.items.item.length; i++) {
+
+           
+                
+               
+                
+                console.log(res.response.body.items.item[i].firstimage2);
+                
+               
+               
+              
+                
+                $('#result').append('<div class="col-md-12 tour_item" id="seoul2">'+
+                        '<div class="col-md-4 list_img"><img class="img-rounded img-responsive"'+ 
+                        'src="'+res.response.body.items.item[i].firstimage2+'" /></div> <div class="col-md-8 list_contents"><h4 >'+res.response.body.items.item[i].title+'</h4>'+
+                                   	                    '<p >'+recode+'</p></div> </div>');
+                
+                
+                
+               }
+                
+//            var feature = e.feature;
+//
+//            if (feature.getProperty('focus') !== true) {
+//                feature.setProperty('focus', true);
+//            } else {
+//                feature.setProperty('focus', false);
+//            }
+
+
+            marker3.setPosition(e.coord);
+            marker3.setAnimation(2);
+
+
         });
 
-        map.data.addListener('mouseover', function(e) {
+        map3.data.addListener('mouseover', function(e) {
             var feature = e.feature,
                     regionName = feature.getProperty('area1');
 
-            tooltip.css({
+            tooltip_.css({
                 display: '',
                 left: e.offset.x,
                 top: e.offset.y
             }).text(regionName);
 
-            map.data.overrideStyle(feature, {
+            map3.data.overrideStyle(feature, {
                 fillOpacity: 0.6,
                 strokeWeight: 4,
                 strokeOpacity: 1
             });
         });
 
-        map.data.addListener('mouseout', function(e) {
-            tooltip.hide().empty();
-            map.data.revertStyle();
+        map3.data.addListener('mouseout', function(e) {
+            tooltip_.hide().empty();
+            map3.data.revertStyle();
         });
     }
 </script>

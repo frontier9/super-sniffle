@@ -1,11 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Kevin
-  Date: 2016-09-12
-  Time: 오후 4:22
-  To change this template use File | Settings | File Templates.
---%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -98,8 +90,8 @@
             map.data.addGeoJson(geojson);
         });
 
-        map.data.addListener('click', function(e) {
-            var feature = e.feature;
+        map.data.addListener('click', function(event) {
+            var feature = event.feature;
 
             if (feature.getProperty('focus') !== true) {
                 feature.setProperty('focus', true);
@@ -108,14 +100,14 @@
             }
         });
 
-        map.data.addListener('mouseover', function(e) {
-            var feature = e.feature,
+        map.data.addListener('mouseover', function(event) {
+            var feature = event.feature,
                     regionName = feature.getProperty('area1');
 
             tooltip.css({
                 display: '',
-                left: e.offset.x,
-                top: e.offset.y
+                left: event.offset.x,
+                top: event.offset.y
             }).text(regionName);
 
             map.data.overrideStyle(feature, {
@@ -125,7 +117,7 @@
             });
         });
 
-        map.data.addListener('mouseout', function(e) {
+        map.data.addListener('mouseout', function(event) {
             tooltip.hide().empty();
             map.data.revertStyle();
         });

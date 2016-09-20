@@ -1,124 +1,23 @@
-body {
-  background: #e2e1e0;
-}
-
-
-
-.title_schedule{
-	margin-top: 15px;
-	margin-bottom: 60px;
-	width: 15%;
-}
-
-
-
-.lg_map{
-	background: #FEFEFE;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-
 .mx{
 	
-	max-width:1500px
+	max-width:1920px;
 }
 
-.drag_card{
-	background: #FEFEFE;
-	display: block;
-	width: 450px;
-	margin-top: 30px;
 
+.side_bar{
 	
-}
-
-.tour_group{
-	
-	overflow-y:scroll; 
-	height:650px; 
-	width:460px;
-
-}
-.tour_item{
 	display:block;
-	position: relative;
-	padding: 10px 15px;
-    margin-bottom: -1px;
-    border: 1px solid #ddd;
-}
-
-
-.list_img img{
-	
-	width: 90px;
-	height: 70px;
-}
-
-.list_contents{
-	
-}
-
-.drop_card{
-	background: #FEFEFE;
-	margin-top: 30px;
-	
-} 
-
-#sel_city{
-	background: #1a7ad9;
-}
-
-.city{
-  
-   color:  #FEFEFE;
-   margin-right: 260px;	
-   margin-left: 15px;	
-}
-
-.down{
-	display:inline;
-	background: #FEFEFE;
-	margin-top: 16px;
-}
-
-.glyphicon-search{
-	
-	font-size:20px;
-}
-
-
-
-.search_bar{
-	
-	background:#D7DFE6;
-	border-left: 1px solid #ddd;
-	border-right: 1px solid #ddd;
-}
-
-#custom-search-input{
-	
+	height:100%;
 	width:100%;
-    margin-bottom: 15px;
-	margin-top: 15px;
-}
-
-.box_footer{
-	
-	background: #1a7ad9;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	border: 1px solid #ddd;
 	
 }
 
 
-
-
-
-.thead-inverse{
+.content{
 	
-	background:#625859;
-	color:#FEFEFE;
-	
+	background:#FFFFFF;
 }
 
-table thead{border: 0px;}
+
+

@@ -5,7 +5,7 @@ $(document).ready(function() {
         } catch(ignored) {};
     });
 
-    $("#wrap, #wrap1")[0] && $(window).on("load", function() {
+    $("#wrap")[0] && $(window).on("load", function() {
         window.setTimeout(function() {
             if (window.map && window.naver && window.naver.maps && map instanceof naver.maps.Map) {
                 var mapModel = map.getMapModel(),
@@ -20,6 +20,15 @@ $(document).ready(function() {
             }
         }, 0);
     });
+    
+    // $(document).ready(function(){
+    // 	$('.test').css('width', $(window).width() - 50 );
+    // 	$('.test').css('height', $(window).height() - 50 );
+    // 	$(window).resize(function() {
+    // 		$('.test').css('width', $(window).width() - 50 );
+    // 		$('.test').css('height', $(window).height() - 50 );
+    // 	});
+    // });
 
     var snippetEl = $("#snippet"),
         codeEl = $("#code");

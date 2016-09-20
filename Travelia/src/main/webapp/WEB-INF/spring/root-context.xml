@@ -11,5 +11,8 @@
 	<context:component-scan base-package="com.kitri.travelia.dao"/>
 	<!-- service package scan -->
 	<context:component-scan base-package ="com.kitri.travelia.service"/>
-			
+	<bean id="filterMultipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="100000000" />
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>	
 </beans>

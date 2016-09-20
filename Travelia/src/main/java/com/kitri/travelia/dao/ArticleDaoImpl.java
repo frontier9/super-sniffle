@@ -30,6 +30,5 @@ public class ArticleDaoImpl extends AbstractDAO  {
     public Map<String, Object> selectArticleDetail(Map<String, Object> map) throws Exception {
         return (Map<String, Object>) selectOne(namespace + ".selectArticleDetail", map);
     }
-
 }
 

@@ -20,5 +20,7 @@ public interface MemberDAO {
 	public int delete(int mem_no) throws Exception;
 	//회원 리스트 조회
 	public List<Member> listAll() throws Exception;
+	//회원 리스트 페이지 조회
+	public List<Member> listPage(int page) throws Exception;
 	
 }

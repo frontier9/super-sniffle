@@ -90,13 +90,13 @@
 
     <!-- sign up -->
     <div class="tab-pane fade" id="signup">
-         <form class="form center-block" action='<c:url value="/join"/>' method="post" id="sign_up" enctype="multipart/form-data">
+         <form class="form center-block" action='<c:url value="/join"/>' method="post" id="sign_up" name="member" enctype="multipart/form-data">
          	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
             <fieldset>
                <br>
                <div class="form-group">
                    <div class="input-group">
-                       <input type="email" class="form-control" id="user_email" name="mem_email" placeholder="이메일을 입력해주세요">
+                       <input type="email" class="form-control" id="user_email"  name="mem_email" placeholder="이메일을 입력해주세요">
                        <span class="input-group-btn">
                        	<button class="btn btn-info" type="button">중복확인</button>
                        </span>
@@ -106,7 +106,7 @@
              
                <div class="form-group">
                    <div class="input-group">
-                       <input type="text" class="form-control" id="user_nick" name="mem_nick" placeholder="닉네임을 입력해주세요">
+                       <input type="text" class="form-control" id="user_nick"  name="mem_nick" placeholder="닉네임을 입력해주세요">
                        <span class="input-group-btn">
                        	 <button class="btn btn-info" type="button">중복확인</button>
                        </span>
@@ -130,7 +130,7 @@
                
                <div>                            
 	               <div class="form-inline text-left">
-	                    <input type="file" class="form-control" style="display: block; visibility: hidden;" id="file_input" name="mem_avt" 
+	                    <input type="file" class="form-control" style="display: block; visibility: hidden;" id="file_input" name="profileImg" 
 	                    accept="image/bmp, image/gif, image/jpeg, image/png">
 	                    <label for="file_input">선택해</label><div id="filename"></div>
 	               </div>

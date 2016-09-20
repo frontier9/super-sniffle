@@ -22,8 +22,8 @@
 
 <!-- @category DataLayer -->
 
-<div id="wrap" class="section">
-    <div id="map3" style="width:100%;height:450px;"></div>
+<div id="wrap">
+    <div id="map3" class="test" style="width:100%;height:700px;"></div>
  </div>
 
 <script id="code">
@@ -175,14 +175,9 @@
             console.log(res);
 
             //$('div#result').text(response.body.items.item.title);
-
-                $('#result').empty();
-            
-               for(var i=0; i<res.response.body.items.item.length; i++) {
-
-           
+               
                 var recode;
-                var recoder =res.response.body.items.item[i].areacode;
+                var recoder =res.response.body.items.item[0].areacode;
                 
                 switch(recoder) {
                 case 1:
@@ -240,12 +235,24 @@
                     recode = 1;
             }
                 
+            
+            
+
+                $('#result').empty();
+                $('.city').empty();
+                $('.city').append('<h4>'+recode+'</h4>');
+                
+               for(var i=0; i<res.response.body.items.item.length; i++) {
+
+           
                 
                
                 
                 console.log(res.response.body.items.item[i].firstimage2);
                 
-                
+               
+               
+              
                 
                 $('#result').append('<div class="col-md-12 tour_item" id="seoul2">'+
                         '<div class="col-md-4 list_img"><img class="img-rounded img-responsive"'+ 

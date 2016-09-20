@@ -1,4 +1,87 @@
 
+.tableview{
+	max-width:100%;
+	height:auto;
+}
+.firstline{
+	background-color: #f8f8fa;
+	border-radius:15px 15px 0 0;
+}
+.tb{
+	width: 48%;
+	height: 30px;
+	margin: 0 auto; 
+}
+.tb1{
+	border-right:2px solid;
+	border-bottom:2px solid;
+	border-color: rgb(255,255,255);
+	display:inline;
+	width:13%;
+	float:left;
+	text-align:center;
+	padding-top:5px
+}
+.tb2{
+	border-right:2px solid;
+	border-bottom:2px solid;
+	border-color: rgb(255,255,255);
+	display:inline;
+	width:13%;
+	float:left;
+	text-align:center;
+	padding-top:5px
+}
+.tb3{
+	border-bottom:2px solid;
+	border-color: rgb(255,255,255);
+	display:inline;
+	width:73%;
+	float:left;
+	text-align:right;
+	padding-top:5px
+}
+.tb-title{
+	border-bottom:10px solid;
+	border-color:#f8f8fa;
+	height:70px;
+	text-align:center;
+	font-size:2em;
+	padding-top:10px
+}
+.secondline{
+		background-color: #f8f8fa;
+}
+.tb-hit{
+	border-right:2px solid;
+	border-color: rgb(255,255,255);
+	display:inline;
+	float:left;
+	width:13%;
+	text-align:center;
+	padding-top:5px
+}
+.tb-nick{
+	display:inline;
+	float:left;
+	width:86%;
+	text-align: right;
+	padding-top:5px
+	
+}
+.tb-contents{
+	border-bottom:20px solid;
+	border-color:#f8f8fa;
+	border-radius:0 0 15px 15px;
+	height:250px;
+	padding-left:20px;
+	padding-top:20px;
+	padding-right:20px;	
+	margin-bottom:20px;
+	font-size:1em;
+}
+
+
 .board-h1{
 	color:inherit;
 	line-height:1.1;
@@ -22,10 +105,7 @@
 	text-align:right;
 	margin-top:2em;
 }
-/*.col-xs-12 col-md-12{
-	pedding-right:20px;
-	text-align:right;
-}*/
+
 
 .table{
 	max-width:100%;
@@ -82,47 +162,6 @@ row{
 	}
 }
 
-#title{
-	text-align:center;
-	font-size: 5em;
-}
-
-
-/* Travel note */
-img {
-	margin-bottom: -7px
-	}
-
-#col-md-4-R{
-position: relative;
-  min-height: 1px;
-  padding-right: 0;
-  padding-left: 0;
- 
-}
-@media (min-width: 992px) {
-	#col-md-4-R{
-	 float: left;
-	  width: 33.33333333%;
-}
-}
-.travel-content{
-	max-width:1500px;margin:auto;
-	}
-.pedding-btn{
-	border:none;display:inline-block;
-	outline:0;padding:6px 16px;vertical-align:middle;
-	overflow:hidden;text-decoration:none!important;
-	color:#fff;background-color:#000;text-align:center;
-	cursor:pointer;white-space:nowrap;
-}
-.traveltitle{
-	padding-top:32px;padding-bottom:32px;
-	text-align:center;
-	opacity:0.60;filter:alpha(opacity=60);
-	margin-bottom:16px;
-	}
-	
 /*board write*/
 .write{
 	display:block;
@@ -135,28 +174,6 @@ position: relative;
 	margin-left:15%;
 }
 
-/* board view*/
-.tableview{
-	display:block;
-	max-width:600px;
-	margin:0 auto;
-}
-.cell {
-	display: table-cell; padding: 10px; border-bottom: 1px solid #DDD;
-	}
-.col1 {
-	width: 10%;
-	}
-.col2 {
-	width: 30%;
-	}
-.col3{
-	height: 250px;
-	width:30%;
-}
-#table {
-	display: table; width: 100%; text-align:center; margin-top:0; margin-bottom:30px;
-	}
 	
 	/*header*/
 .intro-header {
@@ -240,3 +257,4 @@ position: relative;
 .bottom-empty{
 	height: 100px;
 }
+

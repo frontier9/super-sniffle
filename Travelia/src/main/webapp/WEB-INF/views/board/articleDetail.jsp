@@ -17,7 +17,6 @@
 		<header class="intro-header" style="background-image: url('/resources/images/제목 없음1231.png')">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
                         <h1 class ="board-h1">BOARD</h1>
                  
@@ -25,7 +24,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     	</header>
 
 
@@ -68,40 +66,7 @@
    	 </div>
     <div class="bottom-empty">
 	</div> 
-    <!--  <table class="board_view">
-        <colgroup>
-            <col width="15%"/>
-            <col width="35%"/>
-            <col width="15%"/>
-            <col width="35%"/>
-        </colgroup>
-        <caption>상세 조회 페이지</caption>
-        <tbody>
-            <tr>
-                <th scope="row">글 번호</th>
-                <td>${map.brd_article_no}</td>
-                <th scope="row">조회수</th>
-                <td>${map.brd_hit}</td>
-            </tr>
-            <tr>
-                <th scope="row">작성자</th>
-                <td>${map.brd_writer}</td>
-                <th scope="row">카테고리</th>
-                <td>${map.brd_cat}</td>
-            </tr>
-            <tr>
-                <th scope="row">제목</th>
-                <td colspan="3">${map.brd_article_title}</td>
-            </tr>
-            <tr>
-                <td colspan="4">${map.brd_article}</td>
-            </tr>
-        </tbody>
-    </table>
 
-<a href="#this" class="btn" id="list">목록으로</a>
-<a href="#this" class="btn" id="update">수정하기</a>
--->
 <%@ include file="/WEB-INF/include/include-body.jsp"%>
 <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 <script type="text/javascript">

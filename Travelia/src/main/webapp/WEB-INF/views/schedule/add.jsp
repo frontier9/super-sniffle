@@ -68,7 +68,7 @@
           
           <div class="sel_text">
           <h4>
-          	인천
+          	인천광역시
           </h4>
           </div>
           

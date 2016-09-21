@@ -9,11 +9,12 @@
 <title>Schedule</title>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="<c:url value="/resources/css/schedule_add.css"/>" >
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap-datetimepicker.css"/>">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment-with-locales.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/js/bootstrap-datetimepicker.min.js"></script>
+  <script type="text/javascript" src="<c:url value="/resources/js/moment.min.js"/>" ></script>
+    <script type="text/javascript" src="<c:url value="/resources/js/bootstrap-datetimepicker.min.js"/>" ></script>
+
 </head>
 <body>
 
@@ -22,72 +23,51 @@
 
 
 
-<div class="modal-content sch" id="see">
+<div class="modal-content sch" id="see" style="display:none;">
 
       <div class="modal-header modal-header-success">
-         <span class="glyphicon glyphicon-calendar start" aria-hidden="true"> 출발일</span>
-        <h4 class="modal-title">여행도시</h4>
+      
+          <div class="head-left">
+         <h3 class="modal-title">여행도시</h3>
+         </div>
+         
+         <div class="head-right">
+        <h5> <span class="glyphicon glyphicon-calendar start" aria-hidden="true"></span>출발일</h5>
+         
+     <div id="calren">   
+     
+    <div class=" glyphicon glyphicon-triangle-top tri" aria-hidden="true"></div> 
+   <div style="overflow:hidden;" id="date_pick">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="datetimepicker12"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+       
+       jQuery.noConflict();
+        $(function () {
+         
+            $('#datetimepicker12').datetimepicker({
+                inline: true
+               
+            })(jQuery);
+        });
+    </script>
+</div>
+  </div>        
+        
+    
+       
+        </div>
+         
       </div>
       
-      <div class="modal-body">
+      <div class="modal-body sch-body">
         
-        <div class="sel_city">
-          
-        
-          <span class="glyphicon glyphicon-remove-circle cen_line"></span>
-          
-          <div class="sel_text">
-          <h4>
-          	서울
-          </h4>
-          </div>
-          
-          <div class="input-group input-group-sm ip_gr">
-          <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number1" disabled="disabled" data-type="minus" data-field="quant[1]">
-                  <span class="glyphicon glyphicon-minus"></span>
-              </button>
-          </span>
-          
-         <input type="text" class="form-control input-number" name="quant[1]" placeholder="Username" aria-describedby="sizing-addon3" value="1" min="1" max="100">
-          
-          <span class="input-group-btn">
-              <button type="button" class="btn btn-default  btn-number1" data-type="plus" data-field="quant[1]">
-                  <span class="glyphicon glyphicon-plus"></span>
-              </button>
-          </span>
-      </div>
-        </div>
-        
-         <span class="glyphicon glyphicon-option-vertical line" aria-hidden="true"></span>
-         
-               <div class="sel_city">
-          
-        
-          <span class="glyphicon glyphicon-remove-circle cen_line"></span>
-          
-          <div class="sel_text">
-          <h4>
-          	인천광역시
-          </h4>
-          </div>
-          
-          <div class="input-group input-group-sm ip_gr">
-          <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number2" disabled="disabled" data-type="minus" data-field="quant[2]">
-                  <span class="glyphicon glyphicon-minus"></span>
-              </button>
-          </span>
-          
-         <input type="text" class="form-control input-number" name="quant[2]" placeholder="Username" aria-describedby="sizing-addon3" value="1" min="1" max="100">
-          
-          <span class="input-group-btn">
-              <button type="button" class="btn btn-default  btn-number2" data-type="plus" data-field="quant[2]">
-                  <span class="glyphicon glyphicon-plus"></span>
-              </button>
-          </span>
-      </div>
-        </div>
+     
         
       </div>
       
@@ -95,16 +75,53 @@
       
       
       <div class="modal-footer">
-        <button type="button" class="btn btn-success">상세일정</button>
-        <button type="button" class="btn btn-default">닫기</button>
+        <button type="button" class="btn btn-success remodal" data-toggle="modal" data-target="#myModal" >상세일정</button>
+        <button type="button" class="btn btn-default exit">닫기</button>
       </div>
   </div><!-- /.modal-content -->
+   
+   
+   
 
+<!--last Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">여행계획 세우기</h4>
+      </div>
+      <div class="modal-body">
+      
+      
+      
+      </div>
+      <div class="modal-footer">
+       
+        <button type="button" class="btn btn-primary">완료</button>
+      </div>
+    </div>
+  </div>
+</div>
+   
+    
 
 
 
 <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
-<script src="<c:url value="/resources/js/jquery-ui.min.js"/>" type="text/javascript"></script>
+
+
 <script src="<c:url value="/resources/js/schedule_add.js"/>" type="text/javascript"></script>
+<script>
+
+
+/*$(".remodal").on("click",function(){
+	
+	$("#myModal").css("display", "block");
+	
+});*/
+
+</script>
+
 </body>
 </html>

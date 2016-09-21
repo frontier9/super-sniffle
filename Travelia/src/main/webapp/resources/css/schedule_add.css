@@ -19,12 +19,25 @@
 	
 }
 
+.head-left{
+	
+	float: left;
+}
+
+.head-right{
+	
+	display:inline-block;
+	float:right;
+	cursor:pointer;
+}
+
 
 .cen_line{
 	margin-top: 10px;
 	margin-left:10px;
-	margin-right:60px;
+	margin-right:40px;
 	font-size:18px;
+	cursor:pointer;
 }
 
 
@@ -55,6 +68,47 @@
 	margin-left:15px;
 	font-size:24px;
 	margin-bottom:10px;
+}
+
+
+#date_pick{
+	
+	position: absolute;
+    width:230px;
+    marging-top:-5px;
+    background:#fff;
+    color:black;
+    z-index:3;
+     -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+          -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+     border-bottom-left-radius: 5px;
+     border-bottom-right-radius: 5px;
+}
+
+.tri{
+  margin-bottom:-7px;	
+  margin-left:30px;
+  font-size:26px;	
+}
+
+#calren{
+	
+	display:none;
+}
+
+td{
+	
+	margin-left:5px;
+	margin-right:5px;
+	
 }
 
 .sel_city{
@@ -99,4 +153,10 @@
     -moz-border-radius-topright: 5px;
      border-top-left-radius: 5px;
      border-top-right-radius: 5px;
+}
+
+
+
+.change_text{
+	color:black;
 }

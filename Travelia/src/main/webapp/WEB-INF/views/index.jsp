@@ -13,13 +13,12 @@
 <meta name="author" content="trv">
 <link rel="shortcut icon" href="<c:url value="/resources/images/favicon.ico" />"/>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>	">
+<link rel="stylesheet" href="<c:url value='/resources/css/bootstrap-3.3.7.min.css'/>">
 <link href="<c:url value="/resources/css/font-awesome.min.css" />" rel="stylesheet">
-<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/trv_style.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/navbar.css" />" rel="stylesheet">
 <link rel="stylesheet" href="<c:url value="/resources/css/login.css" />">
-<title>Travelia</title>
+<title>여행의 시작 Travelia</title>
 
 
 </head>

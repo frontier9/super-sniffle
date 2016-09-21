@@ -6,10 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <script
-            src="<c:url value='https://code.jquery.com/jquery-1.12.4.js'/>"
-            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
-            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="<c:url value='/resources/js/jquery-2.2.4.min.js'/>"></script>
     <script type="text/javascript" src="<c:url value='/resources/js/example-base.js'/>"></script>
     <script type="text/javascript" src="<c:url value='/resources/js/highlight.min.js' />"></script>
     <script type="text/javascript" src="<c:url value='https://openapi.map.naver.com/openapi/v3/maps.js?clientId=drdLdlwXdcgkoSa00hlT&amp;submodules=panorama'/>"></script>
@@ -27,7 +24,10 @@
             urlPrefix = HOME_PATH +'./resources/data/region/region',
             urlSuffix = '.json',
             regionGeoJson = [],
-            loadCount = 0;
+            loadCount = 0,
+            markers = [],
+            infoWindows = [];
+
 
     for (var i = 1; i < 18; i++) {
         var keyword = i +'';
@@ -52,21 +52,21 @@
         });
     }
 
-    var daejeon = naver.maps.LatLng(36.3504119, 127.38454750000005);
+//    var daejeon = naver.maps.LatLng(36.3504119, 127.38454750000005);
     var map3 = new naver.maps.Map(document.getElementById('map3'), {
         zoom: 3,
         mapTypeId: 'hybrid',
-        center: daejeon,
+//        center: daejeon,
         scaleControl: true,
         logoControl: true,
         zoomControl: false
     });
 
-    var marker3 = new naver.maps.Marker({
-        position: daejeon,
-        map: map3,
-        animation: 1
-    });
+//    var marker3 = new naver.maps.Marker({
+//        position: daejeon,
+//        map: map3,
+//        animation: 1
+//    });
 
     var tooltip_ = $('<div style="position:absolute;z-index:1000;padding:5px 10px;background-color:#fff;border:solid 2px #000;font-size:14px;pointer-events:none;display:none;"></div>');
 
@@ -75,7 +75,7 @@
     tooltip_.appendTo(map3.getPanes().floatPane);
 
     function startDataLayer() {
-        map3.data.setStyle(function(feature) {
+        map3.data.setStyle(function (feature) {
             var styleOptions = {
                 fillColor: '#606060',
                 fillOpacity: 0.0001,
@@ -95,9 +95,10 @@
             return styleOptions;
         });
 
-        regionGeoJson.forEach(function(geojson) {
+        regionGeoJson.forEach(function (geojson) {
             map3.data.addGeoJson(geojson);
         });
+    }
 
 
 //        Start of click event
@@ -162,20 +163,17 @@
                     code = 1;
             }
 
-            console.log(regionName + ' / ' + code );
-
-
-
+//            console.log(regionName + ' / ' + code );
 
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?" +
                     "ServiceKey=mT7AA8FcGoNUx91TYsnY2xSzr33aNx3h6NqX%2FHYlVIj0rrY%2F3dtaJ25fyOD8GjZoafWkGBeokkEueSETu81kMA%3D%3D&" +
-                    "contentTypeId=12&areaCode=" + code + "&sigunguCode=&cat1=&cat2=&cat3=&listYN=Y&MobileOS=ETC&ContentTypeId=12&MobileApp=TourAPI3.0_Guide&arrange=A&" +
-                    "numOfRows=10000&pageNo=1&_type=json", false);
+                    "contentTypeId=12&areaCode=" + code + "&sigunguCode=&cat1=&cat2=&cat3=&listYN=Y&MobileOS=ETC&ContentTypeId=12&MobileApp=TourAPI3.0_Guide&arrange=B&" +
+                    "numOfRows=20&pageNo=1&_type=json", false);
 
             xhr.send();
-            console.log(xhr.status);
-            console.log(xhr.statusText);
+//            console.log(xhr.status);
+//            console.log(xhr.statusText);
 
             var res = JSON.parse(xhr.responseText);
             //console.log(res);
@@ -245,65 +243,87 @@
 //                $('.city').empty();
 //                $('.city').append('<h4>'+recode+'</h4>');
 
-            if(pointer !== null) {
-
-            }
 
                for(var i=0; i<res.response.body.items.item.length; i++) {
 
-                   var coord = naver.maps.LatLng(res.response.body.items.item[i].mapy, res.response.body.items.item[i].mapx);
-                   var pointer = new naver.maps.Marker({
-                       position: coord,
+                   var coords = naver.maps.LatLng(res.response.body.items.item[i].mapy, res.response.body.items.item[i].mapx);
+                   var marker = new naver.maps.Marker({
+                       position: coords,
                        map: map3,
+                       title: res.response.body.items.item[i].title,
                        animation: 2
                    });
 
-//                    $('#result').append(
-//                            '<div class="col-md-12 tour_item" id="seoul2">' +
-//                            '   <div class="col-md-4 list_img">' +
-//                            '       <img class="img-rounded img-responsive" src="'+res.response.body.items.item[i].firstimage2+'" />' +
-//                            '   </div>' +
-//                            '   <div class="col-md-8 list_contents">' +
-//                            '       <h4>'+res.response.body.items.item[i].title+'</h4>' +
-//                            '       <p>'+recode+'</p>' +
-//                            '   </div>' +
-//                            '</div>');
+                   var infoWindow = new naver.maps.InfoWindow({
+                       content:  [
+                           '<div class="iw_inner">',
+                           '   <h3>' + res.response.body.items.item[i].title + '</h3>',
+                           '   <p>' + res.response.body.items.item[i].addr1 + '<br />',
+                           '       <img src=' + res.response.body.items.item[i].firstimage2 +' width="55" height="55" alt="서울시청" class="thumb" /><br />',
+                           '   </p>',
+                           '</div>'
+                       ].join(''),
+                       maxWidth: 200,
+                       backgroundColor: "#eee",
+                       borderColor: "#ffff00",
+                       borderWidth: 3.5,
+                       anchorSize: new naver.maps.Size(30, 30),
+                       anchorSkew: true,
+                       anchorColor: "#eee",
+                       pixelOffset: new naver.maps.Point(26, -23)
+                   });
+//                   console.log(infoWindow.content);
+                   markers.push(marker);
+                   infoWindows.push(infoWindow);
                }
-
-            marker3.setPosition(e.coord);
-            marker3.setAnimation(2);
+//            marker3.setPosition(e.coord);
+//            marker3.setAnimation(2);
         });
 // End of click event
 
-        var contentString = [
-            '<div class="iw_inner">',
-            '   <h3>대전광역시청</h3>',
-            '   <p>대전광역시 서구 둔산로 100<br />',
-            '       <img src="<c:url value='/resources/images/img_gondol.jpg'/>" width="55" height="55" alt="서울시청" class="thumb" /><br />',
-            '       공공,사회기관 &gt; 광역시청<br />',
-            '   </p>',
-            '</div>'
-        ].join('');
+    function showMarker(map, marker) {
 
-        var infowindow = new naver.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 200,
-            backgroundColor: "#eee",
-            borderColor: "#ffff00",
-            borderWidth: 3.5,
-            anchorSize: new naver.maps.Size(30, 30),
-            anchorSkew: true,
-            anchorColor: "#eee",
-            pixelOffset: new naver.maps.Point(26, -23)
-        });
+        if (marker.setMap())
+            return;
+        marker.setMap(map);
+    }
 
-        naver.maps.Event.addListener(marker3, "click", function(e) {
-            if (infowindow.getMap()) {
-                infowindow.close();
+    function hideMarker(map, marker) {
+
+        if (!marker.setMap())
+            return;
+        marker.setMap(null);
+    }
+
+    function updateMarkers(map, markers) {
+
+        var mapBounds = map.getBounds();
+        var marker, position;
+
+        for (var i = 0; i < markers.length; i++) {
+
+            marker = markers[i]
+            position = marker.getPosition();
+
+            if (mapBounds.hasLatLng(position)) {
+                showMarker(map, marker);
             } else {
-                infowindow.open(map3, marker3);
+                hideMarker(map, marker);
             }
-        });
+        }
+    }
+
+        naver.maps.Event.addListener(map3, 'idle', function() {
+            updateMarkers(map3, markers);
+        })
+
+//        naver.maps.Event.addListener(marker3, "click", function(e) {
+//            if (infoWindow.getMap()) {
+//                infoWindow.close();
+//            } else {
+//                infoWindow.open(map3, marker3);
+//            }
+//        });
 
 
         map3.data.addListener('mouseover', function(e) {
@@ -327,7 +347,27 @@
             tooltip_.hide().empty();
             map3.data.revertStyle();
         });
-    }
+
+        function getClickHandler(seq) {
+            console.log("I AM HERE in click handler!");
+            return function(e) {
+                var marker = markers[seq],
+                        infoWindow = infoWindows[seq];
+
+                if (infoWindow.getMap()) {
+                    infoWindow.close();
+                } else {
+                    infoWindow.open(map3, marker);
+                }
+            }
+        }
+
+        for (var i=0; i<markers.length; i++) {
+            console.log("hey brother");
+            naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
+        }
+
+
 </script>
 
 </body>

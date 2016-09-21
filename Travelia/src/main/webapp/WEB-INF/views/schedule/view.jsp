@@ -6,8 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="<c:url value="/resources/css/detail.css"/>" >
-<link rel="stylesheet" href="<c:url value="fonts/glyphicons-halflings-regular.ttf"/>"> 
-<title>Insert title here</title>
+<link rel="stylesheet" href="<c:url value="/resources/fonts/glyphicons-halflings-regular.ttf"/>">
+<title>여행의 시작 Travelia</title>
 </head>
 <body style =background:#f8f8fa;>
 

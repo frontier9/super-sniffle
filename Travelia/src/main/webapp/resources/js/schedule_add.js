@@ -6,6 +6,7 @@ map3.data.addListener('click', function(e) {
 	var feature = e.feature,
     regionName = feature.getProperty('area1');
     var code; 
+    
     var selcity = "kr_city"+i;
     var minus_id="del"+i;
     var btn_num = "btn-number"+i;

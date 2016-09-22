@@ -3,42 +3,70 @@
 PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kitri.travelia.mapper.TravelNoteMapper">
-	<!-- TravelNote List 조회 
-	<select id ="listTravelNote">
-		<![CDATA[select* from Travel_note where note_no>0 order by note_no desc, note_write_date desc]]>
-	</select>-->
-	<!-- TravelNote item 조회 -->
-	<!-- TravelNote item 등록
-	<insert id ="insertTravelNote">
-		insert into Travel_note(note_title, note, note_write_date, note_hit, note_nick, note_cat, note_recom, mem_no) 
-		values(#{note_title},#{note},#{note_write_date},#{note_hit},#{note_nick},#{note_cat},#{note_recom},#{mem_no})
-	</insert> -->
-	<!-- TravelNote item Image 등록 
-	<insert id ="insertTravelNote">
-		insert into Note_img(note_no, note_img, note_img, note_img, note_img, note_img, note_img, note_img, note_img, note_img, note_img) 
-		values(#{note_no},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img},#{note_img})
-	</insert>-->
-	<!-- TravelNote item 수정 
-	<update id="updateTravelNote">
+
+	<!-- TravelNote Item 등록 -->
+	<insert id ="createNote">
+		insert into Travel_note
+		(note_no, note_title, contitle1, context1, contitle2, context2, contitle3, context3, contitle4, context4, timetitle1, timetext1, timetitle2, timetext2, timetitle3, timetext3, timetitle4, timetext4, mem_no) 
+		values
+		(#{note_no}, #{note_title},#{contitle1},#{context1},#{contitle2},#{context2},#{contitle3},#{context3},#{contitle4},#{context4},#{timetitle1},#{timetext1},#{timetitle2},#{timetext2},#{timetitle3},#{timetext3},#{timetitle4},#{timetext4},#{mem_no})
+	</insert> 
+	<!-- TravelNote Image 등록 -->	
+	<insert id ="createImg">
+		insert into Note_img(note_no,note_img1, note_img2, note_img3, note_img4, note_img5) 
+		values(#{note_no},#{note_img1},#{note_img2},#{note_img3},#{note_img4},#{note_img5})
+	</insert>
+
+	<!-- 최근 Note_no 조회 -->
+	<select id ="note_no" resultType="int">
+	 select MAX(note_no) from travel_note;
+	</select>
+	
+	
+	<!-- TravelNote Item 조회 -->
+	<select id ="readNote" resultType="Member" parameterType="String">
+			select * from Travel_note where trn_no = #{trn_no}
+	</select>
+	<!-- TravelNote Image 조회 -->
+	<select id ="readImg" resultType="Note_img" parameterType="String">
+			select * from note_img where note_no = #{note_no}
+	</select>
+
+	<!-- TravelNote Item 수정 -->
+	<update id="updateNote">
 		update Travel_note set note_title = #{note_title}, note = #{note} where note_no = #{note_no}
-	</update>-->
-	<!-- TravelNote item 삭제
-	<delete id ="deleteTravelNote" parameterType ="int">
-		delete from member where note_no = #{note_no}
-	</delete> -->
-	<!-- TravelNote command list 조회 -->
-	<!-- TravelNote command item 조회 -->
-	<!-- TravelNote command item 등록 
-	<insert id ="insertNoteCommand">
-		insert into Note_com(com, com_write_date, writer, note_no) 
-		values(#{com},#{com_write_date},#{writer},#{note_no})
-	</insert>-->
-	<!-- TravelNote command item 삭제 
-	<delete id ="deleteNoteCommand" parameterType ="int">
-		delete from Note_com where trn_no = #{trn_no}
-	</delete>-->
-	<!-- TravelNote command item 수정 -->
+	</update>
+	<!-- TravelNote Item 수정 -->
+	<update id="updateImg">
+		update Note_img set 
+		note_img1 = #{note_img1}, 
+		note_img2 = #{note_img2},
+		note_img3 = #{note_img3},
+		note_img4 = #{note_img4},
+		note_img5 = #{note_img5},
+		note_img6 = #{note_img6},
+		note_img7 = #{note_img7},
+		note_img8 = #{note_img8},
+		note_img9 = #{note_img9},
+		note_img10 = #{note_img10} where note_no = #{note_no}
+	</update>
 	
-	<!-- TravelNote 검색 -->
+	<!-- TravelNote Item 삭제-->
+	<delete id ="deleteNote" parameterType ="int">
+		delete from Travel_note where note_no = #{note_no}
+	</delete> 
+	<!-- TravelNote Image 삭제-->
+	<delete id ="deleteImg" parameterType ="int">
+		delete from Note_img where note_no = #{note_no}
+	</delete> 
 	
+	<!-- TravelNote Item list 조회 -->
+	<select id ="listNote">
+		<![CDATA[select* from Travel_note where note_no>0 order by note_no desc, note_write_date desc]]>
+	</select>
+	<!-- TravelNote Image list 조회 -->
+	<select id ="listImg">
+		<![CDATA[select note_img1 from Note_img where note_no>0 order by note_no desc]]>
+	</select>
+
 </mapper>

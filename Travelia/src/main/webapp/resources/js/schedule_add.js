@@ -95,8 +95,7 @@ map3.data.addListener('click', function(e) {
 				'<span class="glyphicon glyphicon-plus"></span></button></span></div></div>' ;
    
    
-   console.log(state);
-   
+
    if(state==="none"){
        $(".sch-body").append(add_div);
 	}else{
@@ -117,23 +116,19 @@ map3.data.addListener('click', function(e) {
          if(type == 'minus') {
              
              if(currentVal > input.attr('min')) {
-            	 console.log("굿1" );
                  input.val(currentVal - 1).change();
              } 
              if(parseInt(input.val()) == input.attr('min')) {
-            	 console.log("아왜" );
                  $(this).attr('disabled', true);
              }
 
          } else if(type == 'plus') {
 
              if(currentVal < input.attr('max')) {
-            	 console.log("굿23" );
                  input.val(currentVal + 1).change();
                  $(".btn-default").attr('disabled', false);
              }
              if(parseInt(input.val()) == input.attr('max')) {
-            	 console.log("아왜" );
                  $(this).attr('disabled', true);
              }
 
@@ -199,8 +194,7 @@ var sel_num=$('.sel_city').length;
 
 function dele(a,b){
 	
-	console.log(a);
-	
+
 	$(a).remove();
 	$(b).remove();
 	
@@ -213,8 +207,7 @@ function dele(a,b){
 
 $(".head-right").on("click", function(){
 	
-	   console.log(sel_num);
-	
+
 	$("#calren").toggle();
 	
 	$(".head-right").css("margin-bottom","-20px");

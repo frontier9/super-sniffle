@@ -12,6 +12,13 @@
     <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/example-base.css'/>">
     <script>
         var HOME_PATH = ''; // CONTEXT PATH FOR PROJECT
+        var HOME_PATH = window.HOME_PATH || '.',
+                urlPrefix = HOME_PATH +'./resources/data/region/region',
+                urlSuffix = '.json',
+                regionGeoJson = [],
+                loadCount = 0,
+                markers = [],
+                infoWindows = [];
     </script>
 </head>
 <body>
@@ -19,14 +26,6 @@
 <div id="map3" style="min-height: 100%;"></div>
 
 <script id="code">
-    var HOME_PATH = window.HOME_PATH || '.',
-            urlPrefix = HOME_PATH +'./resources/data/region/region',
-            urlSuffix = '.json',
-            regionGeoJson = [],
-            loadCount = 0,
-            markers = [],
-            infoWindows = [];
-
 
     for (var i = 1; i < 18; i++) {
         var keyword = i +'';
@@ -209,67 +208,90 @@
                        pixelOffset: new naver.maps.Point(26, -23)
                    });
 //                   console.log(infoWindow.content);
-                   markers.push(marker);
+                   markers.push(marker); //a
                    infoWindows.push(infoWindow);
-               }
-//            marker3.setPosition(e.coord);
-//            marker3.setAnimation(2);
-        });
-// End of click event
+            }
+            function getClickHandler(seq) {
+                return function(e) {
+                    var marker = markers[seq],
+                            infoWindow = infoWindows[seq];
 
-    naver.maps.Event.addListener(map3, 'keydown', function(e){
-        var keyboardEvent = e.keyboardEvent,
-            keyCode = keyboardEvent.keyCode || keyboardEvent.which;
-
-        var ESC = 27;
-
-        if(keyCode === ESC) {
-            keyboardEvent.preventDefault();
-
-            for(var i=0; i<markers.length; i++) {
-                markers[i].setMap(null);
+                    if (infoWindow.getMap()) {
+                        infoWindow.close();
+                    } else {
+                        infoWindow.open(map3, marker);
+                    }
+                }
             }
 
-            markers = [];
+            for (var i=0, ii=markers.length; i<ii; i++) {
+                naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
+            }
+        });
+// End of click event
+//    naver.maps.Event.addListener(mk, 'click', function(e){
+//        if (inf.getMap()) {
+//            inf.close();
+//        } else {
+//            inf.open(map3, mk);
+//        }
+//    });
 
-        }
 
-    });
 
-//    function showMarker(map, marker) {
+
+
+
+//    naver.maps.Event.addListener(map3, 'keydown', function(e){
+//        var keyboardEvent = e.keyboardEvent,
+//            keyCode = keyboardEvent.keyCode || keyboardEvent.which;
 //
+//        var ESC = 27;
+//
+//        if(keyCode === ESC) {
+//            keyboardEvent.preventDefault();
+//
+//            for(var i=0; i<markers.length; i++) {
+//                markers[i].setMap(null);
+//            }
+//            markers = [];
+//        }
+//    });
+
+    function showMarker(map, marker) {
+
 //        if (marker.setMap())
 //            return;
-//        marker.setMap(map);
-//    }
-//
-//    function hideMarker(map, marker) {
-//
+        marker.setMap(map);
+    }
+
+    function hideMarker(map, marker) {
+
 //        if (!marker.setMap())
 //            return;
-//        marker.setMap(null);
-//    }
+        marker.setMap(null);
+    }
 
     function updateMarkers(map, markers) {
 
         var mapBounds = map.getBounds();
-        var marker, position;
+        var position;
 
         for (var i = 0; i < markers.length; i++) {
 
-            marker = markers[i]
-            position = marker.getPosition();
+            position = markers[i].getPosition();
 
             if (mapBounds.hasLatLng(position)) {
-                showMarker(map, marker);
+                hideMarker(map, markers[i]);
             } else {
-                hideMarker(map, marker);
+                showMarker(map, markers[i]);
             }
         }
     }
 
         naver.maps.Event.addListener(map3, 'idle', function() {
             updateMarkers(map3, markers);
+            //console.log('idle status in effect');
         })
 
 //        naver.maps.Event.addListener(marker3, "click", function(e) {
@@ -302,25 +324,6 @@
             tooltip_.hide().empty();
             map3.data.revertStyle();
         });
-
-        function getClickHandler(seq) {
-            console.log("I AM HERE in click handler!");
-            return function(e) {
-                var marker = markers[seq],
-                        infoWindow = infoWindows[seq];
-
-                if (infoWindow.getMap()) {
-                    infoWindow.close();
-                } else {
-                    infoWindow.open(map3, marker);
-                }
-            }
-        }
-
-        for (var i=0; i<markers.length; i++) {
-            naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
-        }
-
 
 </script>
 

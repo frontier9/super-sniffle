@@ -13,10 +13,10 @@ map3.data.addListener('click', function(e) {
     var field_name="quant"+i;
     var btm = ".btn-number"+i;
     var sel_num=$('.sel_city').length;
-    var state =$(".sch").css("display"); 
+    var state =$("#see").css("display");
     var line_time="line"+i;
 
-    $(".sch").show(1000); 
+    $("#see").show(1000);
     
  
   
@@ -98,13 +98,9 @@ map3.data.addListener('click', function(e) {
    console.log(state);
    
    if(state==="none"){
-  
-		   	   
-			   $(".sch-body").append(add_div);
-			   
+       $(".sch-body").append(add_div);
 	}else{
-	   
-		$(".sch-body").append('<span class="glyphicon glyphicon-option-vertical line" id="'+line_time+'" aria-hidden="true"></span>'+add_div);
+       $(".sch-body").append('<span class="glyphicon glyphicon-option-vertical line" id="'+line_time+'" aria-hidden="true"></span>'+add_div);
 	}
 	
    

@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Kevin
-  Date: 2016-09-04
-  Time: 오후 12:13
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page pageEncoding="utf-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <html lang="ko">
 <head>
@@ -242,12 +236,10 @@
 </div>
 <!-- Navigation bar ends -->
 
-<script src="<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" />"> </script>
+<script src="<c:url value='/resources/js/jquery-2.2.4.min.js' />"> </script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />"> </script>
-
+<script src="<c:url value='/resources/js/bootstrap-3.3.7.min.js' />"> </script>
 <script src="<c:url value="/resources/js/trv_script.js" />"></script>
-
 <script src="<c:url value="/resources/js/jquery.validate.js" />"></script>
 <script src="<c:url value="/resources/js/additional_methods.js" />"></script>
 <script src="<c:url value="/resources/js/form_validation_msg.js" />"></script>

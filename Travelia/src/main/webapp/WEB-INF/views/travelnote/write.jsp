@@ -7,11 +7,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Travel note</title>
-<link rel="stylesheet" href="<c:url value="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>">
+<title>여행의 시작 Travelia</title>
+<link rel="stylesheet" href="<c:url value='/resources/css/bootstrap-3.3.7.min.css'/>">
 <link rel="stylesheet" href="<c:url value="/resources/css/write.css"/>" >
-<script src="<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"/>"></script>
-<script src="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>"></script>
+<script src="<c:url value='/resources/js/jquery-2.2.4.min.js'/>"></script>
+<script src="<c:url value='/resources/js/bootstrap-3.3.7.min.js'/>"></script>
 </head>
 <body>
 

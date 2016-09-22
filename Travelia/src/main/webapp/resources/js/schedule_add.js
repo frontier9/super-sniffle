@@ -13,10 +13,10 @@ map3.data.addListener('click', function(e) {
     var field_name="quant"+i;
     var btm = ".btn-number"+i;
     var sel_num=$('.sel_city').length;
-    var state =$(".sch").css("display"); 
+    var state =$("#see").css("display");
     var line_time="line"+i;
 
-    $(".sch").show(1000); 
+    $("#see").show(1000);
     
  
   
@@ -98,17 +98,9 @@ map3.data.addListener('click', function(e) {
    console.log(state);
    
    if(state==="none"){
-  	   
-	   
-			   $(".sch-body").append(add_div+'<div id="'+line_time+'"></div>');
-			   $(".glyphicon-remove-circle").css("display", "none");
-			   $(".sel_text").css("margin-left", '50px');
-			  
-		
+       $(".sch-body").append(add_div);
 	}else{
-	   
-		$(".sch-body").append('<span class="glyphicon glyphicon-option-vertical line" id="'+line_time+'" aria-hidden="true"></span>'+add_div);
-		
+       $(".sch-body").append('<span class="glyphicon glyphicon-option-vertical line" id="'+line_time+'" aria-hidden="true"></span>'+add_div);
 	}
 	
    
@@ -203,16 +195,15 @@ map3.data.addListener('click', function(e) {
 });
 
 
-
+var sel_num=$('.sel_city').length;
 
 function dele(a,b){
 	
-	
+	console.log(a);
 	
 	$(a).remove();
 	$(b).remove();
 	
-
 	
 }
 
@@ -234,7 +225,7 @@ $(".head-right").on("click", function(){
 $(".exit").on("click", function(){
 	
 	$(".sch").hide(500);
-	$(".sch-body").empty();
+	$(".modal-body").empty();
 	
 	
 });

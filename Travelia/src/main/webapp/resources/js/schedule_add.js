@@ -234,7 +234,7 @@ $(".head-right").on("click", function(){
 $(".exit").on("click", function(){
 	
 	$(".sch").hide(500);
-	$(".modal-body").empty();
+	$(".sch-body").empty();
 	
 	
 });

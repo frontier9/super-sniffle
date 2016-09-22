@@ -24,7 +24,7 @@
   <form class="text-center filebox preview-image"  name = "form">
 
   <div class="firstone">
-    <img src="<c:url value="/resources/images/avatar.jpg" />" class="img-circle"  alt="Your Avatar" style="width:160px" id="normal"/><h6 class="text-muted">이미지 눌러서 사진을 등록하세요.</h6>
+    <img src="<c:url value="/resources/images/avatar.jpg" />" class="img-thumbnail"  alt="Your Avatar" style="width:160px" id="normal"/><h6 class="text-muted">이미지 눌러서 사진을 등록하세요.</h6>
 
   </div>
 
@@ -35,16 +35,18 @@
   </form>
 
    <div class= "col-md-12">
-   <h4><span class="label label-info">닉네임</span> portugal</h4>
+   <h4><span class="label label-info">닉네임</span>crazygogo</h4>
    </div>
 
    <div class= "col-md-12">
-   <h4><span class="label label-info">E-mail</span> wimo1@daum.net</h4>
+   <h4><span class="label label-info">E-mail</span>wonbin@naver.com</h4>
    </div>
 
   <div class= "col-md-12">
   <h4> <span class="label label-info">자기소개</span></h4>
-  <textarea class="form-control" rows="3"></textarea>
+ <h4>
+      자다 일어나서 찍은 사진 입니더 같이 여행가요~~
+ </h4>
 
    </div>
 
@@ -57,7 +59,7 @@
 
     <div class= "col-md-12">
          <button class="btn btn-default pps" type="submit"  data-toggle="modal" data-target="#pwdmodal">비밀번호 변경</button>
-           <button class="btn btn-default pps" type="submit">수정완료</button>
+           <button class="btn btn-default pps" type="submit">수정하기</button>
     </div>
     
     <div class="modal fade" id="pwdmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">

@@ -98,13 +98,17 @@ map3.data.addListener('click', function(e) {
    console.log(state);
    
    if(state==="none"){
-  
-		   	   
-			   $(".sch-body").append(add_div);
-			   
+  	   
+	   
+			   $(".sch-body").append(add_div+'<div id="'+line_time+'"></div>');
+			   $(".glyphicon-remove-circle").css("display", "none");
+			   $(".sel_text").css("margin-left", '50px');
+			  
+		
 	}else{
 	   
 		$(".sch-body").append('<span class="glyphicon glyphicon-option-vertical line" id="'+line_time+'" aria-hidden="true"></span>'+add_div);
+		
 	}
 	
    
@@ -199,15 +203,16 @@ map3.data.addListener('click', function(e) {
 });
 
 
-var sel_num=$('.sel_city').length;
+
 
 function dele(a,b){
 	
-	console.log(a);
+	
 	
 	$(a).remove();
 	$(b).remove();
 	
+
 	
 }
 

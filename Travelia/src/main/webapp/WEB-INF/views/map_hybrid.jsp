@@ -179,69 +179,6 @@
 
             //$('div#result').text(response.body.items.item.title);
 
-//                var recode;
-//                var recoder =res.response.body.items.item[0].areacode;
-//
-//                switch(recoder) {
-//                case 1:
-//                    recode = "서울특별시";
-//                    break;
-//                case 2:
-//                    recode = "인천광역시";
-//                    break;
-//                case 3:
-//                   recode = '대전광역시';
-//                    break;
-//                case 4:
-//                    recode = '대구광역시';
-//                    break;
-//                case 5:
-//                    recode = '광주광역시';
-//                    break;
-//                case 6:
-//                    recode = '부산광역시';
-//                    break;
-//                case 7:
-//                    recode = '울산광역시';
-//                    break;
-//                case 8:
-//                    recode = '세종특별자치시';
-//                    break;
-//                case 31:
-//                    recode = '경기도';
-//                    break;
-//                case 32:
-//                    recode = '강원도';
-//                    break;
-//                case 33:
-//                    recode = '충청북도';
-//                    break;
-//                case 34:
-//                    recode = '충청남도';
-//                    break;
-//                case 35:
-//                    recode = '경상북도';
-//                    break;
-//                case 36:
-//                    recode = '경상남도';
-//                    break;
-//                case 37:
-//                    recode = '전라북도';
-//                    break;
-//                case 38:
-//                    recode = '전라남도';
-//                    break;
-//                case 39:
-//                    recode = '제주특별자치도';
-//                    break;
-//                default:
-//                    recode = 1;
-//            }
-//
-//                $('#result').empty();
-//                $('.city').empty();
-//                $('.city').append('<h4>'+recode+'</h4>');
-
 
                for(var i=0; i<res.response.body.items.item.length; i++) {
 
@@ -280,19 +217,38 @@
         });
 // End of click event
 
-    function showMarker(map, marker) {
+    naver.maps.Event.addListener(map3, 'keydown', function(e){
+        var keyboardEvent = e.keyboardEvent,
+            keyCode = keyboardEvent.keyCode || keyboardEvent.which;
 
-        if (marker.setMap())
-            return;
-        marker.setMap(map);
-    }
+        var ESC = 27;
 
-    function hideMarker(map, marker) {
+        if(keyCode === ESC) {
+            keyboardEvent.preventDefault();
 
-        if (!marker.setMap())
-            return;
-        marker.setMap(null);
-    }
+            for(var i=0; i<markers.length; i++) {
+                markers[i].setMap(null);
+            }
+
+            markers = [];
+
+        }
+
+    });
+
+//    function showMarker(map, marker) {
+//
+//        if (marker.setMap())
+//            return;
+//        marker.setMap(map);
+//    }
+//
+//    function hideMarker(map, marker) {
+//
+//        if (!marker.setMap())
+//            return;
+//        marker.setMap(null);
+//    }
 
     function updateMarkers(map, markers) {
 
@@ -362,7 +318,6 @@
         }
 
         for (var i=0; i<markers.length; i++) {
-            console.log("hey brother");
             naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
         }
 

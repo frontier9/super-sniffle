@@ -21,13 +21,12 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 	 select MAX(note_no) from travel_note;
 	</select>
 	
-	
 	<!-- TravelNote Item 조회 -->
-	<select id ="readNote" resultType="Member" parameterType="String">
-			select * from Travel_note where trn_no = #{trn_no}
+	<select id ="readNote" resultType="Travel_note" parameterType="int">
+			select * from Travel_note where note_no = #{note_no}
 	</select>
 	<!-- TravelNote Image 조회 -->
-	<select id ="readImg" resultType="Note_img" parameterType="String">
+	<select id ="readImg" resultType="Note_img" parameterType="int">
 			select * from note_img where note_no = #{note_no}
 	</select>
 

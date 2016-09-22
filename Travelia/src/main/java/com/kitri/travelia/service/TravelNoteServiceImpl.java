@@ -43,7 +43,10 @@ public class TravelNoteServiceImpl implements TravelNoteService{
 
 	@Override
 	public Travel_note read(Integer note_no) throws Exception {
-		return null;
+		Travel_note note = dao.readNote(note_no);
+		Note_img  note_img = dao.readNoteImg(note_no);
+		note.setNote_imgFile(note_img.note_imgFile());
+		return note;
 	}
 
 	@Override

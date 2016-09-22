@@ -17,5 +17,4 @@ public interface TravelNoteDAO {
 	public void update(Travel_note note, Note_img img) throws Exception;
 	public void delete(Integer note_no) throws Exception;
 	public List<NoteList> listAll() throws Exception;
-	public List<Travel_note> listPage(int page) throws Exception;
 }

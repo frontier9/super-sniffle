@@ -1,7 +1,5 @@
 package com.kitri.travelia.domain;
 
-import java.util.ArrayList;
-
 //travel note Image
 public class Note_img {
 	private int note_no;
@@ -47,6 +45,17 @@ public class Note_img {
 	}
 	public void setNote_img5(String note_img5) {
 		this.note_img5 = note_img5;
+	}
+	public String[] note_imgFile(){
+		String[] note_imgFile = new String[5];
+		
+		note_imgFile[0] = new String(note_img1);
+		note_imgFile[1] = new String(note_img2);
+		note_imgFile[2] = new String(note_img3);
+		note_imgFile[3] = new String(note_img4);
+		note_imgFile[4] = new String(note_img5);
+		
+		return note_imgFile;
 	}
 	@Override
 	public String toString() {

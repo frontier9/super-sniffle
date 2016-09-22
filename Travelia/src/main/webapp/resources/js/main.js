@@ -27,7 +27,6 @@ $(".wt_icon").on("click", function(){
 
 $(".grid-item").on("click", function(){
 	var note_no = $(this).children('img').attr('alt');
-	alert(note_no);
     var href = "view?note_no="+note_no;
 	location.href=href;
 	

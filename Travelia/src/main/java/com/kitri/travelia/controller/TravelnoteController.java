@@ -1,13 +1,19 @@
-package com.kitri.travelia.controller;
+ package com.kitri.travelia.controller;
+
+import java.io.File;
 
 import javax.inject.Inject;
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.kitri.travelia.domain.Travel_note;
@@ -21,15 +27,17 @@ public class TravelnoteController {
 	@Inject
 	private TravelNoteService service;
 	
-	//Travelnote list 페이지
+	@Autowired
+	ServletContext context;
+	
 	@RequestMapping(value="/list", method =RequestMethod.GET)
 	public String listAll(Model model) throws Exception{
 		logger.info("list");
+		System.out.println(service.listAll());
 		model.addAttribute("list",service.listAll());
-		
 		return "travelnote/list";
 	}
-	//Travelnote view 페이지
+
 	@RequestMapping(value="/view", method = RequestMethod.GET)
 	public String viewContent(){
 		return "travelnote/view";
@@ -39,25 +47,43 @@ public class TravelnoteController {
 	public String viewWrite(){
 		return "/travelnote/write";
 	}
-	//Travelnote write 페이지
+	
 	@RequestMapping(value="/write", method = RequestMethod.POST)
-	public String Write(Travel_note note, RedirectAttributes rttr) throws Exception{
-		logger.info("write(post)");
-		logger.info(note.toString());
-		
-		service.regist(note);
-		
-		//브라우저 까지 전송, URI상에는 보이지 않는 숨겨진 데이터 형태
-		/* 삭제할 주석
-		 list.jsp에 script추가
-		 <script>
-		 	var result = '${msg}';
-		 	if(result =='SUCCESS'){
-		 		alert("처리 완료!");
-		 	}
-		 </script>
-		 */
+	public String Write(HttpServletRequest request, Travel_note note, RedirectAttributes rttr) throws Exception{
+		System.out.println("TravelNoteController Write(Note) = "+note.toString());
+		String noteImgPath = "/resources/images/noteImg/";
+			
+		MultipartFile[] f = note.getNote_img();
+		String[] Note_imgFile = new String[5];
+		for(int i=0;i<f.length;i++){
+			if(!f[i].isEmpty()){
+				System.out.println(i+"//파일 있음");
+				String orgName = f[i].getOriginalFilename();
+				String newName = System.currentTimeMillis() + orgName;
+				String path = context.getRealPath(noteImgPath);
+				
+				System.out.println("page : " + path);
+				File file = new File(path+File.separator+newName);
+				Note_imgFile[i] = newName;
+				f[i].transferTo(file);
+			}
+		}
+				note.setNote_imgFile(Note_imgFile);
+
+		service.regist(note);	
+		//브라우저 까지 전송, URI상에는 보이지 않는 숨겨진 데이터 형태	
 		rttr.addFlashAttribute("msg","success");
 		return "redirect:/travelnote/list";
+	}
+	
+	
+	@RequestMapping(value="/modify", method=RequestMethod.POST)
+	public String modify(){
+		return"";
+	}
+	
+	@RequestMapping(value="/test")
+	public String test(){
+		return "test";
 	}
 }

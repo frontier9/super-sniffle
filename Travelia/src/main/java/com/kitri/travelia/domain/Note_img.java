@@ -6,16 +6,11 @@ import java.util.ArrayList;
 public class Note_img {
 	private int note_no;
 	//최대 10
-	private ArrayList<String> note_img;
-	
-	public Note_img() {
-	}
-
-	public Note_img(int note_no, ArrayList<String> note_img) {
-		super();
-		this.note_no = note_no;
-		this.note_img = note_img;
-	}
+	private String note_img1;
+	private String note_img2;
+	private String note_img3;
+	private String note_img4;
+	private String note_img5;
 	
 	public int getNote_no() {
 		return note_no;
@@ -23,18 +18,39 @@ public class Note_img {
 	public void setNote_no(int note_no) {
 		this.note_no = note_no;
 	}
-	public ArrayList<String> getNote_img() {
-		return note_img;
+	public String getNote_img1() {
+		return note_img1;
 	}
-	public void setNote_img(ArrayList<String> note_img) {
-		this.note_img = note_img;
+	public void setNote_img1(String note_img1) {
+		this.note_img1 = note_img1;
 	}
-
+	public String getNote_img2() {
+		return note_img2;
+	}
+	public void setNote_img2(String note_img2) {
+		this.note_img2 = note_img2;
+	}
+	public String getNote_img3() {
+		return note_img3;
+	}
+	public void setNote_img3(String note_img3) {
+		this.note_img3 = note_img3;
+	}
+	public String getNote_img4() {
+		return note_img4;
+	}
+	public void setNote_img4(String note_img4) {
+		this.note_img4 = note_img4;
+	}
+	public String getNote_img5() {
+		return note_img5;
+	}
+	public void setNote_img5(String note_img5) {
+		this.note_img5 = note_img5;
+	}
 	@Override
 	public String toString() {
-		return "Note_img [note_no=" + note_no + ", note_img=" + note_img + "]";
+		return "Note_img [note_no=" + note_no + ", note_img1=" + note_img1 + ", note_img2=" + note_img2 + ", note_img3="
+				+ note_img3 + ", note_img4=" + note_img4 + ", note_img5=" + note_img5 + "]";
 	}
-	
-	
-	
 }

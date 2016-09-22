@@ -58,12 +58,12 @@
 	 </div>   
 	 <div class=col-md-3></div>
    	<div class=col-md-5>
-   			<a href="#this" class="btn btn-default" id="list">목록</a>
+   			
    	</div>
    	
    	<div class=col-md-1>
 	   		<a href="#this" class="btn btn-default" id ="update">수정</a>
-	   		<a href="#this" class="btn btn-default" id ="delete">삭제</a>
+	   		<a href="#this" class="btn btn-default" id ="list">목록</a>
    	 </div>
     <div class="bottom-empty">
 	</div> 

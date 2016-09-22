@@ -1,0 +1,243 @@
+.ui-resizable-helper {
+  border: 2px dotted #00F;
+}
+
+
+/*date box*/
+
+
+
+#date-box{
+
+ margin-left: -250px;
+
+  top:95px;
+
+  left: 250px;
+
+  width: 150px;
+
+  background: #2E3742;
+
+  position: fixed;
+
+  height: 100%;
+
+  
+
+  z-index: 1000;
+
+  transition: all 0.4s ease 0s;
+}
+
+
+#date-text{
+	
+color: white;
+margin-top:20px;
+border-bottom: 2px solid white;
+	
+}
+
+#box-all{
+	
+	 overflow-y:scroll; 
+	 height:800px; 
+ 	 width: 150px;
+	
+}
+
+#day_footer{
+	
+	border-top: 2px solid white;
+}
+
+.box-dt{
+	
+	float:left;
+	height: 70px;
+	width:150px;
+	border-bottom: 1px solid white;
+}
+
+.day_pos{
+	
+	display:inline-block;
+	color:white;
+	margin-left:10px;
+}
+
+.reg_pos{
+	
+	display:inline-block;
+	color: white;
+	margin-top:10px;
+	margin-left:5px;
+}
+
+/*date box end*/
+
+
+/*drop pos*/
+
+#drop_land{
+  margin-left:-100px;
+  top:95px;
+  left: 250px;
+  width:200px;
+  background: #fff;
+  position: fixed;
+  height: 100%;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+.drop_head{
+	
+    color: white;
+    display: block;
+    padding: 15px;
+    background: #95BEDD;
+    
+}
+
+.drop_content{
+	
+	 overflow-y:scroll; 
+	 height:790px; 
+ 	 width: 200px;
+ 	 
+}
+
+.drop_footer{
+	
+	color: white;
+    display: block;
+    height: 200px;
+    background: #95BEDD;
+	
+}
+
+/*drop pos end*/
+
+#sidebar-wrapper {
+
+  margin-left:100px;
+
+  top:95px;
+
+  left: 250px;
+
+  width: 250px;
+
+  background: #ffffff;
+
+  position: fixed;
+
+  height: 100%;
+
+  
+
+  z-index: 1000;
+
+  transition: all 0.4s ease 0s;
+
+}
+
+#side_head{
+
+ 
+
+ color:white;
+
+ display:block;
+
+ padding:20px;
+
+ background:#2E3742 ;
+
+}
+
+.reg img{
+
+ 
+
+ width:60px;
+
+ height:40px;
+
+ margin-left:6px;
+
+ 
+
+}
+
+#side_list{
+
+ 
+
+ margin-top:30px;
+
+ overflow-y:scroll; 
+
+ height:730px; 
+
+ width: 250px;
+
+ 
+
+}
+
+.reg{
+
+ 
+
+ padding-top:15px;
+
+ padding-bottom:10px;
+
+ border: 1px solid #ddd;
+
+}
+
+.list_img{
+
+ 
+
+ 
+
+ float:left;
+
+ width:35%;
+
+ margin-top:15px
+
+}
+
+.list_text{
+
+ display:inline-block; 
+
+ width:35%;
+
+}
+
+.reg_city{
+
+ 
+
+ display:inline-block;
+
+ width:20%; 
+
+ }
+
+.list_footer{
+
+ 
+
+ padding-bottom:126px;
+
+ background:#2E3742;
+
+}

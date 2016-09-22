@@ -362,10 +362,14 @@ $(function(){
 if ((st > lastScrollTop) && (lastScrollTop>0)) {
       $("#trv_banner_menu ").css("top","-94px"); // 스크롤을 내렸을때 #header의 CSS 속성중 top 값을 -94px로 변경한다.
       $("#sidebar-wrapper").css("top", "0");
+      $("#drop_land").css("top", "0");
+      $("#date-box").css("top", "0");
   
    } else {
       $("#trv_banner_menu ").css("top","0px"); // 스크롤을 올렸을때 #header의 CSS 속성중 top 값을 0px로 변경한다.
       $("#sidebar-wrapper").css("top", "95px");
+      $("#drop_land").css("top", "95px");
+      $("#date-box").css("top", "95px");
    }  
        lastScrollTop = st;
     });

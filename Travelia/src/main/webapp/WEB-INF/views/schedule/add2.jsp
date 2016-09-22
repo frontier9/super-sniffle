@@ -24,7 +24,6 @@
 <div class="text-center" id="date-text">
 
 <p> 2016 9/15 ~ 9/20</p>
-
 </div>
 
 <div id="box-all">

@@ -2,6 +2,7 @@ $(document).ready(function () {
     //Counter
     counter = 0;
     //Make element draggable
+    
     $(".reg").draggable({
         helper: 'clone',
         containment: 'frame',
@@ -23,7 +24,7 @@ $(document).ready(function () {
                     console.log($(this).attr("id"));
                     console.log(pos.left)
                     console.log(pos.top)
-                }
+               }
             });
         }
     });

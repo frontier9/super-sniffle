@@ -371,7 +371,7 @@ if ((st > lastScrollTop) && (lastScrollTop>0)) {
       $("#drop_land").css("top", "95px");
       $("#date-box").css("top", "95px");
    }  
-       lastScrollTop = st;
+      lastScrollTop = st;
     });
 });
 

@@ -54,10 +54,10 @@
 		    </div>
 		 </div>   
 	   		<div class ="tb tb-title">
-	   			<span><textarea rows="1" cols="70" id="title" name="title" class="wdp_90" >${map.brd_article_title}</textarea></span>
+	   			<textarea class ="form-control" rows="1" id="title" name="title" class="wdp_90" >${map.brd_article_title}</textarea>
 	    	</div>
 		    <div class ="tb tb-contents">
-		    	<span><textarea rows="10" cols="155" title="내용" id="contents" name="contents">${map.brd_article}</textarea></span>
+		    	<textarea class ="form-control" rows="10"  title="내용" id="contents" name="contents">${map.brd_article}</textarea>
 		    </div>
 		 </div>
 	 </form>

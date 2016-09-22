@@ -37,21 +37,17 @@ public class TravelNoteDAOImpl implements TravelNoteDAO {
 
 	@Override
 	public Travel_note readNote(Integer note_no) throws Exception {
-		sqlSession.selectOne(namespace+".readNote",note_no);
-		
-		return null;
+		return sqlSession.selectOne(namespace+".readNote",note_no);
 	}
 
 	@Override
 	public Note_com readNoteCom(Integer note_no) throws Exception {
-		sqlSession.selectOne(namespace+".listCom",note_no);
-		return null;
+		return sqlSession.selectOne(namespace+".listCom",note_no);
 	}
 
 	@Override
 	public Note_img readNoteImg(Integer note_no) throws Exception {
-		sqlSession.selectList(namespace,".readImg");
-		return null;
+		return sqlSession.selectOne(namespace+".readImg",note_no);
 	}
 
 	@Override
@@ -59,23 +55,13 @@ public class TravelNoteDAOImpl implements TravelNoteDAO {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void delete(Integer note_no) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public List<NoteList> listAll() throws Exception {
 		return sqlSession.selectList(namespace+".list");
 	}
-
-	@Override
-	public List<Travel_note> listPage(int page) throws Exception {
-		return null;
-	}
-
-
-
 }

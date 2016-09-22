@@ -30,7 +30,9 @@
                     <li role="presentation"><a href="#signup" data-toggle="tab">회원가입</a></li>
                 </ul>
             </div>
-
+		  <form name="logout" method="post" action='<c:url value="/logout"/>'>
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+		  </form>
             <div class="modal-body" >
                 <div id="myTabContent" class="tab-content">
                     <!-- </div> -->
@@ -175,13 +177,12 @@
         </security:authorize>
         <!-- login 후 ${pageContext.request.userPrincipal.name} -->
         <security:authorize access="isAuthenticated()">
-            <li><form name="logout" method="post" action='<c:url value="/logout"/>'>
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-                <a href="javascript:document.logoutmobile.submit();">
+            <li>
+                <a href="javascript:document.logout.submit();">
                     <span class="fa fa-sign-in fa-fw"></span>
                     &nbsp;Logout
                 </a>
-            </form></li>
+            </li>
         </security:authorize>
 
     </ul>
@@ -214,13 +215,12 @@
                     </security:authorize>
                     <!-- login 후 -->
                     <security:authorize access="isAuthenticated()">
-                        <li><form name="logout" method="post" action='<c:url value="/logout"/>'>
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                        <li>
                             <a href="javascript:document.logout.submit();">
                                 <span class="fa fa-sign-in"></span>
                                 &nbsp;Logout
                             </a>
-                        </form></li>
+                       </li>
                     </security:authorize>
                 </ul>
             </div>

@@ -15,14 +15,16 @@
 </head>
 <body>
 
-
-
-
     <!-- Full Width Image Header -->
-    <header class="header-image">
+    <header class="header-image" 
+    style="background: url('/resources/images/noteImg/${noteItem.note_imgFile[0]}') no-repeat center center scroll;
+    		   background-size: cover;
+    		   -webkit-background-size: cover;
+    		   -moz-background-size: cover;
+    		   -o-background-size: cover;">
         <div class="headline">
             <div class="container">
-                  <h1>3박 4일 국내 여행</h1>
+                  <h1>${noteItem.note_title}</h1>
             </div>
         </div>
     </header>
@@ -30,59 +32,50 @@
     <!-- Page content -->
     <div class="container-fluid fluid-user">
     
-    <!--Trip  -->
-            <div class="col-xs-12 col-sm-6 col-md-8 interval0">
+    	<!--Trip  -->
+        <div class="col-xs-12 col-sm-6 col-md-8 interval0">
+   
+     	    <hr class="featurette-divider">  
+	        <div class="featurette" id="about">
+	            <img class="featurette-image img-circle img-responsive pull-left img_sz" src="/resources/images/noteImg/${noteItem.note_imgFile[1]}">
+	            <h2 class="featurette-heading">첫번째_
+	                <span class="text-muted">${noteItem.contitle1}</span>
+	            </h2>
+	            <p class="lead">${noteItem.context1}</p>
+	        </div>
+	        
+	        <hr class="featurette-divider">
        
-       
-        <hr class="featurette-divider">
+	        <div class="featurette" id="about">
+	            <img class="featurette-image img-circle img-responsive pull-left img_sz" src="/resources/images/noteImg/${noteItem.note_imgFile[2]}">
+	            <h2 class="featurette-heading">두번째_
+	                <span class="text-muted">${noteItem.contitle2}</span>
+	            </h2>
+	            <p class="lead">${noteItem.context2}</p>
+	        </div>
 
-        <!-- First Featurette -->
-        
-        <div class="featurette" id="about">
-            <img class="featurette-image img-circle img-responsive pull-left img_sz" src="/resources/images/note1.jpg">
-            <h2 class="featurette-heading">국내최고의 여행
-                <span class="text-muted">최고의 여행 목포로 떠나요~~~~~</span>
-            </h2>
-            <p class="lead">목포항에서 오후 2시 30분에 제주로 가는 배에 오른다. 제주항까지 배를 타면 3~4시간이 소요되는데, 이 구간의 장점이자 단점은 ‘시간활용’에 있다. 목포를 출발하고 한 시간 정도는 갑판 위에서 다도해의 절경을 감상하는 것이 좋다. 비행기 안에서 아련하게만 보이던 푸른 바다와 그림 같은 섬이 눈앞에서 파노라마처럼 펼쳐지기 때문이다. 다도해를 지나고 망망대해가 펼쳐지면 선실로 내려와 오붓한 시간을 즐긴다.
-             게임, 영화보기 등 2~3시간을 지루하지 않게 보낼 아이템을 준비하면 100% 시간 활용을 할 수 있다. 배가 제주항에 가까워지면 다시 사진기를 들고 갑판에 나온다. </p>
-        </div>
+	        <hr class="featurette-divider">
        
-        
-        
-        <hr class="featurette-divider">
-  
-        <!-- Second Featurette -->
-       
-        <div class="featurette" id="services">
-            <img class="featurette-image img-circle img-responsive pull-right img_sz" src="/resources/images/note2.jpg">
-            <h2 class="featurette-heading">국내최고의 여행
-                <span class="text-muted">최고의 여행 목포로 떠나요~~~~~</span>
-            </h2>
-            <p class="lead">목포항에서 오후 2시 30분에 제주로 가는 배에 오른다. 제주항까지 배를 타면 3~4시간이 소요되는데, 이 구간의 장점이자 단점은 ‘시간활용’에 있다. 목포를 출발하고 한 시간 정도는 갑판 위에서 다도해의 절경을 감상하는 것이 좋다. 비행기 안에서 아련하게만 보이던 푸른 바다와 그림 같은 섬이 눈앞에서 파노라마처럼 펼쳐지기 때문이다. 다도해를 지나고 망망대해가 펼쳐지면 선실로 내려와 오붓한 시간을 즐긴다.
-             게임, 영화보기 등 2~3시간을 지루하지 않게 보낼 아이템을 준비하면 100% 시간 활용을 할 수 있다. 배가 제주항에 가까워지면 다시 사진기를 들고 갑판에 나온다. </p>
-        </div>
-       
-
-         
-        <hr class="featurette-divider">
-
-        <!-- Third Featurette -->
-        
-        <div class="featurette" id="contact">
-            <img class="featurette-image img-circle img-responsive pull-left img_sz" src="/resources/images/note3.jpg">
-            <h2 class="featurette-heading">국내최고의 여행
-                <span class="text-muted">최고의 여행 목포로 떠나요~~~~~</span>
-            </h2>
-            <p class="lead">목포항에서 오후 2시 30분에 제주로 가는 배에 오른다. 제주항까지 배를 타면 3~4시간이 소요되는데, 이 구간의 장점이자 단점은 ‘시간활용’에 있다. 목포를 출발하고 한 시간 정도는 갑판 위에서 다도해의 절경을 감상하는 것이 좋다. 비행기 안에서 아련하게만 보이던 푸른 바다와 그림 같은 섬이 눈앞에서 파노라마처럼 펼쳐지기 때문이다. 다도해를 지나고 망망대해가 펼쳐지면 선실로 내려와 오붓한 시간을 즐긴다.
-             게임, 영화보기 등 2~3시간을 지루하지 않게 보낼 아이템을 준비하면 100% 시간 활용을 할 수 있다.  </p>
-        </div>
-     
-
-      
+	        <div class="featurette" id="about">
+	            <img class="featurette-image img-circle img-responsive pull-left img_sz" src="/resources/images/noteImg/${noteItem.note_imgFile[3]}">
+	            <h2 class="featurette-heading">세번째_
+	                <span class="text-muted">${noteItem.contitle3}</span>
+	            </h2>
+	            <p class="lead">${noteItem.context3}</p>
+	        </div>
+	        
+	       <hr class="featurette-divider">
+	       
+	        <div class="featurette" id="about">
+	            <img class="featurette-image img-circle img-responsive pull-left img_sz" src="/resources/images/noteImg/${noteItem.note_imgFile[4]}">
+	            <h2 class="featurette-heading">네번째_
+	                <span class="text-muted">${noteItem.contitle4}</span>
+	            </h2>
+	            <p class="lead">${noteItem.context4}</p>
+	        </div>
        </div>        
       
-       
-          
+            
         <div class="col-xs-12 col-md-4">
 
             <div class="row">
@@ -96,15 +89,13 @@
                         </div>
                         <div class="timeline-event">
                             <div class="timeline-heading">
-                                <h4>제주도 여행</h4>
+                                <h4>${noteItem.timetitle1}</h4>
                             </div>
                             <div class="timeline-body">
-                                <p>이번 여행의 주연은 여행지가 아니다. 육지, 바다, 하늘을 모두 아우르는 ‘이동수단’이 주연이다. 여정의 콘셉트는 다양한 교통수단을 이용하는 것. 그리고 천천히 그 길을 음미하는 것이다. 
-                                아침 7시 20분 서울 용산역에서 기차를 타고 목포로 향한다. 다시 목포에서 배를 타고 제주로 가는 여정. 첫 번째 목적지 목포역까지는 KTX로 3시간 10분 남짓. 열차를 탈 때마다 느껴지는 여유가 이 구간의 묘미고 창밖으로 보이는 푸른 들판은 기차여행의 별미다.</p>
+                                <p>${noteItem.timetext1}</p>
                             </div>
-                            
                             <div class="timeline-footer">
-                                <p class="text-right">Feb-22-2014</p>
+                                <p class="text-right">Sep-22-2016</p>
                             </div>
                         </div>
                     </div>
@@ -117,15 +108,14 @@
                         </div>
                         <div class="timeline-event">
                             <div class="timeline-heading">
-                                <h4>제주도 여행</h4>
+                                <h4>${noteItem.timetitle2}</h4>
                             </div>
                             <div class="timeline-body">
-                                <p>이번 여행의 주연은 여행지가 아니다. 육지, 바다, 하늘을 모두 아우르는 ‘이동수단’이 주연이다. 여정의 콘셉트는 다양한 교통수단을 이용하는 것. 그리고 천천히 그 길을 음미하는 것이다. 
-                                아침 7시 20분 서울 용산역에서 기차를 타고 목포로 향한다. 다시 목포에서 배를 타고 제주로 가는 여정. 첫 번째 목적지 목포역까지는 KTX로 3시간 10분 남짓. 열차를 탈 때마다 느껴지는 여유가 이 구간의 묘미고 창밖으로 보이는 푸른 들판은 기차여행의 별미다.</p>
+                                 <p>${noteItem.timetext2}</p>
                             </div>
                             
                             <div class="timeline-footer">
-                                <p class="text-right">Feb-22-2014</p>
+                               <p class="text-right">Sep-22-2016</p>
                             </div>
                         </div>
                     </div>
@@ -136,82 +126,37 @@
                         </div>
                         <div class="timeline-event">
                             <div class="timeline-heading">
-                                <h4>제주도 여행</h4>
+                                <h4>${noteItem.timetitle3}</h4>
                             </div>
                             <div class="timeline-body">
-                                <p>이번 여행의 주연은 여행지가 아니다. 육지, 바다, 하늘을 모두 아우르는 ‘이동수단’이 주연이다. 여정의 콘셉트는 다양한 교통수단을 이용하는 것. 그리고 천천히 그 길을 음미하는 것이다. 
-                                아침 7시 20분 서울 용산역에서 기차를 타고 목포로 향한다. 다시 목포에서 배를 타고 제주로 가는 여정. 첫 번째 목적지 목포역까지는 KTX로 3시간 10분 남짓. 열차를 탈 때마다 느껴지는 여유가 이 구간의 묘미고 창밖으로 보이는 푸른 들판은 기차여행의 별미다.</p>
+                               <p>${noteItem.timetext3}</p>
                             </div>
                             
                             <div class="timeline-footer">
-                                <p class="text-right">Feb-22-2014</p>
+                                <p class="text-right">Sep-22-2016</p>
                             </div>
                         </div>
                     </div>
 
                 
-         	<div class="timeline-item">
+         			<div class="timeline-item">
                         <div class="timeline-point">
                             <i><strong>4</strong></i>
                         </div>
                         <div class="timeline-event">
                             <div class="timeline-heading">
-                                <h4>제주도 여행</h4>
+                                <h4>${noteItem.timetitle4}</h4>
                             </div>
                             <div class="timeline-body">
-                                <p>이번 여행의 주연은 여행지가 아니다. 육지, 바다, 하늘을 모두 아우르는 ‘이동수단’이 주연이다. 여정의 콘셉트는 다양한 교통수단을 이용하는 것. 그리고 천천히 그 길을 음미하는 것이다. 
-                                아침 7시 20분 서울 용산역에서 기차를 타고 목포로 향한다. 다시 목포에서 배를 타고 제주로 가는 여정. 첫 번째 목적지 목포역까지는 KTX로 3시간 10분 남짓. 열차를 탈 때마다 느껴지는 여유가 이 구간의 묘미고 창밖으로 보이는 푸른 들판은 기차여행의 별미다.</p>
+                               <p>${noteItem.timetext4}</p>
                             </div>
                             
                             <div class="timeline-footer">
-                                <p class="text-right">Feb-22-2014</p>
+                                <p class="text-right">Sep-22-2016</p>
                             </div>
                         </div>
                     </div>
-
-
-                       <div class="timeline-item">
-                        <div class="timeline-point">
-                            <i><strong>5</strong></i>
-                        </div>
-                        <div class="timeline-event">
-                            <div class="timeline-heading">
-                                <h4>제주도 여행</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p>이번 여행의 주연은 여행지가 아니다. 육지, 바다, 하늘을 모두 아우르는 ‘이동수단’이 주연이다. 여정의 콘셉트는 다양한 교통수단을 이용하는 것. 그리고 천천히 그 길을 음미하는 것이다. 
-                                아침 7시 20분 서울 용산역에서 기차를 타고 목포로 향한다. 다시 목포에서 배를 타고 제주로 가는 여정. 첫 번째 목적지 목포역까지는 KTX로 3시간 10분 남짓. 열차를 탈 때마다 느껴지는 여유가 이 구간의 묘미고 창밖으로 보이는 푸른 들판은 기차여행의 별미다.</p>
-                            </div>
-                            
-                            <div class="timeline-footer">
-                                <p class="text-right">Feb-22-2014</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-      				<div class="timeline-item">
-                        <div class="timeline-point">
-                           <i><strong>6</strong></i>
-                        </div>
-                        <div class="timeline-event">
-                            <div class="timeline-heading">
-                                <h4>제주도 여행</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p>이번 여행의 주연은 여행지가 아니다. 육지, 바다, 하늘을 모두 아우르는 ‘이동수단’이 주연이다. 여정의 콘셉트는 다양한 교통수단을 이용하는 것. 그리고 천천히 그 길을 음미하는 것이다. 
-                                아침 7시 20분 서울 용산역에서 기차를 타고 목포로 향한다. 다시 목포에서 배를 타고 제주로 가는 여정. 첫 번째 목적지 목포역까지는 KTX로 3시간 10분 남짓. 열차를 탈 때마다 느껴지는 여유가 이 구간의 묘미고 창밖으로 보이는 푸른 들판은 기차여행의 별미다.</p>
-                            </div>
-                            
-                            <div class="timeline-footer">
-                                <p class="text-right">Feb-22-2014</p>
-                            </div>
-                        </div>
-                    </div>
-
-               
-
-                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                       
                     
                 </div>
             </div>

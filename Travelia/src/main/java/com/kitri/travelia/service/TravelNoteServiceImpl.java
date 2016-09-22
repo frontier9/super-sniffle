@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.kitri.travelia.dao.TravelNoteDAO;
+import com.kitri.travelia.domain.NoteList;
 import com.kitri.travelia.domain.Note_img;
 import com.kitri.travelia.domain.Travel_note;
 
@@ -38,7 +39,6 @@ public class TravelNoteServiceImpl implements TravelNoteService{
 		
 		dao.createImg(img);
 		
-		
 	}
 
 	@Override
@@ -57,8 +57,8 @@ public class TravelNoteServiceImpl implements TravelNoteService{
 	}
 
 	@Override
-	public List<Travel_note> listAll() throws Exception {
-		return null;
+	public List<NoteList> listAll() throws Exception {
+		return dao.listAll();
 	}
 
 }

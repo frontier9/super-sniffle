@@ -50,11 +50,7 @@
           <div class="row">
             <div class="col-md-3">
                 <img src="<c:url value="/resources/images/plus2.png"/>" style="width:150px; height:150px;" id="nt_img1" class="img-circle"/>
-
             </div>
-
-			
-
             <div class="col-md-9">
                 <input type="text" class="form-control title" name="contitle1" placeholder="제목을 입력해 주세요.">
                 <textarea class="form-control" rows="6"  style="width:100%;" placeholder="여행 일지를 작성해 주세요." name="context1">

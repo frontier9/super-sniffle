@@ -33,9 +33,8 @@ public class TravelnoteController {
 	@RequestMapping(value="/list", method =RequestMethod.GET)
 	public String listAll(Model model) throws Exception{
 		logger.info("list");
-		System.out.println("travel_note list"+service.listAll());
+		System.out.println(service.listAll());
 		model.addAttribute("list",service.listAll());
-		
 		return "travelnote/list";
 	}
 
@@ -71,19 +70,8 @@ public class TravelnoteController {
 		}
 				note.setNote_imgFile(Note_imgFile);
 
-				
 		service.regist(note);	
-			
-		//브라우저 까지 전송, URI상에는 보이지 않는 숨겨진 데이터 형태
-		/* 삭제할 주석
-		 list.jsp에 script추가
-		 <script>
-		 	var result = '${msg}';
-		 	if(result =='SUCCESS'){
-		 		alert("처리 완료!");
-		 	}
-		 </script>
-		 */
+		//브라우저 까지 전송, URI상에는 보이지 않는 숨겨진 데이터 형태	
 		rttr.addFlashAttribute("msg","success");
 		return "redirect:/travelnote/list";
 	}

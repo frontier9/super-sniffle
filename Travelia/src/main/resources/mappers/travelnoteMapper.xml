@@ -16,7 +16,6 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		insert into Note_img(note_no,note_img1, note_img2, note_img3, note_img4, note_img5) 
 		values(#{note_no},#{note_img1},#{note_img2},#{note_img3},#{note_img4},#{note_img5})
 	</insert>
-
 	<!-- 최근 Note_no 조회 -->
 	<select id ="note_no" resultType="int">
 	 select MAX(note_no) from travel_note;
@@ -60,13 +59,13 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		delete from Note_img where note_no = #{note_no}
 	</delete> 
 	
+	
 	<!-- TravelNote Item list 조회 -->
-	<select id ="listNote">
-		<![CDATA[select* from Travel_note where note_no>0 order by note_no desc, note_write_date desc]]>
-	</select>
-	<!-- TravelNote Image list 조회 -->
-	<select id ="listImg">
-		<![CDATA[select note_img1 from Note_img where note_no>0 order by note_no desc]]>
+	<select id ="list" resultType="NoteList">
+		<![CDATA[
+		select a.note_no, a.note_title, b.note_img1 
+		from  travel_note a inner join Note_img b on a.note_no = b.note_no 
+		where a.note_no>0 order by a.note_no desc;]]>
 	</select>
 
 </mapper>

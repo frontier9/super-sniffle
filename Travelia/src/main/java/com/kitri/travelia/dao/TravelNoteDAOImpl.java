@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.kitri.travelia.domain.NoteList;
 import com.kitri.travelia.domain.Note_com;
 import com.kitri.travelia.domain.Note_img;
 import com.kitri.travelia.domain.Travel_note;
@@ -66,14 +67,12 @@ public class TravelNoteDAOImpl implements TravelNoteDAO {
 	}
 
 	@Override
-	public List<Travel_note> listAll() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+	public List<NoteList> listAll() throws Exception {
+		return sqlSession.selectList(namespace+".list");
 	}
 
 	@Override
 	public List<Travel_note> listPage(int page) throws Exception {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

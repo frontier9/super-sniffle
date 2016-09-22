@@ -13,7 +13,7 @@
 		use-expressions = true일때 SpEL 사용 (기본 =  true)
 
 		create-session = 권한이 필요한 페이지 접근시 로그인 페이지로 리다이렉트, 로그인 후 세션아이디 생성
-		disable-url-rewriting = url에 jsessionid가 붙는걸  방지,ㅋㅋㅋ
+		disable-url-rewriting = url에 jsessionid가 붙는걸  방지,
 			invalidate-session = 세션을 삭제 여부
 			delete-cookies = jsessionid, remember-me 등 로그인에 관련된 쿠키 및 세션 삭제 -->
 				
@@ -26,14 +26,6 @@
   						 logout-success-url="/"
   						 invalidate-session ="true"
   						 delete-cookies="JSESSIONID,SPRING_SECURITY_REMEMBER_ME_COOKIE"/>
-
-	<!--<security:http auto-config="false" use-expressions="true" create-session="never" disable-url-rewriting="true">
-		<security:form-login 		
-					login-processing-url = "/login/loginPrc"					
-					always-use-default-target="true"/>
-					
-		<security:logout 
-					 delete-cookies="JSESSIONID,SPRING_SECURITY_REMEMBER_ME_COOKIE"/>-->	
 		<!-- 자동 로그인 
 			key=...?SSS
 			token-validity-seconds=세션유지시간(브라우저 닫은 뒤에도 자동 로그인)	

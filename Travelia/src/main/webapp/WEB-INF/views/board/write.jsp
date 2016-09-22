@@ -54,13 +54,7 @@
         			<label for="comment">Comment:</label>
                     <textarea class= "writearea"title="내용" id="contents" name="contents" ></textarea>
                     -->
-                      <div class = "form-group ">
-				 	<label class ="col-sm-2 control-label">작성자</label>
-				    
-				    <div class="col-sm-10">
-				 	<p class="form-control-static"> 정동원</p>
-				 	</div>
-				 	</div>
+                      
 				 	
 				
 				 	<div class="form-group">
@@ -92,8 +86,9 @@
                     
 			        
 			   		<div class="col-sm-3"></div>
-			   		<div class="col-sm-3"></div>
-			   		<div class="col-sm-2">		
+			   		<div class="col-sm-2"></div>
+			   		<div class="col-sm-2"></div>
+			   		<div class="col-sm-3">		
 			         <a href="#this" class="btn btn-default" id="list">목록</a>
 			       		 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 			         <a href="#this" class="btn btn-default" id="write">확인</a>

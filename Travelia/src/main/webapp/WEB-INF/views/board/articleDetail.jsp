@@ -7,7 +7,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>여행의 시작 Travelia</title>
+	<title>Travelia </title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link href="<c:url value="/resources/css/bootstrap-3.3.7.min.css" />" rel="stylesheet">
 	<link href="<c:url value="/resources/css/Rcss.css"/>" rel="stylesheet">

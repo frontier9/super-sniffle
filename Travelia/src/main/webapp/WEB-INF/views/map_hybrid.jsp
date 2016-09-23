@@ -242,6 +242,7 @@
             
             
  $("#side_list").empty();
+ 
  $("#side_head").empty();        
             
  $("#side_head").append('<h3 class="text-center">'+coder+'</h3>');

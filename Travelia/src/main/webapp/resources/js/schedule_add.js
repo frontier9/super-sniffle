@@ -3,6 +3,7 @@ var i=1;
 
 map3.data.addListener('click', function(e) {
 	
+	
 	var feature = e.feature,
     regionName = feature.getProperty('area1');
     var code; 

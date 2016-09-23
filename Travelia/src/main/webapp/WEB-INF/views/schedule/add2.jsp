@@ -32,13 +32,13 @@
 
 <div class="day_pos">
 
-<h4>Day1</h4>
-<h5>9/15</h5>
+<h4>Day2</h4>
+<h5>9/16</h5>
 </div>
 
 <div class="reg_pos">
 
-<p>금요일</p>
+<p>토요일</p>
 <p>인천</p>
 
 </div>
@@ -48,23 +48,7 @@
 <div class="day_pos" >
 
 <h4>Day1</h4>
-<h5>9/15</h5>
-</div>
-
-<div class="reg_pos">
-
-<p>금요일</p>
-<p>인천</p>
-
-</div>
-</div>
-
-
-<div class="box-dt">
-<div class="day_pos" >
-
-<h4>Day1</h4>
-<h5>9/15</h5>
+<h5>9/17</h5>
 </div>
 
 <div class="reg_pos">
@@ -76,12 +60,28 @@
 </div>
 
 
+<div class="box-dt">
+<div class="day_pos" >
+
+<h4>Day1</h4>
+<h5>9/18</h5>
+</div>
+
+<div class="reg_pos">
+
+<p>금요일</p>
+<p>인천</p>
+
+</div>
+</div>
+
+
 
 <div class="box-dt">
 <div class="day_pos" >
 
 <h4>Day1</h4>
-<h5>9/15</h5>
+<h5>9/19</h5>
 </div>
 
 <div class="reg_pos">
@@ -108,7 +108,9 @@
  <div id="drop_land">
  
  <div class="drop_head text-center">
- <h5>Day1 9/15 금요일</h5>
+ <h5>Day1 9/16 금요일</h5>
+ <button class="btn btn-default btn-sm go_view" type="submit">등록하기</button>
+ 
  </div>
  
  <div class="drop_content">
@@ -155,7 +157,7 @@
 
 
 <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
-<script src="<c:url value="/resources/js/jquery-ui.min.js"/>" type="text/javascript"></script>
+<script src="<c:url value="/resources/js/jquery-ui-1.10.4.min.js"/>" type="text/javascript"></script>
 <script src="<c:url value="/resources/js/add2.js"/>" type="text/javascript"></script>
 
 </body>

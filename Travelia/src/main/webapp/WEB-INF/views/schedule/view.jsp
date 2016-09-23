@@ -19,7 +19,7 @@
 					<img src="http://www.earthtory.com/res/img/common/mobile/img_profile.png" alt class="puser_img">
 				</div>
 				<div class="user_name">정동원</div>
-					<div class="header_title">경주 불국사로 떠나자~
+					<div class="header_title">경주 불국사로 떠나자~~
 						<div class="datetime"> 2016.09.12 ~ 2016.09.15 (3일)</div>
 					</div>
 				</div>

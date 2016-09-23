@@ -50,6 +50,14 @@ $(document).ready(function () {
 
 
 
+$("#view").on("click", function(){
+    var href = "/schedule/view";
+	location.href=href;
+	
+});
+
+
+
 var element=$(ui.draggable).clone();
 element.addClass("tempclass");
 $(element).resizable({
@@ -57,11 +65,8 @@ $(element).resizable({
 });                 
 $(this).append(element);
 
-$(".go_view").on("click", function(){
-    var href = "/schedule/view";
-	location.href=href;
-	
-});
+
+
 
 
 

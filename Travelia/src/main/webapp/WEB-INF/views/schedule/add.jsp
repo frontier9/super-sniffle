@@ -47,6 +47,7 @@
             </div>
         </div>
     </div>
+    
     <script type="text/javascript">
 
         $(document).ready(function(){
@@ -92,13 +93,19 @@
         <h4 class="modal-title" id="myModalLabel">여행계획 세우기</h4>
       </div>
       <div class="modal-body">
-
-
+         
+          <div class="form-group">
+        <input type="text" class="form-control" id="title" placeholder="제목을 입력해주세요.">
+        </div>
+        
+         <div class="form-group">
+        <input type="text" class="form-control" id="start_date" placeholder="출발일을 입력해주세요.">
+        </div>
 
       </div>
       <div class="modal-footer">
 
-        <button type="button" class="btn btn-primary">완료</button>
+        <button type="button" class="btn btn-primary" id="add2_go">완료</button>
       </div>
     </div>
   </div>

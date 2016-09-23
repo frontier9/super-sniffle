@@ -12,6 +12,13 @@
     <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/example-base.css'/>">
     <script>
         var HOME_PATH = ''; // CONTEXT PATH FOR PROJECT
+        var HOME_PATH = window.HOME_PATH || '.',
+                urlPrefix = HOME_PATH +'./resources/data/region/region',
+                urlSuffix = '.json',
+                regionGeoJson = [],
+                loadCount = 0,
+                markers = [],
+                infoWindows = [];
     </script>
 </head>
 <body>
@@ -19,14 +26,6 @@
 <div id="map3" style="min-height: 100%;"></div>
 
 <script id="code">
-    var HOME_PATH = window.HOME_PATH || '.',
-            urlPrefix = HOME_PATH +'./resources/data/region/region',
-            urlSuffix = '.json',
-            regionGeoJson = [],
-            loadCount = 0,
-            markers = [],
-            infoWindows = [];
-
 
     for (var i = 1; i < 18; i++) {
         var keyword = i +'';
@@ -179,7 +178,75 @@
 
             //$('div#result').text(response.body.items.item.title);
 
-
+           
+            var reg = res.response.body.items.item[0].areacode;
+            var coder;
+            
+ switch(reg) {
+                case 1:
+                	coder = "서울";
+                    break;
+                case 2:
+                    coder = "인천";
+                    break;
+                case 3:
+                    coder = "대전";
+                    break;
+                case 4:
+                    coder = "대구";
+                    break;
+                case 5:
+                    coder = '광주';
+                    break;
+                case 6:
+                    coder = '부산';
+                    break;
+                case 7:
+                    coder = '울산';
+                    break;
+                case 8:
+                    coder = '세종시';
+                    break;
+                case 31:
+                    coder = '경기도';
+                    break;
+                case 32:
+                    coder = '강원도';
+                    break;
+                case 33:
+                    coder = '충청북도';
+                    break;
+                case 34:
+                    coder = '충청남도';
+                    break;
+                case 35:
+                    coder = '경상북도';
+                    break;
+                case 36:
+                    coder = '경상남도';
+                    break;
+                case 37:
+                    coder = '전라북도';
+                    break;
+                case 38:
+                    coder = '전라남도';
+                    break;
+                case 39:
+                    coder = '제주시';
+                    break;
+                default:
+                    code = 1;
+            }
+            
+            
+            
+            
+ $("#side_list").empty();
+ 
+ $("#side_head").empty();        
+            
+ $("#side_head").append('<h3 class="text-center">'+coder+'</h3>');
+ 
                for(var i=0; i<res.response.body.items.item.length; i++) {
 
                    var coords = naver.maps.LatLng(res.response.body.items.item[i].mapy, res.response.body.items.item[i].mapx);
@@ -189,7 +256,18 @@
                        title: res.response.body.items.item[i].title,
                        animation: 2
                    });
-
+                  
+                   
+                   
+              	 $("#side_list").append(' <div class="reg"><div class="list_img"><img src='+res.response.body.items.item[i].firstimage2 +'></div>'+
+         				'<div class="list_text">'+
+         				'<h4>'+res.response.body.items.item[i].title+'</h4>'+
+         				'<h5>'+coder+'</h5>'+
+         				'</div></div>');
+               
+                   
+                   
+                  
                    var infoWindow = new naver.maps.InfoWindow({
                        content:  [
                            '<div class="iw_inner">',
@@ -209,67 +287,90 @@
                        pixelOffset: new naver.maps.Point(26, -23)
                    });
 //                   console.log(infoWindow.content);
-                   markers.push(marker);
+                   markers.push(marker); //a
                    infoWindows.push(infoWindow);
-               }
-//            marker3.setPosition(e.coord);
-//            marker3.setAnimation(2);
-        });
-// End of click event
+            }
+            function getClickHandler(seq) {
+                return function(e) {
+                    var marker = markers[seq],
+                            infoWindow = infoWindows[seq];
 
-    naver.maps.Event.addListener(map3, 'keydown', function(e){
-        var keyboardEvent = e.keyboardEvent,
-            keyCode = keyboardEvent.keyCode || keyboardEvent.which;
-
-        var ESC = 27;
-
-        if(keyCode === ESC) {
-            keyboardEvent.preventDefault();
-
-            for(var i=0; i<markers.length; i++) {
-                markers[i].setMap(null);
+                    if (infoWindow.getMap()) {
+                        infoWindow.close();
+                    } else {
+                        infoWindow.open(map3, marker);
+                    }
+                }
             }
 
-            markers = [];
+            for (var i=0, ii=markers.length; i<ii; i++) {
+                naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
+            }
+        });
+// End of click event
+//    naver.maps.Event.addListener(mk, 'click', function(e){
+//        if (inf.getMap()) {
+//            inf.close();
+//        } else {
+//            inf.open(map3, mk);
+//        }
+//    });
 
-        }
 
-    });
 
-//    function showMarker(map, marker) {
+
+
+
+//    naver.maps.Event.addListener(map3, 'keydown', function(e){
+//        var keyboardEvent = e.keyboardEvent,
+//            keyCode = keyboardEvent.keyCode || keyboardEvent.which;
 //
+//        var ESC = 27;
+//
+//        if(keyCode === ESC) {
+//            keyboardEvent.preventDefault();
+//
+//            for(var i=0; i<markers.length; i++) {
+//                markers[i].setMap(null);
+//            }
+//            markers = [];
+//        }
+//    });
+
+    function showMarker(map, marker) {
+
 //        if (marker.setMap())
 //            return;
-//        marker.setMap(map);
-//    }
-//
-//    function hideMarker(map, marker) {
-//
+        marker.setMap(map);
+    }
+
+    function hideMarker(map, marker) {
+
 //        if (!marker.setMap())
 //            return;
-//        marker.setMap(null);
-//    }
+        marker.setMap(null);
+    }
 
     function updateMarkers(map, markers) {
 
         var mapBounds = map.getBounds();
-        var marker, position;
+        var position;
 
         for (var i = 0; i < markers.length; i++) {
 
-            marker = markers[i]
-            position = marker.getPosition();
+            position = markers[i].getPosition();
 
             if (mapBounds.hasLatLng(position)) {
-                showMarker(map, marker);
+                hideMarker(map, markers[i]);
             } else {
-                hideMarker(map, marker);
+                showMarker(map, markers[i]);
             }
         }
     }
 
         naver.maps.Event.addListener(map3, 'idle', function() {
             updateMarkers(map3, markers);
+            //console.log('idle status in effect');
         })
 
 //        naver.maps.Event.addListener(marker3, "click", function(e) {
@@ -302,25 +403,6 @@
             tooltip_.hide().empty();
             map3.data.revertStyle();
         });
-
-        function getClickHandler(seq) {
-            console.log("I AM HERE in click handler!");
-            return function(e) {
-                var marker = markers[seq],
-                        infoWindow = infoWindows[seq];
-
-                if (infoWindow.getMap()) {
-                    infoWindow.close();
-                } else {
-                    infoWindow.open(map3, marker);
-                }
-            }
-        }
-
-        for (var i=0; i<markers.length; i++) {
-            naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
-        }
-
 
 </script>
 

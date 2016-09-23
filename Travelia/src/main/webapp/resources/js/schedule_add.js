@@ -3,6 +3,7 @@ var i=1;
 
 map3.data.addListener('click', function(e) {
 	
+	
 	var feature = e.feature,
     regionName = feature.getProperty('area1');
     var code; 
@@ -95,10 +96,11 @@ map3.data.addListener('click', function(e) {
 				'<span class="glyphicon glyphicon-plus"></span></button></span></div></div>' ;
    
    
-   console.log(state);
-   
+
    if(state==="none"){
        $(".sch-body").append(add_div);
+       $(".glyphicon-remove-circle").css("display","none");
+       $(".sel_text").css("margin-left","60px");
 	}else{
        $(".sch-body").append('<span class="glyphicon glyphicon-option-vertical line" id="'+line_time+'" aria-hidden="true"></span>'+add_div);
 	}
@@ -117,23 +119,19 @@ map3.data.addListener('click', function(e) {
          if(type == 'minus') {
              
              if(currentVal > input.attr('min')) {
-            	 console.log("굿1" );
                  input.val(currentVal - 1).change();
              } 
              if(parseInt(input.val()) == input.attr('min')) {
-            	 console.log("아왜" );
                  $(this).attr('disabled', true);
              }
 
          } else if(type == 'plus') {
 
              if(currentVal < input.attr('max')) {
-            	 console.log("굿23" );
                  input.val(currentVal + 1).change();
                  $(".btn-default").attr('disabled', false);
              }
              if(parseInt(input.val()) == input.attr('max')) {
-            	 console.log("아왜" );
                  $(this).attr('disabled', true);
              }
 
@@ -199,8 +197,7 @@ var sel_num=$('.sel_city').length;
 
 function dele(a,b){
 	
-	console.log(a);
-	
+
 	$(a).remove();
 	$(b).remove();
 	
@@ -213,8 +210,7 @@ function dele(a,b){
 
 $(".head-right").on("click", function(){
 	
-	   console.log(sel_num);
-	
+
 	$("#calren").toggle();
 	
 	$(".head-right").css("margin-bottom","-20px");
@@ -225,10 +221,21 @@ $(".head-right").on("click", function(){
 $(".exit").on("click", function(){
 	
 	$(".sch").hide(500);
-	$(".modal-body").empty();
+	$(".sch-body").empty();
 	
 	
 });
+
+
+$("#add2_go").on("click", function(){
+    var href = "/schedule/add2";
+	location.href=href;
+	
+});
+
+
+
+
 
 
 

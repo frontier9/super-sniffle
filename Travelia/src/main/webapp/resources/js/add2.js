@@ -48,9 +48,15 @@ $(document).ready(function () {
     });
 });
 
+
 var element=$(ui.draggable).clone();
 element.addClass("tempclass");
 $(element).resizable({
   helper: "ui-resizable-helper"
 });                 
 $(this).append(element);
+
+
+
+
+

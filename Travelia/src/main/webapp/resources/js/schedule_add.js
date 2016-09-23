@@ -98,6 +98,8 @@ map3.data.addListener('click', function(e) {
 
    if(state==="none"){
        $(".sch-body").append(add_div);
+       $(".glyphicon-remove-circle").css("display","none");
+       $(".sel_text").css("margin-left","60px");
 	}else{
        $(".sch-body").append('<span class="glyphicon glyphicon-option-vertical line" id="'+line_time+'" aria-hidden="true"></span>'+add_div);
 	}
@@ -218,10 +220,21 @@ $(".head-right").on("click", function(){
 $(".exit").on("click", function(){
 	
 	$(".sch").hide(500);
-	$(".modal-body").empty();
+	$(".sch-body").empty();
 	
 	
 });
+
+
+$("#add2_go").on("click", function(){
+    var href = "/schedule/add2";
+	location.href=href;
+	
+});
+
+
+
+
 
 
 

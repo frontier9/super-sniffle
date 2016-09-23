@@ -54,3 +54,8 @@ $(element).resizable({
   helper: "ui-resizable-helper"
 });                 
 $(this).append(element);
+
+
+
+
+

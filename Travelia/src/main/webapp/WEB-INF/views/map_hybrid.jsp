@@ -178,7 +178,74 @@
 
             //$('div#result').text(response.body.items.item.title);
 
-
+           
+            var reg = res.response.body.items.item[0].areacode;
+            var coder;
+            
+ switch(reg) {
+                case 1:
+                	coder = "서울";
+                    break;
+                case 2:
+                    coder = "인천";
+                    break;
+                case 3:
+                    coder = "대전";
+                    break;
+                case 4:
+                    coder = "대구";
+                    break;
+                case 5:
+                    coder = '광주';
+                    break;
+                case 6:
+                    coder = '부산';
+                    break;
+                case 7:
+                    coder = '울산';
+                    break;
+                case 8:
+                    coder = '세종시';
+                    break;
+                case 31:
+                    coder = '경기도';
+                    break;
+                case 32:
+                    coder = '강원도';
+                    break;
+                case 33:
+                    coder = '충청북도';
+                    break;
+                case 34:
+                    coder = '충청남도';
+                    break;
+                case 35:
+                    coder = '경상북도';
+                    break;
+                case 36:
+                    coder = '경상남도';
+                    break;
+                case 37:
+                    coder = '전라북도';
+                    break;
+                case 38:
+                    coder = '전라남도';
+                    break;
+                case 39:
+                    coder = '제주시';
+                    break;
+                default:
+                    code = 1;
+            }
+            
+            
+            
+            
+ $("#side_list").empty();
+ $("#side_head").empty();        
+            
+ $("#side_head").append('<h3 class="text-center">'+coder+'</h3>');
+ 
                for(var i=0; i<res.response.body.items.item.length; i++) {
 
                    var coords = naver.maps.LatLng(res.response.body.items.item[i].mapy, res.response.body.items.item[i].mapx);
@@ -188,7 +255,18 @@
                        title: res.response.body.items.item[i].title,
                        animation: 2
                    });
-
+                  
+                   
+                   
+              	 $("#side_list").append(' <div class="reg"><div class="list_img"><img src='+res.response.body.items.item[i].firstimage2 +'></div>'+
+         				'<div class="list_text">'+
+         				'<h4>'+res.response.body.items.item[i].title+'</h4>'+
+         				'<h5>'+coder+'</h5>'+
+         				'</div></div>');
+               
+                   
+                   
+                  
                    var infoWindow = new naver.maps.InfoWindow({
                        content:  [
                            '<div class="iw_inner">',

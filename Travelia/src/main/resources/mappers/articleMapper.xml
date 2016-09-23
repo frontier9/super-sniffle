@@ -18,7 +18,8 @@
             FROM
               board
             WHERE
-              del_flag <> 1
+              del_flag <> 1 
+            ORDER BY brd_article_no desc;
         ]]>
     </select>
 

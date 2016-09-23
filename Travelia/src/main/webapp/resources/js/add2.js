@@ -49,6 +49,7 @@ $(document).ready(function () {
 });
 
 
+
 var element=$(ui.draggable).clone();
 element.addClass("tempclass");
 $(element).resizable({

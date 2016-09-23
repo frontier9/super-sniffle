@@ -110,6 +110,7 @@
  <div class="drop_head text-center">
  <h5>Day1 9/16 금요일</h5>
  <button class="btn btn-default btn-sm go_view" type="submit">등록하기</button>
+ 
  </div>
  
  <div class="drop_content">

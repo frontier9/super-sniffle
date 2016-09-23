@@ -4,8 +4,14 @@
 
 <%@ include file="/WEB-INF/include/navbar-md.jsp"%>
 <%@ include file="/WEB-INF/views/map_hybrid.jsp"%>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<sec:authorize access="! isAuthenticated()">
+ <script>
+ 	alert("로그인을 해주세요");
+ 	location.href="/";
+ </script>	
+</sec:authorize>
 <html lang="kr">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
